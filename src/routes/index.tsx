@@ -117,43 +117,52 @@ function PriceEntry({ item, onOpenImages }: { item: PriceItem; onOpenImages: (in
 
   return (
     <article className="mb-12 break-inside-avoid last:mb-0">
-      <div className="flex gap-4 md:gap-5">
-        {images[0] && (
-          <button
-            onClick={() => onOpenImages(0)}
-            aria-label={`${plain(item.name)} – zobacz zdjęcia (${images.length})`}
-            className="group relative h-[72px] w-[72px] shrink-0 rounded-full p-[3px] ring-1 ring-primary/30 md:h-24 md:w-24"
-          >
-            <img src={images[0]} alt="" loading="lazy" className="h-full w-full rounded-full object-cover transition duration-500 group-hover:scale-105" />
-            {images.length > 1 && (
-              <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-2 py-0.5 font-narrow text-xs tracking-wide text-primary-foreground">
-                +{images.length - 1} foto
-              </span>
-            )}
-          </button>
-        )}
-        <div className="min-w-0 flex-1">
-          <div className="flex items-start justify-between gap-3">
-            <h4 className="font-display text-lg uppercase leading-snug tracking-wide text-primary md:text-xl">{plain(item.name)}</h4>
-            {item.discount && (
-              <span className="mt-0.5 shrink-0 rounded-full border border-primary/40 px-2.5 py-0.5 font-narrow text-sm tracking-wider text-primary">
-                {item.discount}
-              </span>
-            )}
-          </div>
-          {item.badge && <p className="mt-1 font-narrow text-sm uppercase tracking-[0.2em] text-primary/80">✦ {plain(item.badge)}</p>}
-          {item.desc && (
-            <div className="mt-1.5">
-              <p className={`text-sm leading-relaxed text-muted-foreground ${longDesc && !expanded ? "line-clamp-3" : ""}`}>{item.desc}</p>
-              {longDesc && (
-                <button onClick={() => setExpanded((e) => !e)} className="mt-1 text-xs font-medium uppercase tracking-wider text-primary hover:underline">
-                  {expanded ? "Zwiń" : "Czytaj więcej"}
-                </button>
-              )}
-            </div>
+      <div>
+        <div className="flex items-start justify-between gap-3">
+          <h4 className="font-display text-lg uppercase leading-snug tracking-wide text-primary md:text-xl">{plain(item.name)}</h4>
+          {item.discount && (
+            <span className="mt-0.5 shrink-0 rounded-full border border-primary/40 px-2.5 py-0.5 font-narrow text-sm tracking-wider text-primary">
+              {item.discount}
+            </span>
           )}
         </div>
+        {item.badge && <p className="mt-1 font-narrow text-sm uppercase tracking-[0.2em] text-primary/80">✦ {plain(item.badge)}</p>}
+        {item.desc && (
+          <div className="mt-1.5">
+            <p className={`text-sm leading-relaxed text-muted-foreground ${longDesc && !expanded ? "line-clamp-3" : ""}`}>{item.desc}</p>
+            {longDesc && (
+              <button onClick={() => setExpanded((e) => !e)} className="mt-1 text-xs font-medium uppercase tracking-wider text-primary hover:underline">
+                {expanded ? "Zwiń" : "Czytaj więcej"}
+              </button>
+            )}
+          </div>
+        )}
       </div>
+
+      {images.length > 0 && (
+        <div className="mt-4 grid max-w-sm grid-cols-5 gap-2">
+          {images.slice(0, 5).map((src, i) => {
+            const more = i === 4 && images.length > 5 ? images.length - 5 : 0;
+            return (
+              <button
+                key={src}
+                onClick={() => onOpenImages(i)}
+                aria-label={`${plain(item.name)} – zdjęcie ${i + 1} z ${images.length}`}
+                className="group relative aspect-square rounded-full p-[2px] ring-1 ring-primary/30 transition hover:ring-primary"
+              >
+                <span className="block h-full w-full overflow-hidden rounded-full">
+                  <img src={src} alt="" loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+                </span>
+                {more > 0 && (
+                  <span className="absolute inset-[2px] flex items-center justify-center rounded-full bg-foreground/55 font-narrow text-lg text-background">
+                    +{more}
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       <ul className="mt-5 space-y-3">
         {item.variants.map((v, i) => (
