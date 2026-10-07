@@ -7,7 +7,8 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const LOGO = "/logo.png";
-import { loadPricing } from "@/lib/pricing-db";
+import { formatPln, loadPricing } from "@/lib/pricing-db";
+import type { PriceItem } from "@/data/pricing";
 import { getBooksyReviews } from "@/lib/booksy-reviews";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
@@ -104,6 +105,78 @@ function Btn({ href, children, variant = "solid", external = true }: { href: str
 
 function Reveal({ children, className = "" }: { children: ReactNode; className?: string }) {
   return <div className={`reveal ${className}`}>{children}</div>;
+}
+
+/** Usuwa emoji z nazw – w cenniku wyglądają elegancko bez nich. */
+const plain = (s: string) => s.replace(/[\p{Extended_Pictographic}️‍]/gu, "").replace(/\s{2,}/g, " ").trim();
+
+function PriceEntry({ item, onOpenImages }: { item: PriceItem; onOpenImages: (index: number) => void }) {
+  const [expanded, setExpanded] = useState(false);
+  const images = item.images ?? [];
+  const longDesc = (item.desc?.length ?? 0) > 170;
+
+  return (
+    <article className="mb-12 break-inside-avoid last:mb-0">
+      <div className="flex gap-4 md:gap-5">
+        {images[0] && (
+          <button
+            onClick={() => onOpenImages(0)}
+            aria-label={`${plain(item.name)} – zobacz zdjęcia (${images.length})`}
+            className="group relative h-[72px] w-[72px] shrink-0 rounded-full p-[3px] ring-1 ring-primary/30 md:h-24 md:w-24"
+          >
+            <img src={images[0]} alt="" loading="lazy" className="h-full w-full rounded-full object-cover transition duration-500 group-hover:scale-105" />
+            {images.length > 1 && (
+              <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-2 py-0.5 font-narrow text-xs tracking-wide text-primary-foreground">
+                +{images.length - 1} foto
+              </span>
+            )}
+          </button>
+        )}
+        <div className="min-w-0 flex-1">
+          <div className="flex items-start justify-between gap-3">
+            <h4 className="font-display text-lg uppercase leading-snug tracking-wide text-primary md:text-xl">{plain(item.name)}</h4>
+            {item.discount && (
+              <span className="mt-0.5 shrink-0 rounded-full border border-primary/40 px-2.5 py-0.5 font-narrow text-sm tracking-wider text-primary">
+                {item.discount}
+              </span>
+            )}
+          </div>
+          {item.badge && <p className="mt-1 font-narrow text-sm uppercase tracking-[0.2em] text-primary/80">✦ {plain(item.badge)}</p>}
+          {item.desc && (
+            <div className="mt-1.5">
+              <p className={`text-sm leading-relaxed text-muted-foreground ${longDesc && !expanded ? "line-clamp-3" : ""}`}>{item.desc}</p>
+              {longDesc && (
+                <button onClick={() => setExpanded((e) => !e)} className="mt-1 text-xs font-medium uppercase tracking-wider text-primary hover:underline">
+                  {expanded ? "Zwiń" : "Czytaj więcej"}
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <ul className="mt-5 space-y-3">
+        {item.variants.map((v, i) => (
+          <li key={v.label ?? i}>
+            <div className="flex items-baseline gap-2">
+              <span className="text-[15px] text-foreground">{v.label ?? (v.time ? <span className="text-muted-foreground">{v.time}</span> : "Cena")}</span>
+              <span aria-hidden className="min-w-6 flex-1 -translate-y-1 border-b border-dotted border-primary/40" />
+              {(v.old ?? v.lowest30) != null && (
+                <s className="whitespace-nowrap text-sm text-muted-foreground/80">{formatPln((v.old ?? v.lowest30)!)}</s>
+              )}
+              <span className="whitespace-nowrap font-narrow text-xl leading-none text-primary">{v.price}</span>
+            </div>
+            {((v.label && v.time) || v.lowest30 != null) && (
+              <p className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-xs text-muted-foreground">
+                {v.label && v.time && <span className="inline-flex items-center gap-1"><Clock className="h-3 w-3" />{v.time}</span>}
+                {v.lowest30 != null && <span>Najniższa cena z 30 dni przed obniżką: {formatPln(v.lowest30)}</span>}
+              </p>
+            )}
+          </li>
+        ))}
+      </ul>
+    </article>
+  );
 }
 
 function SectionTitle({ kicker, title }: { kicker?: string; title: string }) {
@@ -262,68 +335,43 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <SectionTitle kicker="Promocje do -15%" title="Cennik" />
           <Tabs defaultValue={pricing[0]?.id ?? ""}>
-            <div className="-mx-5 overflow-x-auto px-5 pb-2 [scrollbar-width:none] lg:mx-0 lg:overflow-visible lg:px-0 [&::-webkit-scrollbar]:hidden">
-              <TabsList className="h-auto w-max gap-1 rounded-full bg-card p-1 lg:mx-auto lg:flex lg:w-full lg:flex-wrap lg:justify-center lg:rounded-3xl lg:p-2">
+            <div className="-mx-5 overflow-x-auto px-5 [scrollbar-width:none] lg:mx-0 lg:overflow-visible lg:px-0 [&::-webkit-scrollbar]:hidden">
+              <TabsList className="h-auto w-max gap-x-1 rounded-none border-b border-primary/20 bg-transparent p-0 lg:flex lg:w-full lg:flex-wrap lg:justify-center lg:gap-x-4">
                 {pricing.map((c) => (
-                  <TabsTrigger key={c.id} value={c.id} className="rounded-full px-4 py-2 font-narrow text-lg uppercase tracking-wide data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">{c.label}</TabsTrigger>
+                  <TabsTrigger
+                    key={c.id}
+                    value={c.id}
+                    className="-mb-px rounded-none border-b-2 border-transparent bg-transparent px-3 py-3 font-narrow text-lg uppercase tracking-[0.15em] text-muted-foreground shadow-none transition-colors hover:text-primary data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-primary data-[state=active]:shadow-none"
+                  >
+                    {plain(c.label)}
+                  </TabsTrigger>
                 ))}
               </TabsList>
             </div>
             {pricing.map((c) => (
-              <TabsContent key={c.id} value={c.id} className="mt-8">
-                <div className="gap-4 md:columns-2">
-                  {c.items.map((it) => (
-                    <div key={it.name} className="mb-4 break-inside-avoid rounded-2xl border border-border bg-card p-6">
-                      <div className="flex flex-wrap items-start justify-between gap-2">
-                        <h3 className="font-display text-xl uppercase text-primary">{it.name}</h3>
-                        <div className="flex flex-wrap gap-2">
-                          {it.badge && <span className="rounded-full bg-accent px-3 py-0.5 font-narrow text-base uppercase tracking-wide">{it.badge}</span>}
-                          {it.discount && <span className="rounded-full bg-primary px-3 py-0.5 font-narrow text-base uppercase tracking-wide text-primary-foreground">Zaoszczędź {it.discount}</span>}
-                        </div>
-                      </div>
-                      {it.desc && <p className="mt-2 text-sm text-muted-foreground">{it.desc}</p>}
-                      {it.images && it.images.length > 0 && (
-                        <div className="mt-4 grid grid-cols-4 gap-2">
-                          {it.images.slice(0, 4).map((src, i) => {
-                            const more = i === 3 && it.images!.length > 4 ? it.images!.length - 4 : 0;
-                            return (
-                              <button
-                                key={src}
-                                onClick={() => setLightbox({ imgs: it.images!, i, alt: `${it.name} – efekt zabiegu` })}
-                                aria-label={`${it.name} – zdjęcie ${i + 1}`}
-                                className="relative aspect-square overflow-hidden rounded-lg"
-                              >
-                                <img src={src} alt="" loading="lazy" className="h-full w-full object-cover transition duration-500 hover:scale-105" />
-                                {more > 0 && <span className="absolute inset-0 flex items-center justify-center bg-foreground/50 font-narrow text-2xl text-background">+{more}</span>}
-                              </button>
-                            );
-                          })}
-                        </div>
-                      )}
-                      <ul className="mt-4 divide-y divide-border">
-                        {it.variants.map((vr, i) => (
-                          <li key={vr.label ?? i} className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1 py-3">
-                            <div className="min-w-0">
-                              {vr.label && <p className="text-sm font-medium text-foreground">{vr.label}</p>}
-                              {vr.old && <p className="text-xs text-muted-foreground">Najniższa cena z 30 dni przed obniżką: {vr.old}</p>}
-                            </div>
-                            <div className="ml-auto text-right">
-                              <p className="font-narrow text-lg leading-tight">
-                                {vr.old && <span className="mr-2 text-muted-foreground line-through">{vr.old}</span>}
-                                <span className="text-primary">{vr.price}</span>
-                              </p>
-                              {vr.time && <p className="inline-flex items-center gap-1 text-xs text-muted-foreground"><Clock className="h-3.5 w-3.5" />{vr.time}</p>}
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
+              <TabsContent key={c.id} value={c.id} className="mt-10">
+                <div className="rounded-[2rem] border border-primary/15 bg-card px-5 py-10 shadow-[0_20px_60px_-30px_rgba(92,74,54,0.25)] md:px-12 md:py-14">
+                  <header className="mb-10 text-center">
+                    <div className="flex items-center justify-center gap-4">
+                      <span className="hidden h-px w-20 bg-primary/40 md:block" />
+                      <h3 className="font-display text-2xl uppercase tracking-wide text-primary md:text-4xl">{plain(c.label)}</h3>
+                      <span className="hidden h-px w-20 bg-primary/40 md:block" />
                     </div>
-                  ))}
+                  </header>
+                  <div className="md:columns-2 md:gap-16 md:[column-rule:1px_solid_color-mix(in_srgb,var(--primary)_15%,transparent)]">
+                    {c.items.map((it) => (
+                      <PriceEntry
+                        key={it.name}
+                        item={it}
+                        onOpenImages={(i) => setLightbox({ imgs: it.images ?? [], i, alt: `${plain(it.name)} – efekt zabiegu` })}
+                      />
+                    ))}
+                  </div>
                 </div>
               </TabsContent>
             ))}
           </Tabs>
-          <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-muted-foreground">Ceny przekreślone to najniższe ceny z 30 dni przed obniżką. Ostateczna cena zależy od długości i gęstości włosa – dokładny koszt poznasz przed zabiegiem.</p>
+          <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-muted-foreground">Ostateczna cena zależy od długości i gęstości włosa – dokładny koszt poznasz przed zabiegiem.</p>
           <div className="mt-6 text-center"><Btn href={BOOKSY}>Zarezerwuj na Booksy</Btn></div>
         </div>
       </section>

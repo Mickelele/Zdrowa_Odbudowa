@@ -4,6 +4,8 @@ export type PriceVariant = {
   old?: string | undefined;
   price: string;
   time?: string | undefined;
+  /** Najniższa cena z 30 dni przed obniżką – wyliczana automatycznie w bazie (widok price_services_public) */
+  lowest30?: number | string | undefined;
 };
 export type PriceItem = {
   name: string;

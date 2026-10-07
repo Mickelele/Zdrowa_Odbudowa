@@ -14,7 +14,7 @@ import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import type { PriceVariant } from "@/data/pricing";
-import { fetchPricingRows, type CategoryRow, type ServiceRow } from "@/lib/pricing-db";
+import { fetchPricingRows, formatPln, type CategoryRow, type ServiceRow } from "@/lib/pricing-db";
 import { STORAGE_BUCKET, supabase } from "@/lib/supabase";
 
 export const Route = createFileRoute("/admin")({
@@ -243,7 +243,10 @@ function Dashboard({ email }: { email: string }) {
   const duplicateService = async (s: ServiceRow) => {
     const { id: _id, ...rest } = s;
     const sort = Math.max(-1, ...catServices.map((x) => x.sort)) + 1;
-    await run("Nie udało się skopiować", async () => supabase!.from("price_services").insert({ ...rest, name: `${s.name} (kopia)`, sort }));
+    const variants = rest.variants.map(({ lowest30: _l, ...v }) => v); // lowest30 to wartość wyliczana, nie zapisujemy jej
+    await run("Nie udało się skopiować", async () =>
+      supabase!.from("price_services").insert({ ...rest, variants, name: `${s.name} (kopia)`, sort }),
+    );
     toast.success("Skopiowano usługę");
   };
 
@@ -394,6 +397,11 @@ function ServiceDialog({
   const [variants, setVariants] = useState<FormVariant[]>((initial.variants ?? [{ price: "" }]).map(toForm));
   const [images, setImages] = useState<string[]>(initial.images ?? []);
   const [uploading, setUploading] = useState(false);
+  // wyliczone w bazie "najniższe ceny z 30 dni" dla zapisanych wariantów (po nazwie wariantu)
+  const lowestByLabel = useMemo(
+    () => new Map((initial.variants ?? []).filter((v) => v.lowest30 != null).map((v) => [v.label ?? "", v.lowest30!])),
+    [initial.variants],
+  );
   const [saving, setSaving] = useState(false);
 
   const setVar = (i: number, patch: Partial<FormVariant>) => setVariants((vs) => vs.map((v, j) => (j === i ? { ...v, ...patch } : v)));
@@ -523,7 +531,8 @@ function ServiceDialog({
               </Button>
             </div>
             <p className="text-xs text-muted-foreground">
-              „Cena regularna” wyświetla się jako przekreślona (najniższa cena z 30 dni). Zostaw ją pustą, jeśli usługa nie jest w promocji.
+              „Cena regularna” wyświetla się jako przekreślona – zostaw ją pustą, jeśli usługa nie jest w promocji. Najniższa cena z 30 dni przed obniżką liczy się sama z historii zmian cen,
+              więc obniżkę wprowadzaj zmieniając cenę istniejącego wariantu (nie zmieniaj przy tym jego nazwy).
             </p>
             <div className="space-y-2">
               {variants.map((v, i) => (
@@ -533,6 +542,11 @@ function ServiceDialog({
                   <Input aria-label="Cena" placeholder="Cena: 85,00 zł" value={v.price} onChange={(e) => setVar(i, { price: e.target.value })} />
                   <Input aria-label="Czas" placeholder="Czas: 40 min" value={v.time} onChange={(e) => setVar(i, { time: e.target.value })} />
                   <IconBtn title="Usuń wariant" className="justify-self-end text-destructive" onClick={() => setVariants((vs) => vs.filter((_, j) => j !== i))}><X /></IconBtn>
+                  {lowestByLabel.has(v.label.trim()) && (
+                    <p className="col-span-full px-1 text-xs text-muted-foreground">
+                      Najniższa cena z 30 dni przed obniżką (automatycznie): <b>{formatPln(lowestByLabel.get(v.label.trim())!)}</b>
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
