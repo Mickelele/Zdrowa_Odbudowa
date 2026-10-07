@@ -7,7 +7,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const LOGO = "/logo.png";
-import { pricing } from "@/data/pricing";
+import { loadPricing } from "@/lib/pricing-db";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
 const FRESHA = "https://www.fresha.com/pl/a/zdrowa-odbudowa-studio-koloryzacji-i-rekonstrukcji-wlosa-kobylka-ksiedza-marcina-zaluskiego-73-xnra11q1";
@@ -51,6 +51,7 @@ const jsonLd = {
 };
 
 export const Route = createFileRoute("/")({
+  loader: () => loadPricing(),
   head: () => ({
     meta: [
       { title: TITLE },
@@ -106,6 +107,7 @@ function Logo({ small }: { small?: boolean }) {
 }
 
 function Index() {
+  const pricing = Route.useLoaderData();
   const [open, setOpen] = useState(false);
   const [lightbox, setLightbox] = useState<{ imgs: string[]; i: number; alt: string } | null>(null);
   const step = (d: number) => setLightbox((lb) => (lb ? { ...lb, i: (lb.i + d + lb.imgs.length) % lb.imgs.length } : lb));
@@ -234,7 +236,7 @@ function Index() {
       <section id="cennik" className="bg-secondary py-20">
         <div className="mx-auto max-w-6xl px-5">
           <SectionTitle kicker="Promocje do -15%" title="Cennik" />
-          <Tabs defaultValue="popularne">
+          <Tabs defaultValue={pricing[0]?.id ?? ""}>
             <div className="-mx-5 overflow-x-auto px-5 pb-2 [scrollbar-width:none] lg:mx-0 lg:overflow-visible lg:px-0 [&::-webkit-scrollbar]:hidden">
               <TabsList className="h-auto w-max gap-1 rounded-full bg-card p-1 lg:mx-auto lg:flex lg:w-full lg:flex-wrap lg:justify-center lg:rounded-3xl lg:p-2">
                 {pricing.map((c) => (
