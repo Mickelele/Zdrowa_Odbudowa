@@ -107,7 +107,8 @@ function Logo({ small }: { small?: boolean }) {
 
 function Index() {
   const [open, setOpen] = useState(false);
-  const [lightbox, setLightbox] = useState<number | null>(null);
+  const [lightbox, setLightbox] = useState<{ imgs: string[]; i: number; alt: string } | null>(null);
+  const step = (d: number) => setLightbox((lb) => (lb ? { ...lb, i: (lb.i + d + lb.imgs.length) % lb.imgs.length } : lb));
 
   useEffect(() => {
     const io = new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && e.target.classList.add("is-visible")), { threshold: 0.12 });
@@ -119,12 +120,12 @@ function Index() {
     if (lightbox === null) return;
     const k = (e: KeyboardEvent) => {
       if (e.key === "Escape") setLightbox(null);
-      if (e.key === "ArrowRight") setLightbox((i) => (i! + 1) % effects.length);
-      if (e.key === "ArrowLeft") setLightbox((i) => (i! - 1 + effects.length) % effects.length);
+      if (e.key === "ArrowRight") step(1);
+      if (e.key === "ArrowLeft") step(-1);
     };
     window.addEventListener("keydown", k);
     return () => window.removeEventListener("keydown", k);
-  }, [lightbox]);
+  }, [lightbox !== null]);
 
   return (
     <div id="top" className="min-h-screen">
@@ -234,8 +235,8 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <SectionTitle kicker="Promocje do -15%" title="Cennik" />
           <Tabs defaultValue="popularne">
-            <div className="-mx-5 overflow-x-auto px-5 pb-2">
-              <TabsList className="h-auto w-max gap-1 rounded-full bg-card p-1">
+            <div className="-mx-5 overflow-x-auto px-5 pb-2 [scrollbar-width:none] lg:mx-0 lg:overflow-visible lg:px-0 [&::-webkit-scrollbar]:hidden">
+              <TabsList className="h-auto w-max gap-1 rounded-full bg-card p-1 lg:mx-auto lg:flex lg:w-full lg:flex-wrap lg:justify-center lg:rounded-3xl lg:p-2">
                 {pricing.map((c) => (
                   <TabsTrigger key={c.id} value={c.id} className="rounded-full px-4 py-2 font-narrow text-lg uppercase tracking-wide data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">{c.label}</TabsTrigger>
                 ))}
@@ -243,9 +244,9 @@ function Index() {
             </div>
             {pricing.map((c) => (
               <TabsContent key={c.id} value={c.id} className="mt-8">
-                <div className="grid items-start gap-4 md:grid-cols-2">
+                <div className="gap-4 md:columns-2">
                   {c.items.map((it) => (
-                    <div key={it.name} className="rounded-2xl border border-border bg-card p-6">
+                    <div key={it.name} className="mb-4 break-inside-avoid rounded-2xl border border-border bg-card p-6">
                       <div className="flex flex-wrap items-start justify-between gap-2">
                         <h3 className="font-display text-xl uppercase text-primary">{it.name}</h3>
                         <div className="flex flex-wrap gap-2">
@@ -254,6 +255,24 @@ function Index() {
                         </div>
                       </div>
                       {it.desc && <p className="mt-2 text-sm text-muted-foreground">{it.desc}</p>}
+                      {it.images && it.images.length > 0 && (
+                        <div className="mt-4 grid grid-cols-4 gap-2">
+                          {it.images.slice(0, 4).map((src, i) => {
+                            const more = i === 3 && it.images!.length > 4 ? it.images!.length - 4 : 0;
+                            return (
+                              <button
+                                key={src}
+                                onClick={() => setLightbox({ imgs: it.images!, i, alt: `${it.name} – efekt zabiegu` })}
+                                aria-label={`${it.name} – zdjęcie ${i + 1}`}
+                                className="relative aspect-square overflow-hidden rounded-lg"
+                              >
+                                <img src={src} alt="" loading="lazy" className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+                                {more > 0 && <span className="absolute inset-0 flex items-center justify-center bg-foreground/50 font-narrow text-2xl text-background">+{more}</span>}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      )}
                       <ul className="mt-4 divide-y divide-border">
                         {it.variants.map((vr, i) => (
                           <li key={vr.label ?? i} className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1 py-3">
@@ -288,7 +307,7 @@ function Index() {
           <SectionTitle kicker="Metamorfozy" title="Galeria efektów" />
           <div className="columns-2 gap-4 md:columns-3 lg:columns-4">
             {effects.map((src, i) => (
-              <button key={src} onClick={() => setLightbox(i)} className="mb-4 block w-full overflow-hidden rounded-xl">
+              <button key={src} onClick={() => setLightbox({ imgs: effects, i, alt: "Powiększone zdjęcie metamorfozy" })} className="mb-4 block w-full overflow-hidden rounded-xl">
                 <img src={src} alt={`Metamorfoza włosów – efekt zabiegu ${i + 1}`} loading="lazy" className="w-full object-cover transition duration-500 hover:scale-105" />
               </button>
             ))}
@@ -298,9 +317,9 @@ function Index() {
       {lightbox !== null && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/90 p-4" onClick={() => setLightbox(null)}>
           <button aria-label="Zamknij" className="absolute right-4 top-4 text-background"><X className="h-8 w-8" /></button>
-          <button aria-label="Poprzednie" className="absolute left-2 p-3 font-display text-5xl text-background" onClick={(e) => { e.stopPropagation(); setLightbox((lightbox - 1 + effects.length) % effects.length); }}>‹</button>
-          <img src={effects[lightbox] ?? ""} alt="Powiększone zdjęcie metamorfozy" className="max-h-[90vh] max-w-full rounded-lg object-contain" onClick={(e) => e.stopPropagation()} />
-          <button aria-label="Następne" className="absolute right-2 p-3 font-display text-5xl text-background" onClick={(e) => { e.stopPropagation(); setLightbox((lightbox + 1) % effects.length); }}>›</button>
+          <button aria-label="Poprzednie" className="absolute left-2 p-3 font-display text-5xl text-background" onClick={(e) => { e.stopPropagation(); step(-1); }}>‹</button>
+          <img src={lightbox.imgs[lightbox.i] ?? ""} alt={lightbox.alt} className="max-h-[90vh] max-w-full rounded-lg object-contain" onClick={(e) => e.stopPropagation()} />
+          <button aria-label="Następne" className="absolute right-2 p-3 font-display text-5xl text-background" onClick={(e) => { e.stopPropagation(); step(1); }}>›</button>
         </div>
       )}
 
