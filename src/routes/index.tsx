@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import logo from "@/assets/logo.png.asset.json";
+const LOGO = "/logo.png";
 import { pricing, lengthLegend } from "@/data/pricing";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
@@ -99,7 +99,7 @@ const nav = [
 function Logo({ small }: { small?: boolean }) {
   return (
     <a href="#top" className="flex items-center gap-3">
-      <img src={logo.url} alt="Logo Zdrowa Odbudowa" className={small ? "h-10 w-10 rounded-full object-cover" : "h-12 w-12 rounded-full object-cover"} />
+      <img src={LOGO} alt="Logo Zdrowa Odbudowa" className={small ? "h-10 w-10 rounded-full object-cover" : "h-12 w-12 rounded-full object-cover"} />
       <span className="font-display text-lg uppercase leading-none text-primary">Zdrowa<br />Odbudowa</span>
     </a>
   );
@@ -152,7 +152,7 @@ function Index() {
       <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:py-24 lg:grid-cols-2">
         <Reveal className="text-center lg:text-left">
           <div className="mb-8 flex items-center justify-center gap-4 lg:justify-start">
-            <img src={logo.url} alt="Sylwetka kobiety – logo Zdrowa Odbudowa" className="h-24 w-24 rounded-full object-cover shadow-sm" />
+            <img src={LOGO} alt="Sylwetka kobiety – logo Zdrowa Odbudowa" className="h-24 w-24 rounded-full object-cover shadow-sm" />
             <div>
               <p className="font-display text-3xl uppercase text-primary">Zdrowa Odbudowa</p>
               <div className="gold-line my-1" />

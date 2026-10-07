@@ -1,24 +1,18 @@
-# Pixel Perfect Display
+# Zdrowa Odbudowa
 
-Implement exactly the screenshot and nothing else
+Strona internetowa studia koloryzacji i rekonstrukcji włosa **Zdrowa Odbudowa** w Kobyłce.
 
-This project was built with [Lovable](https://lovable.dev).
+## Uruchomienie lokalne
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/85119579-c237-451c-85ec-a605dcd58e2e).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Wymagany Node.js i npm.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
 npm i
 npm run dev
+```
+
+## Budowanie
+
+```sh
+npm run build
 ```
