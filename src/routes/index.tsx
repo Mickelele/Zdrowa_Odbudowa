@@ -283,7 +283,7 @@ function Index() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/90 p-4" onClick={() => setLightbox(null)}>
           <button aria-label="Zamknij" className="absolute right-4 top-4 text-background"><X className="h-8 w-8" /></button>
           <button aria-label="Poprzednie" className="absolute left-2 p-3 font-display text-5xl text-background" onClick={(e) => { e.stopPropagation(); setLightbox((lightbox - 1 + effects.length) % effects.length); }}>‹</button>
-          <img src={effects[lightbox]} alt="Powiększone zdjęcie metamorfozy" className="max-h-[90vh] max-w-full rounded-lg object-contain" onClick={(e) => e.stopPropagation()} />
+          <img src={effects[lightbox] ?? ""} alt="Powiększone zdjęcie metamorfozy" className="max-h-[90vh] max-w-full rounded-lg object-contain" onClick={(e) => e.stopPropagation()} />
           <button aria-label="Następne" className="absolute right-2 p-3 font-display text-5xl text-background" onClick={(e) => { e.stopPropagation(); setLightbox((lightbox + 1) % effects.length); }}>›</button>
         </div>
       )}
@@ -329,7 +329,7 @@ function Index() {
               <div className="mt-8 flex flex-wrap gap-6">
                 {[["Malwina", "fryzjer i kolorysta"], ["Edyta", "zespół"], ["Agnieszka", "zespół"], ["Glow", "make-up"]].map(([n, r]) => (
                   <div key={n} className="flex items-center gap-3">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-soft font-display text-xl text-primary">{n[0]}</span>
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-soft font-display text-xl text-primary">{n?.[0]}</span>
                     <div><p className="font-narrow text-xl text-primary">{n}</p><p className="text-xs text-muted-foreground">{r}</p></div>
                   </div>
                 ))}
