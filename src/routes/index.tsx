@@ -2,12 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import {
   Sparkles, Palette, Scissors, Leaf, Heart, Gift, Microscope, Droplets, Gem, ShieldCheck, Home,
-  Phone, MapPin, Clock, Menu, X, Star, Facebook, Instagram, Navigation, CalendarHeart,
+  Phone, MapPin, Clock, Menu, X, Star, Facebook, Instagram, Navigation, CalendarHeart, Lock,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const LOGO = "/logo.png";
 import { loadPricing } from "@/lib/pricing-db";
+import { getBooksyReviews } from "@/lib/booksy-reviews";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
 const FRESHA = "https://www.fresha.com/pl/a/zdrowa-odbudowa-studio-koloryzacji-i-rekonstrukcji-wlosa-kobylka-ksiedza-marcina-zaluskiego-73-xnra11q1";
@@ -31,6 +32,15 @@ const salon = [
 ];
 const HERO = W + "2025/02/SAD_7070-682x1024.jpg";
 
+/** Używane, gdy nie uda się pobrać danych z Booksy. */
+const FALLBACK_RATING = { rating: 4.9, count: 271 };
+
+const formatRating = (n: number) => n.toLocaleString("pl-PL", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+const formatReviewDate = (iso: string) => {
+  const d = new Date(iso);
+  return Number.isNaN(d.getTime()) ? "" : d.toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
+};
+
 const TITLE = "Zdrowa Odbudowa – rekonstrukcja i koloryzacja włosów | Kobyłka";
 const DESC = "Studio koloryzacji i rekonstrukcji włosa w Kobyłce. Nanoplastia, keratyna, bioplastia, botoks, Air Touch. Bezpłatna konsultacja – zarezerwuj na Booksy.";
 
@@ -46,13 +56,15 @@ const jsonLd = {
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "21:00" },
     { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "15:00" },
   ],
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "260" },
   sameAs: [FB, IG, BOOKSY],
 };
 
 export const Route = createFileRoute("/")({
-  loader: () => loadPricing(),
-  head: () => ({
+  loader: async () => {
+    const [pricing, booksy] = await Promise.all([loadPricing(), getBooksyReviews()]);
+    return { pricing, booksy };
+  },
+  head: ({ loaderData }) => ({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
@@ -63,7 +75,19 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: HERO },
     ],
-    scripts: [{ type: "application/ld+json", children: JSON.stringify(jsonLd) }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          ...jsonLd,
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: String(loaderData?.booksy?.rating ?? FALLBACK_RATING.rating),
+            reviewCount: String(loaderData?.booksy?.count ?? FALLBACK_RATING.count),
+          },
+        }),
+      },
+    ],
   }),
   component: Index,
 });
@@ -107,7 +131,8 @@ function Logo({ small }: { small?: boolean }) {
 }
 
 function Index() {
-  const pricing = Route.useLoaderData();
+  const { pricing, booksy } = Route.useLoaderData();
+  const rating = booksy ?? FALLBACK_RATING;
   const [open, setOpen] = useState(false);
   const [lightbox, setLightbox] = useState<{ imgs: string[]; i: number; alt: string } | null>(null);
   const step = (d: number) => setLightbox((lb) => (lb ? { ...lb, i: (lb.i + d + lb.imgs.length) % lb.imgs.length } : lb));
@@ -163,7 +188,7 @@ function Index() {
             </div>
           </div>
           <span className="mb-6 inline-flex items-center gap-1 rounded-full bg-accent-soft px-4 py-1 font-narrow text-lg tracking-wide">
-            <Star className="h-4 w-4 fill-primary text-primary" /> 4,9 / 5 · 260 opinii
+            <Star className="h-4 w-4 fill-primary text-primary" /> {formatRating(rating.rating)} / 5 · {rating.count} opinii
           </span>
           <h1 className="font-display text-4xl leading-tight text-primary md:text-6xl">Każdy włos to inna historia… <span className="brush inline-block px-2">Jaka jest Twoja?</span></h1>
           <p className="mt-6 text-lg md:text-xl">Sprawimy, że Twoje włosy bez stylizacji będą lśniące, gładkie i zdrowe – aż do 6 miesięcy!</p>
@@ -383,17 +408,34 @@ function Index() {
       <section className="bg-secondary py-20">
         <div className="mx-auto max-w-6xl px-5 text-center">
           <SectionTitle kicker="Co mówią klientki" title="Opinie" />
-          <p className="font-display text-6xl text-primary">4,9 ★</p>
-          <p className="font-narrow text-2xl">260 opinii na Booksy</p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[1, 2, 3].map((n) => (
-              <div key={n} className="rounded-2xl bg-card p-6 text-left">
-                <div className="mb-3 flex gap-0.5">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-primary text-primary" />)}</div>
-                <p className="italic">„Opinia klientki z Booksy”</p>
-                <p className="mt-3 font-narrow text-lg text-primary">Klientka Booksy</p>
-              </div>
-            ))}
-          </div>
+          <p className="font-display text-6xl text-primary">{formatRating(rating.rating)} ★</p>
+          <p className="font-narrow text-2xl">{rating.count} opinii na Booksy</p>
+          {booksy && booksy.reviews.length > 0 && (
+            <div className="mt-10 gap-6 text-left md:columns-2 lg:columns-3">
+              {booksy.reviews.map((r) => (
+                <figure key={r.id} className="mb-6 break-inside-avoid rounded-2xl bg-card p-6">
+                  <div className="mb-3 flex items-center justify-between gap-2">
+                    <div className="flex gap-0.5" aria-label={`Ocena ${r.stars} na 5`}>
+                      {[...Array(5)].map((_, i) => <Star key={i} className={`h-4 w-4 ${i < r.stars ? "fill-primary text-primary" : "text-border"}`} />)}
+                    </div>
+                    {r.date && <time dateTime={r.date} className="text-xs text-muted-foreground">{formatReviewDate(r.date)}</time>}
+                  </div>
+                  <blockquote className="italic">„{r.text}”</blockquote>
+                  <figcaption className="mt-3">
+                    <p className="font-narrow text-lg text-primary">{r.name} <span className="text-sm text-muted-foreground">· potwierdzony klient Booksy</span></p>
+                    {(r.service || r.staff) && (
+                      <p className="text-xs text-muted-foreground">{[r.service, r.staff && `pracownik: ${r.staff}`].filter(Boolean).join(" · ")}</p>
+                    )}
+                  </figcaption>
+                  {r.reply && (
+                    <p className="mt-4 border-l-2 border-primary/40 pl-3 text-sm text-muted-foreground">
+                      <span className="font-medium text-foreground">Odpowiedź salonu:</span> {r.reply}
+                    </p>
+                  )}
+                </figure>
+              ))}
+            </div>
+          )}
           <div className="mt-10"><Btn href={BOOKSY} variant="outline">Zobacz wszystkie opinie na Booksy</Btn></div>
         </div>
       </section>
@@ -472,7 +514,15 @@ function Index() {
               <a href={IG} {...ext} aria-label="Instagram" className="text-primary hover:text-primary-hover"><Instagram /></a>
             </div>
           </div>
-          <p className="mt-10 text-center text-xs text-muted-foreground">© 2026 Zdrowa Odbudowa · Wykonanie: MicoPage ©</p>
+          <div className="mt-10 flex flex-col items-center gap-3 text-center text-xs text-muted-foreground">
+            <p>
+              © 2026 Zdrowa Odbudowa · Wykonanie:{" "}
+              <a href="https://mico-page.pl" {...ext} className="underline-offset-2 hover:text-primary hover:underline">MicoPage ©</a>
+            </p>
+            <a href="/admin" rel="nofollow" className="inline-flex items-center gap-1 rounded-full border border-border px-3 py-1 hover:border-primary hover:text-primary">
+              <Lock className="h-3 w-3" /> Panel administratora
+            </a>
+          </div>
         </div>
       </footer>
 
