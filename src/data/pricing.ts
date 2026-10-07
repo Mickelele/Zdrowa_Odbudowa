@@ -1,87 +1,361 @@
+export type PriceVariant = {
+  label?: string | undefined;
+  /** Cena regularna (przekreślona), gdy usługa jest w promocji */
+  old?: string | undefined;
+  price: string;
+  time?: string | undefined;
+};
 export type PriceItem = {
   name: string;
   desc?: string;
-  prices: string[];
-  time?: string;
   badge?: string;
+  /** Np. "-15%" */
+  discount?: string;
+  variants: PriceVariant[];
 };
 export type PriceCategory = { id: string; label: string; items: PriceItem[] };
 
-export const lengthLegend = "R = do ramion · Ł = do łopatek · T = do talii · D = dłuższe";
+const v = (label: string | undefined, old: string | undefined, price: string, time?: string): PriceVariant => ({
+  label,
+  old,
+  price,
+  time,
+});
+
+const strzyzenie: PriceItem = {
+  name: "Strzyżenie damskie ✂️",
+  desc: "Strzyżenie + mycie + modelowanie/stylizacja.",
+  discount: "-15%",
+  variants: [
+    v("Strzyżenie samej grzywki BEZ MYCIA", "40,00 zł", "34,00 zł", "15 min"),
+    v("Włosy do ramion", "100,00 zł", "85,00 zł", "40 min"),
+    v("Włosy do łopatek i dłuższe", "120,00 zł", "102,00 zł", "1 h"),
+  ],
+};
+
+const nieWiemZabieg: PriceItem = {
+  name: "Nie wiem jaki zabieg",
+  desc: "Konsultacja + czas na zabieg.",
+  variants: [v(undefined, undefined, "Cena zmienna", "3 h")],
+};
+
+const odrost: PriceItem = {
+  name: "Odrost bez rozjaśniania",
+  desc: "Usługa zawiera koloryzację odrostu do 3 cm na ciemny kolor.",
+  discount: "-15%",
+  variants: [
+    v("Pierwsza wizyta", "350,00 zł", "297,50 zł", "2 h"),
+    v("Stały klient", "250,00 zł", "212,50 zł", "2 h"),
+  ],
+};
 
 export const pricing: PriceCategory[] = [
   {
-    id: "rekonstrukcja",
-    label: "Trwała rekonstrukcja 💚",
-    items: [
-      { name: "Nanobotoks – do 5 miesięcy", badge: "HIT naszych klientek", desc: "Wygładzenie i regeneracja włosów z efektem do 5 miesięcy.", prices: ["R 500 zł", "Ł 600 zł", "T 750 zł", "D 850 zł"], time: "3–4 h" },
-      { name: "Bioplastia – do 6 miesięcy", desc: "Trwałe pożegnanie z puszeniem i elektryzowaniem, zachowuje naturalną objętość, nie zmienia koloru. Idealna dla włosów uwrażliwionych, cienkich, falowanych.", prices: ["R 590 zł", "Ł 690 zł", "T 850 zł", "D 950 zł"], time: "3–4 h" },
-      { name: "Nanoplastia Basic – dla blondynek, do 6 miesięcy", desc: "Najmocniejszy zabieg z 19 aminokwasami, trwale prostuje nawet kręcone włosy.", prices: ["R 600 zł", "Ł 750 zł", "T 950 zł", "D 1100 zł"], time: "3–4,5 h" },
-      { name: "Taninoplastia (vegan)", desc: "Roślinna alternatywa trwałej odbudowy włosa.", prices: ["R 600 zł", "Ł 750 zł", "T i dłuższe 950 zł"], time: "3–3 h 40 min" },
-      { name: "Botoks organiczny", desc: "Brazylijski zabieg – głęboka regeneracja, redukcja objętości i puszenia.", prices: ["R 450 zł", "Ł 550 zł", "T 650 zł"], time: "2,5–3 h 20 min" },
-      { name: "Kauteryzacja włosa", desc: "Ratunek dla najbardziej uwrażliwionych włosów, także po rozjaśnianiu.", prices: ["R 200 zł", "Ł 250 zł", "T 300 zł", "D 350 zł"], time: "2–3 h" },
-      { name: "Rekonstrukcja – trudne przypadki / hybrydy", desc: "Konsultacja + czas na zabieg.", prices: ["cena indywidualna"], time: "3 h" },
-      { name: "Nie wiem jaki zabieg", desc: "Konsultacja + czas na zabieg.", prices: ["cena indywidualna"], time: "3 h" },
-    ],
+    id: "popularne",
+    label: "Popularne usługi ⭐",
+    items: [strzyzenie, nieWiemZabieg, odrost],
   },
   {
     id: "koloryzacja",
-    label: "Koloryzacja 🎨",
+    label: "Koloryzacja i dekoloryzacja 🎨",
     items: [
-      { name: "Air Touch | koloryzacje indywidualne", desc: "Najnowocześniejsze techniki dopasowane do Twojego stylu i urody.", prices: ["R 750 zł", "Ł 1100 zł", "T od 1400 zł"], time: "4–6,5 h" },
-      { name: "Balejaż niteczkowy / pasemka / refleks + tonowanie", desc: "Zawiera odrost, tonowanie i modelowanie/loki/fale.", prices: ["R 550 zł", "Ł 650 zł", "T 750 zł"], time: "3 h" },
-      { name: "Koloryzacja blond + tonowanie", desc: "Dekoloryzacja odrostu + tonowanie długości.", prices: ["R 450 zł", "Ł 590 zł", "T 650 zł"], time: "3–3,5 h" },
-      { name: "Front blond | delikatne pojaśnienia", desc: "Do 10 folii, cena dla każdej długości.", prices: ["400 zł"], time: "2 h" },
-      { name: "Koloryzacja wielotonowa (3D)", desc: "Min. dwa kolory bazowe – głębszy, naturalny efekt.", prices: ["R 350 zł", "Ł 450 zł", "T 550 zł"], time: "2 h" },
-      { name: "Koloryzacja jednotonowa", desc: "Jednolity, równy kolor od nasady po końce.", prices: ["R 290 zł", "Ł 390 zł", "T 490 zł"], time: "2 h" },
-      { name: "Dekoloryzacja + koloryzacja", desc: "Usunięcie sztucznych barwników i nałożenie nowego koloru. Wariant „dekoloryzacja poprzez zabieg rekonstrukcji” – cena indywidualna.", prices: ["Ł 850 zł", "T 1000 zł"], time: "4–4,5 h" },
-      { name: "Odrost bez rozjaśniania", desc: "Odrost do 3 cm na ciemny kolor.", prices: ["pierwsza wizyta 350 zł", "stały klient 250 zł"], time: "2 h" },
-      { name: "Tonowanie", desc: "Odświeżenie chłodnego blondu lub brązu, z myciem i modelowaniem.", prices: ["R 150 zł", "Ł 250 zł", "T 350 zł"], time: "1,5 h" },
-      { name: "Kąpiel rozjaśniająca | oczyszczenie koloru 1 ton", desc: "Delikatne oczyszczenie koloru o jeden ton.", prices: ["R 150 zł", "za ramiona 200 zł"], time: "1 h" },
-      { name: "Repigmentacja (dodatek do usługi)", desc: "Przywrócenie pigmentu przed koloryzacją.", prices: ["150 zł"], time: "45 min" },
-      { name: "Nie wiem jaki kolor", desc: "Konsultacja + czas na wizytę.", prices: ["cena indywidualna"], time: "3 h" },
+      {
+        name: "Nie wiem jaki kolor",
+        desc: "Konsultacja + czas przeznaczony na wizytę. Jeżeli nie wiesz, jaką koloryzację wybrać, ta usługa jest dla Ciebie :)",
+        variants: [v(undefined, undefined, "Cena zmienna", "3 h")],
+      },
+      {
+        name: "Tonowanie",
+        desc: "Jeżeli Twój blond nie jest już chłodnym blondem, brąz przechodzi w rudości, a jeszcze nie chcesz ponawiać koloryzacji permanentnej – ta usługa jest dla Ciebie! Usługa obejmuje tonowanie całej długości włosa, mycie i modelowanie.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "150,00 zł", "127,50 zł", "1 h 30 min"),
+          v("Włosy do łopatek", "250,00 zł", "212,50 zł", "1 h 30 min"),
+          v("Włosy do talii", "350,00 zł", "297,50 zł", "1 h 30 min"),
+        ],
+      },
+      odrost,
+      {
+        name: "Front blond | delikatne pojaśnienia",
+        desc: "Nowoczesne rozjaśnienie frontów włosów do maksymalnej ilości 10 folii. Istnieje również możliwość rozłożenia pojaśnień, tak aby uzyskać delikatne rozjaśnienie całej fryzury. Cena jest taka sama dla każdej długości włosa.",
+        discount: "-15%",
+        variants: [v(undefined, "400,00 zł", "340,00 zł", "2 h")],
+      },
+      {
+        name: "Balejaż niteczkowy | pasemka | refleks + tonowanie",
+        desc: "Wybierz tę usługę, jeżeli pragniesz rozjaśnić swoje włosy metodą całościową, pasemkami lub refleksami. W usługę wlicza się balejaż niteczkowy / refleksy / pojaśnienia min. 50% oraz odrost, tonowanie i modelowanie/loki/fale.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "550,00 zł", "467,50 zł", "3 h"),
+          v("Włosy do łopatek", "650,00 zł", "552,50 zł", "3 h"),
+          v("Włosy do talii", "750,00 zł", "637,50 zł", "3 h"),
+        ],
+      },
+      {
+        name: "Koloryzacja blond + tonowanie",
+        desc: "Usługa polega na dekoloryzacji odrostu oraz tonowaniu reszty włosa. Jeżeli chcesz zrobić również refleksy lub pojaśnienia – wybierz usługę POJAŚNIENIA.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "450,00 zł", "382,50 zł", "3 h"),
+          v("Włosy do łopatek", "590,00 zł", "501,50 zł", "3 h"),
+          v("Włosy długie (do talii)", "650,00 zł", "552,50 zł", "3 h 30 min"),
+        ],
+      },
+      {
+        name: "Koloryzacja jednotonowa",
+        desc: "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną – jednym odcieniem farby po całej długości.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "290,00 zł", "246,50 zł", "2 h"),
+          v("Włosy do łopatek", "390,00 zł", "331,50 zł", "2 h"),
+          v("Włosy do talii", "490,00 zł", "416,50 zł", "2 h"),
+        ],
+      },
+      {
+        name: "Koloryzacja wielotonowa",
+        desc: "Koloryzacja wielotonowa (inaczej koloryzacja 3D) to technika, w której stosuje się co najmniej dwa kolory bazowe. Dzięki niej kolor jest głębszy, bardziej naturalny i nie jest „płaski”. W tej usłudze wliczamy również farbowanie odrostu na inny kolor niż reszta włosów po długości.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "350,00 zł", "297,50 zł", "2 h"),
+          v("Włosy do łopatek", "450,00 zł", "382,50 zł", "2 h"),
+          v("Włosy do talii", "550,00 zł", "467,50 zł", "2 h"),
+        ],
+      },
+      {
+        name: "Air Touch | koloryzacje indywidualne",
+        desc: "Najbardziej nowoczesne techniki koloryzacji dopasowane indywidualnie do Twojego stylu, urody oraz możliwości na włosach.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "750,00 zł", "637,50 zł", "4 h"),
+          v("Włosy do łopatek", "1 100,00 zł", "935,00 zł", "5 h"),
+          v("Włosy do talii", "1 400,00 zł+", "1 190,00 zł+", "6 h 30 min"),
+        ],
+      },
+      {
+        name: "Dekoloryzacja + koloryzacja",
+        desc: "Dekoloryzacja znana jest też jako ściąganie koloru z włosów. Jest to zabieg usunięcia sztucznych barwników z wnętrza włosa – pigmentów wprowadzonych tam podczas koloryzacji. Po dekoloryzacji nakładana jest pożądana koloryzacja.",
+        discount: "-15%",
+        variants: [
+          v("Dekoloryzacja poprzez zabieg rekonstrukcji", undefined, "Cena zmienna", "3 h 30 min"),
+          v("Włosy do łopatek", "850,00 zł", "722,50 zł", "4 h"),
+          v("Włosy do talii", "1 000,00 zł", "850,00 zł", "4 h 30 min"),
+        ],
+      },
+      {
+        name: "Kąpiel rozjaśniająca | oczyszczenie koloru 1 ton",
+        desc: "Poszukujesz sposobu na delikatne rozjaśnienie włosów? Nie chcesz narażać ich na silne, inwazyjne zabiegi takie jak dekoloryzacja, ale zależy Ci na uzyskaniu choć trochę jaśniejszego koloru? Jeśli tak, pomoże Ci kąpiel rozjaśniająca.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "150,00 zł", "127,50 zł", "1 h"),
+          v("Włosy za ramiona", "200,00 zł", "170,00 zł", "1 h"),
+        ],
+      },
+      {
+        name: "Repigmentacja – dodatek do usługi",
+        desc: "Repigmentacja to zabieg chemiczny, który polega na przywróceniu pigmentów utraconych podczas rozjaśniania i farbowania włosów. Może być stosowana także w przypadku bardzo jasnych włosów.",
+        discount: "-15%",
+        variants: [v(undefined, "150,00 zł", "127,50 zł", "45 min")],
+      },
     ],
   },
   {
     id: "pielegnacja",
     label: "Pielęgnacja 🌱",
     items: [
-      { name: "Rekonstrukcja Joico K-PAK ❄️", desc: "Najsilniejsza rekonstrukcja na zimno – dla włosów zniszczonych i łamliwych.", prices: ["150 zł"], time: "1 h" },
-      { name: "Ampułka regeneracyjna ❄️", desc: "Ekspresowa kuracja dla włosów suchych i matowych.", prices: ["150 zł"], time: "1 h" },
-      { name: "Maska na ciepło 🔥", desc: "Aminokwasy, białka, fibroina – odbudowa i ochrona koloru.", prices: ["150 zł"], time: "1 h" },
+      {
+        name: "Ampułka regeneracyjna ❄️",
+        desc: "Złota ampułka to ekspresowa kuracja do włosów suchych, matowych i zniszczonych, idealna także po zabiegach chemicznych.",
+        discount: "-15%",
+        variants: [v(undefined, "150,00 zł", "127,50 zł", "1 h")],
+      },
+      {
+        name: "Rekonstrukcja Joico ❄️",
+        desc: "JOICO K-Pak – najlepsza dostępna rekonstrukcja na zimno na rynku – to silnie regenerująca kuracja przeznaczona do włosów zniszczonych, osłabionych i łamliwych. Wzmacnia pasma, poprawia ich kondycję i pomaga przywrócić elastyczność oraz połysk – efekty są widoczne już po pierwszym użyciu.",
+        discount: "-15%",
+        variants: [v(undefined, "150,00 zł", "127,50 zł", "1 h")],
+      },
+      {
+        name: "Maska na ciepło 🔥",
+        desc: "Profesjonalna, odbudowująca maska do włosów, również po zabiegach chemicznych. Dzięki aminokwasom, białkom, fibroinie i nanokapsułkom intensywnie regeneruje włókna włosów, zapobiega łamliwości i chroni kolor. Idealna po koloryzacji, dekoloryzacji czy innych zabiegach chemicznych.",
+        discount: "-15%",
+        variants: [v(undefined, "150,00 zł", "127,50 zł", "1 h")],
+      },
+    ],
+  },
+  {
+    id: "rekonstrukcja",
+    label: "Trwała rekonstrukcja włosa 💚",
+    items: [
+      nieWiemZabieg,
+      {
+        name: "Rekonstrukcja włosów | trudne przypadki | hybrydy",
+        desc: "Konsultacja + czas na wykonanie zabiegu trwałej rekonstrukcji włosa.",
+        variants: [v(undefined, undefined, "Cena zmienna", "3 h")],
+      },
+      {
+        name: "Kauteryzacja włosa",
+        desc: "Zabieg to ratunek dla najbardziej uwrażliwionych włosów, również tych po procesie rozjaśniania, nieprzechodzących testu włosa.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "200,00 zł", "170,00 zł", "2 h"),
+          v("Włosy do łopatek", "250,00 zł", "212,50 zł", "2 h 30 min"),
+          v("Włosy do talii", "300,00 zł", "255,00 zł", "2 h 30 min"),
+          v("Włosy dłuższe", "350,00 zł", "297,50 zł", "3 h"),
+        ],
+      },
+      {
+        name: "Botoks organiczny",
+        desc: "Btox Organic to zaawansowany, brazylijski zabieg kapilarny (botoks na włosy) stworzony z myślą o głębokiej regeneracji, redukcji objętości oraz eliminacji puszenia się pasm.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "450,00 zł", "382,50 zł", "2 h 30 min"),
+          v("Włosy do łopatek", "550,00 zł", "467,50 zł", "3 h"),
+          v("Włosy do talii", "650,00 zł", "552,50 zł", "3 h 20 min"),
+        ],
+      },
+      {
+        name: "Nanobotoks – do 5 miesięcy",
+        badge: "HIT naszych klientek 🤩",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "500,00 zł", "425,00 zł", "3 h"),
+          v("Włosy do łopatek", "600,00 zł", "510,00 zł", "3 h 30 min"),
+          v("Włosy do talii", "750,00 zł", "637,50 zł", "3 h 30 min"),
+          v("Włosy dłuższe", "850,00 zł", "722,50 zł", "4 h"),
+        ],
+      },
+      {
+        name: "Bioplastia – do 6 miesięcy",
+        desc: "Kuracja przeciw puszeniu się włosa – dla włosów uwrażliwionych, niesfornych, plączących się czy cienkich, a także wysokoporowatych. Uszczelnia łuskę włosa, chroni przed uszkodzeniami mechanicznymi i optycznie pogrubia. To trwałe pożegnanie z puszeniem i elektryzowaniem – włosy nie reagują na zmianę pogody, a przy odpowiednio dobranych parametrach zachowują naturalną objętość. Zalecana również dla włosów falowanych, nie zmienia koloru.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "590,00 zł", "501,50 zł", "3 h"),
+          v("Włosy do łopatek", "690,00 zł", "586,50 zł", "3 h 30 min"),
+          v("Włosy do talii", "850,00 zł", "722,50 zł", "3 h 30 min"),
+          v("Włosy dłuższe", "950,00 zł", "807,50 zł", "4 h"),
+        ],
+      },
+      {
+        name: "Nanoplastia Basic | dla blondynek do 6 miesięcy",
+        desc: "Najmocniejszy zabieg ze specjalnie opatentowaną formułą, wzbogaconą o 19 aminokwasów aktywnych. Trwale rozprostowuje włosy, NAWET kręcone, jednocześnie uszczelniając i odbudowując łodygę włosa.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "600,00 zł", "510,00 zł", "3 h"),
+          v("Włosy do łopatek", "750,00 zł", "637,50 zł", "3 h 30 min"),
+          v("Włosy do talii", "950,00 zł", "807,50 zł", "4 h"),
+          v("Włosy dłuższe", "1 100,00 zł", "935,00 zł", "4 h 30 min"),
+        ],
+      },
+      {
+        name: "Taninoplastia (vegan)",
+        desc: "Taniny – sekret zabiegu taninoplastii.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "600,00 zł", "510,00 zł", "3 h"),
+          v("Włosy do łopatek", "750,00 zł", "637,50 zł", "3 h 20 min"),
+          v("Włosy do talii i dłuższe", "950,00 zł", "807,50 zł", "3 h 40 min"),
+        ],
+      },
     ],
   },
   {
     id: "strzyzenie",
-    label: "Strzyżenie ✂️",
+    label: "Strzyżenie damskie ✂️",
     items: [
-      { name: "Strzyżenie + mycie + modelowanie", desc: "Nowy kształt fryzury z pełną stylizacją.", prices: ["R 100 zł", "Ł i dłuższe 120 zł"], time: "40 min–1 h" },
-      { name: "Podcięcie końcówek + mycie + modelowanie", desc: "Odświeżenie końcówek bez zmiany kształtu.", prices: ["R 99 zł", "Ł i dłuższe 110 zł"], time: "40 min–1 h" },
-      { name: "Mycie + stylizacja / modelowanie", desc: "Z maską nawilżającą.", prices: ["R 80 zł", "Ł i dłuższe 100 zł"], time: "45–50 min" },
-      { name: "Strzyżenie samej grzywki", desc: "Bez mycia.", prices: ["40 zł"], time: "15 min" },
+      {
+        name: "Mycie + podcięcie końcówek + modelowanie",
+        desc: "Usługa polega na umyciu włosów i podcięciu ich na prosto (same końcówki).",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "99,00 zł", "84,15 zł", "40 min"),
+          v("Włosy do łopatek i dłuższe", "110,00 zł", "93,50 zł", "1 h"),
+        ],
+      },
+      {
+        name: "Mycie + stylizacja lub modelowanie",
+        desc: "Mycie włosów, maska nawilżająca i suszenie z modelowaniem, prostowaniem lub stylizacja.",
+        discount: "-15%",
+        variants: [
+          v("Włosy do ramion", "80,00 zł", "68,00 zł", "45 min"),
+          v("Włosy do łopatek i dłuższe", "100,00 zł", "85,00 zł", "50 min"),
+        ],
+      },
+      strzyzenie,
     ],
   },
   {
     id: "czesanie",
     label: "Czesanie i makijaż 💄",
     items: [
-      { name: "Makijaż + fryzura 2w1", desc: "Kompletna stylizacja na wyjątkową okazję.", prices: ["550 zł"], time: "1,5 h" },
-      { name: "Fryzura okolicznościowa Basic", desc: "Prostowanie, karbowanie, loki, fale.", prices: ["200 zł"], time: "1 h" },
-      { name: "Fryzura okolicznościowa Premium", desc: "Fale Hollywood, upięcia, koki, french twist, glamour.", prices: ["250 zł"], time: "1,5 h" },
-      { name: "Makijaż dzienny / biznesowy", desc: "Naturalny, świeży look na co dzień.", prices: ["230 zł"], time: "1 h" },
-      { name: "Makijaż okolicznościowy", desc: "Trwały makijaż na wieczór i uroczystości.", prices: ["280 zł"], time: "1,5 h" },
-      { name: "Makijaż ślubny / próba", desc: "Makijaż dopasowany do Twojego wielkiego dnia.", prices: ["300 zł"], time: "1,5 h" },
-      { name: "Fryzura próbna / ślubna w salonie", desc: "Fryzura ślubna wykonana w studiu.", prices: ["300 zł"], time: "2,5 h" },
-      { name: "Fryzura ślubna + dojazd 👰", desc: "Zapraszamy do rezerwacji na sezon 2027.", prices: ["wycena indywidualna"] },
+      {
+        name: "🚀 Makijaż + fryzura 2w1",
+        desc: "Usługa 2w1, która pozwoli zaoszczędzić Ci czas w ważnym dla Ciebie dniu.",
+        variants: [v(undefined, undefined, "550,00 zł", "1 h 30 min")],
+      },
+      {
+        name: "Fryzura okolicznościowa Basic",
+        desc: "Czesanie prostych fryzur typu prostowanie, karbowanie, loki, fale. Pamiętaj, aby umyć głowę dzień wcześniej i nie nakładać zbyt mocno obciążających masek.",
+        discount: "-10%",
+        variants: [v(undefined, "200,00 zł", "180,00 zł", "1 h")],
+      },
+      {
+        name: "Fryzura okolicznościowa Premium",
+        desc: "Czesanie fryzur typu: fale Hollywood, upięcia, półupięcia, french twist, koki, fale objętościowe, fryzury glamour.",
+        discount: "-10%",
+        variants: [v(undefined, "250,00 zł", "225,00 zł", "1 h 30 min")],
+      },
+      {
+        name: "💄 Makijaż okolicznościowy | makijaż ślubny",
+        desc: "Profesjonalny makijaż dopasowany do indywidualnych potrzeb i typu urody – dzienny, wieczorowy oraz na specjalne okazje, takie jak śluby i sesje zdjęciowe. Używamy wyłącznie wysokiej jakości kosmetyków. Na wizytę zapraszamy bez makijażu, a dzień wcześniej warto zadbać o nawilżenie skóry.",
+        discount: "-10%",
+        variants: [
+          v("Makijaż dzienny / biznesowy (delikatny, bez rzęs)", "230,00 zł", "207,00 zł", "1 h"),
+          v("Makijaż okolicznościowy", "280,00 zł", "252,00 zł", "1 h 30 min"),
+          v("Makijaż ślubny / próba", "300,00 zł", "270,00 zł", "1 h 30 min"),
+        ],
+      },
+      {
+        name: "👰‍♀️ Fryzura próbna | ślubna",
+        desc: "Rezerwacja czasu na próbę ślubną lub pojedynczą fryzurę ślubną w salonie.",
+        discount: "-10%",
+        variants: [v(undefined, "300,00 zł", "270,00 zł", "2 h 30 min")],
+      },
+      {
+        name: "Fryzura ślubna + dojazd 👰🤵‍♂️",
+        desc: "Zapraszamy do rezerwowania miejsc na sezon 2027.",
+        variants: [v(undefined, undefined, "Wycena indywidualna", "4 h")],
+      },
     ],
   },
   {
-    id: "inne",
-    label: "Konsultacja i inne",
+    id: "konsultacja",
+    label: "Konsultacja 🤔",
     items: [
-      { name: "Konsultacja (zabieg i/lub koloryzacja)", badge: "GRATIS", desc: "Test włosa i dobór najlepszego zabiegu.", prices: ["0 zł"], time: "15 min" },
-      { name: "Termin VIP", desc: "Dowolna usługa poza godzinami pracy (przed 10:00 i po 20:00 pn–pt, weekendy i święta).", prices: ["+50% ceny usługi"] },
-      { name: "Voucher prezentowy 🎁", desc: "Do każdego vouchera dodajemy 10% jego wartości!", prices: ["dowolna kwota"] },
+      {
+        name: "Konsultacja",
+        badge: "Bezpłatna",
+        desc: "Jeżeli nie jesteś przekonana, jaki zabieg lub kolor będzie dla Ciebie odpowiedni, zapraszamy na BEZPŁATNĄ I NIEZOBOWIĄZUJĄCĄ konsultację z naszym specjalistą od zabiegów i koloryzacji.",
+        variants: [
+          v("Konsultacja (zabieg i/lub koloryzacja)", undefined, "Darmowa", "15 min"),
+          v("Konsultacja (koloryzacja)", undefined, "Darmowa", "15 min"),
+        ],
+      },
+      {
+        name: "Termin VIP +50%",
+        desc: "Dowolna usługa w dogodnym dla Ciebie terminie – poza godzinami pracy salonu (przed 10:00 i po 20:00 od pon. do pt. oraz w weekendy i święta).",
+        variants: [v(undefined, undefined, "Cena zmienna")],
+      },
+    ],
+  },
+  {
+    id: "vouchery",
+    label: "Vouchery prezentowe 🎁",
+    items: [
+      {
+        name: "Voucher",
+        desc: "Do każdego vouchera dodajemy 10% jego wartości!",
+        variants: [v(undefined, undefined, "Cena zmienna")],
+      },
     ],
   },
 ];

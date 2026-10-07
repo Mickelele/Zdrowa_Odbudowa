@@ -7,7 +7,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const LOGO = "/logo.png";
-import { pricing, lengthLegend } from "@/data/pricing";
+import { pricing } from "@/data/pricing";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
 const FRESHA = "https://www.fresha.com/pl/a/zdrowa-odbudowa-studio-koloryzacji-i-rekonstrukcji-wlosa-kobylka-ksiedza-marcina-zaluskiego-73-xnra11q1";
@@ -232,8 +232,8 @@ function Index() {
       {/* CENNIK */}
       <section id="cennik" className="bg-secondary py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <SectionTitle kicker={lengthLegend} title="Cennik" />
-          <Tabs defaultValue="rekonstrukcja">
+          <SectionTitle kicker="Promocje do -15%" title="Cennik" />
+          <Tabs defaultValue="popularne">
             <div className="-mx-5 overflow-x-auto px-5 pb-2">
               <TabsList className="h-auto w-max gap-1 rounded-full bg-card p-1">
                 {pricing.map((c) => (
@@ -243,26 +243,42 @@ function Index() {
             </div>
             {pricing.map((c) => (
               <TabsContent key={c.id} value={c.id} className="mt-8">
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid items-start gap-4 md:grid-cols-2">
                   {c.items.map((it) => (
                     <div key={it.name} className="rounded-2xl border border-border bg-card p-6">
                       <div className="flex flex-wrap items-start justify-between gap-2">
                         <h3 className="font-display text-xl uppercase text-primary">{it.name}</h3>
-                        {it.badge && <span className="rounded-full bg-accent px-3 py-0.5 font-narrow text-base uppercase tracking-wide">{it.badge}</span>}
+                        <div className="flex flex-wrap gap-2">
+                          {it.badge && <span className="rounded-full bg-accent px-3 py-0.5 font-narrow text-base uppercase tracking-wide">{it.badge}</span>}
+                          {it.discount && <span className="rounded-full bg-primary px-3 py-0.5 font-narrow text-base uppercase tracking-wide text-primary-foreground">Zaoszczędź {it.discount}</span>}
+                        </div>
                       </div>
                       {it.desc && <p className="mt-2 text-sm text-muted-foreground">{it.desc}</p>}
-                      <div className="mt-4 flex flex-wrap items-center gap-2">
-                        {it.prices.map((p) => <span key={p} className="rounded-full border border-primary/40 px-3 py-1 font-narrow text-lg text-primary">{p}</span>)}
-                        {it.time && <span className="ml-auto inline-flex items-center gap-1 text-sm text-muted-foreground"><Clock className="h-4 w-4" />{it.time}</span>}
-                      </div>
+                      <ul className="mt-4 divide-y divide-border">
+                        {it.variants.map((vr, i) => (
+                          <li key={vr.label ?? i} className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1 py-3">
+                            <div className="min-w-0">
+                              {vr.label && <p className="text-sm font-medium text-foreground">{vr.label}</p>}
+                              {vr.old && <p className="text-xs text-muted-foreground">Najniższa cena z 30 dni przed obniżką: {vr.old}</p>}
+                            </div>
+                            <div className="ml-auto text-right">
+                              <p className="font-narrow text-lg leading-tight">
+                                {vr.old && <span className="mr-2 text-muted-foreground line-through">{vr.old}</span>}
+                                <span className="text-primary">{vr.price}</span>
+                              </p>
+                              {vr.time && <p className="inline-flex items-center gap-1 text-xs text-muted-foreground"><Clock className="h-3.5 w-3.5" />{vr.time}</p>}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   ))}
                 </div>
               </TabsContent>
             ))}
           </Tabs>
-          <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-muted-foreground">Podane ceny są cenami regularnymi. Ostateczna cena zależy od długości i gęstości włosa – dokładny koszt poznasz przed zabiegiem. Aktualne promocje (nawet do -15%) znajdziesz na Booksy.</p>
-          <div className="mt-6 text-center"><Btn href={BOOKSY}>Sprawdź promocje i zarezerwuj na Booksy</Btn></div>
+          <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-muted-foreground">Ceny przekreślone to najniższe ceny z 30 dni przed obniżką. Ostateczna cena zależy od długości i gęstości włosa – dokładny koszt poznasz przed zabiegiem.</p>
+          <div className="mt-6 text-center"><Btn href={BOOKSY}>Zarezerwuj na Booksy</Btn></div>
         </div>
       </section>
 
@@ -435,7 +451,7 @@ function Index() {
               <a href={IG} {...ext} aria-label="Instagram" className="text-primary hover:text-primary-hover"><Instagram /></a>
             </div>
           </div>
-          <p className="mt-10 text-center text-xs text-muted-foreground">© 2026 Zdrowa Odbudowa</p>
+          <p className="mt-10 text-center text-xs text-muted-foreground">© 2026 Zdrowa Odbudowa · Wykonanie: MicoPage ©</p>
         </div>
       </footer>
 
