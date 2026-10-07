@@ -26,7 +26,7 @@ const effects = [
   "2025/04/IMG_0075-622x1024.jpg",
 ].map((p) => W + p);
 const salon = [
-  W + "2025/02/IMG_7888-768x1024.jpg", W + "2025/03/IMG_8055-807x1024.jpg", W + "2025/02/IMG_DDD0E2481025-1-scaled-e1740763085948-772x1024.jpeg",
+  W + "2025/03/IMG_8055-807x1024.jpg", W + "2025/02/IMG_DDD0E2481025-1-scaled-e1740763085948-772x1024.jpeg",
   "https://images.fresha.com/locations/location-profile-images/3085242/6711026/e94265ed-d0f2-404d-867c-9b86f68c10fa-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
   "https://images.fresha.com/locations/location-profile-images/3085242/6711027/577c1ec8-671e-4e08-ab08-d50e159837c2-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
   "https://images.fresha.com/locations/location-profile-images/3085242/6711028/d0f21c45-e193-4b62-9ae6-6ca694699d8b-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
@@ -455,8 +455,8 @@ function Index() {
               </div>
             </Reveal>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
-            {salon.map((s, i) => <img key={s} src={s} alt={`Wnętrze salonu Zdrowa Odbudowa ${i + 1}`} loading="lazy" className="aspect-square w-full rounded-xl object-cover" />)}
+          <div className="mt-16 flex flex-wrap justify-center gap-4">
+            {salon.map((s, i) => <img key={s} src={s} alt={`Wnętrze salonu Zdrowa Odbudowa ${i + 1}`} loading="lazy" className="aspect-square w-[calc(50%-0.5rem)] rounded-xl object-cover md:w-[calc(33.333%-0.667rem)] lg:w-[calc(20%-0.8rem)]" />)}
           </div>
         </div>
       </section>

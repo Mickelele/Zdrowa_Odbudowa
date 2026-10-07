@@ -63,6 +63,8 @@
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  /* Ozdobne, obrócone tła nie mogą poszerzać strony na telefonie (biały pasek z prawej). */
+  html, body { overflow-x: clip; }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
