@@ -233,7 +233,7 @@ function Index() {
       <section id="cennik" className="bg-secondary py-20">
         <div className="mx-auto max-w-6xl px-5">
           <SectionTitle kicker={lengthLegend} title="Cennik" />
-          <Tabs defaultValue={pricing[0].id}>
+          <Tabs defaultValue="rekonstrukcja">
             <div className="-mx-5 overflow-x-auto px-5 pb-2">
               <TabsList className="h-auto w-max gap-1 rounded-full bg-card p-1">
                 {pricing.map((c) => (
