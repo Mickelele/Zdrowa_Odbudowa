@@ -11,6 +11,7 @@ import { formatPln, loadPricing } from "@/lib/pricing-db";
 import type { PriceItem } from "@/data/pricing";
 import { getBooksyReviews } from "@/lib/booksy-reviews";
 import { getSiteOrigin } from "@/lib/site-origin";
+import { HairStrand } from "@/components/HairStrand";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
 const FRESHA = "https://www.fresha.com/pl/a/zdrowa-odbudowa-studio-koloryzacji-i-rekonstrukcji-wlosa-kobylka-ksiedza-marcina-zaluskiego-73-xnra11q1";
@@ -408,6 +409,9 @@ function Index() {
           <img src="/cennik/airtouch/1.webp" alt="Efekt koloryzacji Air Touch – lśniące, zdrowe włosy" className="aspect-[4/5] w-full rounded-3xl object-cover" />
         </Reveal>
       </section>
+
+      {/* Ozdoba: pasmo włosów wygładzające się przy przewijaniu */}
+      <HairStrand className="-mt-6 mb-2" />
 
       {/* USŁUGI */}
       <section id="uslugi" className="bg-secondary py-20">
