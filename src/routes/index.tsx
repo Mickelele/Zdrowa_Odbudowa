@@ -10,6 +10,7 @@ const LOGO = "/logo.png";
 import { formatPln, loadPricing } from "@/lib/pricing-db";
 import type { PriceItem } from "@/data/pricing";
 import { getBooksyReviews } from "@/lib/booksy-reviews";
+import { getSiteOrigin } from "@/lib/site-origin";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
 const FRESHA = "https://www.fresha.com/pl/a/zdrowa-odbudowa-studio-koloryzacji-i-rekonstrukcji-wlosa-kobylka-ksiedza-marcina-zaluskiego-73-xnra11q1";
@@ -40,7 +41,8 @@ const team = [
   { name: "Malwina", role: "treatmentolog", photo: "/zespol/malwina.webp" },
   { name: "Aneta", role: "makijaż", photo: "/zespol/aneta.webp" },
 ];
-const HERO = W + "2025/02/SAD_7070-682x1024.jpg";
+/** Obrazek pokazywany przy udostępnianiu linku (Facebook, Messenger, WhatsApp…) – plik public/og-image.jpg, 1200×630. */
+const SHARE_IMAGE = "/og-image.jpg";
 
 /** Używane, gdy nie uda się pobrać danych z Booksy. */
 const FALLBACK_RATING = { rating: 4.9, count: 271 };
@@ -58,7 +60,6 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
   name: "Zdrowa Odbudowa – studio koloryzacji i rekonstrukcji włosa",
-  image: HERO,
   telephone: "+48796764768",
   address: { "@type": "PostalAddress", streetAddress: "ul. Księdza Marcina Załuskiego 73, lokal 1", postalCode: "05-230", addressLocality: "Kobyłka", addressCountry: "PL" },
   openingHoursSpecification: [
@@ -71,8 +72,8 @@ const jsonLd = {
 
 export const Route = createFileRoute("/")({
   loader: async () => {
-    const [pricing, booksy] = await Promise.all([loadPricing(), getBooksyReviews()]);
-    return { pricing, booksy };
+    const [pricing, booksy, origin] = await Promise.all([loadPricing(), getBooksyReviews(), getSiteOrigin()]);
+    return { pricing, booksy, shareImage: origin + SHARE_IMAGE };
   },
   head: ({ loaderData }) => ({
     meta: [
@@ -81,15 +82,19 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: HERO },
+      { property: "og:image", content: loaderData?.shareImage ?? SHARE_IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Wnętrze salonu Zdrowa Odbudowa i efekty koloryzacji włosów" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: HERO },
+      { name: "twitter:image", content: loaderData?.shareImage ?? SHARE_IMAGE },
     ],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           ...jsonLd,
+          image: loaderData?.shareImage ?? SHARE_IMAGE,
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: String(loaderData?.booksy?.rating ?? FALLBACK_RATING.rating),
