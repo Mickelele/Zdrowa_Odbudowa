@@ -213,7 +213,7 @@ function Dashboard({ email }: { email: string }) {
   };
 
   const addCategory = async () => {
-    const label = window.prompt("Nazwa nowej kategorii (możesz dodać emoji):");
+    const label = window.prompt("Nazwa nowej kategorii:");
     if (!label?.trim()) return;
     let id = slugify(label) || "kategoria";
     while (categories.some((c) => c.id === id)) id += "-2";

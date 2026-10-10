@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Sparkles, Palette, Scissors, Leaf, Heart, Gift, Microscope, Droplets, Gem, ShieldCheck, Home,
   Phone, MapPin, Clock, Menu, X, Star, Facebook, Instagram, Navigation, CalendarHeart, Lock,
@@ -21,11 +21,13 @@ const MAPS = "https://maps.google.com/maps?q=Ksi%C4%99dza%20Marcina%20Za%C5%82us
 const ROUTE = "https://www.google.com/maps/dir/?api=1&destination=Ksi%C4%99dza%20Marcina%20Za%C5%82uskiego%2073%2C%2005-230%20Koby%C5%82ka";
 const W = "https://zdrowaodbudowa.beauty-flow.pl/wp-content/uploads/";
 
+// Zdjęcia do karuzeli "Galeria efektów" – wybrane z public/cennik (włosy na środku kadru).
 const effects = [
-  "2025/03/IMG_0142.jpeg", "2025/03/55F38167-82E0-4952-936E-C0EE1EB2C4EF-1024x1024.jpg", "2025/03/IMG_8138-834x1024.jpg",
-  "2025/02/540CC51D-2924-473C-BC8D-F89A7F001D30-1024x1024.jpg", "2025/04/IMG_0077-595x1024.jpg", "2025/04/IMG_0076-703x1024.jpg",
-  "2025/04/IMG_0075-622x1024.jpg",
-].map((p) => W + p);
+  "airtouch/1", "balejazniteczkowy/3", "niewiemjakikolor/2", "tonowanie/1", "airtouch/4", "koloryzacjawielotonowa/2",
+  "balejazniteczkowy/5", "odrostbezrozjasniania/3", "frontblond/1", "nanoplastia/2", "airtouch/3", "niewiemjakikolor/4",
+  "balejazniteczkowy/2", "nanobotoks/1", "tonowanie/2", "botoksorganiczny/2", "koloryzacjablond/1", "odrostbezrozjasniania/2",
+  "niewiemjakikolor/3", "dekoloryzacjakoloryzacja/1",
+].map((p) => `/cennik/${p}.webp`);
 const salon = [
   W + "2025/03/IMG_8055-807x1024.jpg", W + "2025/02/IMG_DDD0E2481025-1-scaled-e1740763085948-772x1024.jpeg",
   "https://images.fresha.com/locations/location-profile-images/3085242/6711026/e94265ed-d0f2-404d-867c-9b86f68c10fa-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
@@ -136,7 +138,7 @@ function PriceEntry({ item, onOpenImages }: { item: PriceItem; onOpenImages: (in
         {item.badge && <p className="mt-1 font-narrow text-sm uppercase tracking-[0.2em] text-primary/80">✦ {plain(item.badge)}</p>}
         {item.desc && (
           <div className="mt-1.5">
-            <p className={`text-sm leading-relaxed text-muted-foreground ${longDesc && !expanded ? "line-clamp-3" : ""}`}>{item.desc}</p>
+            <p className={`text-sm leading-relaxed text-muted-foreground ${longDesc && !expanded ? "line-clamp-3" : ""}`}>{plain(item.desc)}</p>
             {longDesc && (
               <button onClick={() => setExpanded((e) => !e)} className="mt-1 text-xs font-medium uppercase tracking-wider text-primary hover:underline">
                 {expanded ? "Zwiń" : "Czytaj więcej"}
@@ -175,7 +177,7 @@ function PriceEntry({ item, onOpenImages }: { item: PriceItem; onOpenImages: (in
         {item.variants.map((v, i) => (
           <li key={v.label ?? i}>
             <div className="flex items-baseline gap-2">
-              <span className="text-[15px] text-foreground">{v.label ?? (v.time ? <span className="text-muted-foreground">{v.time}</span> : "Cena")}</span>
+              <span className="text-[15px] text-foreground">{v.label ? plain(v.label) : (v.time ? <span className="text-muted-foreground">{v.time}</span> : "Cena")}</span>
               <span aria-hidden className="min-w-6 flex-1 -translate-y-1 border-b border-dotted border-primary/40" />
               {(v.old ?? v.lowest30) != null && (
                 <s className="whitespace-nowrap text-sm text-muted-foreground/80">{formatPln((v.old ?? v.lowest30)!)}</s>
@@ -192,6 +194,63 @@ function PriceEntry({ item, onOpenImages }: { item: PriceItem; onOpenImages: (in
         ))}
       </ul>
     </article>
+  );
+}
+
+/** Karuzela zdjęć w kształcie łuków (jak lustra w salonie): przesuwa się sama, strzałkami lub palcem. */
+function EffectsCarousel({ images, onOpen }: { images: string[]; onOpen: (index: number) => void }) {
+  const track = useRef<HTMLDivElement>(null);
+  const paused = useRef(false);
+
+  const slide = (dir: 1 | -1) => {
+    const el = track.current;
+    if (!el) return;
+    const step = (el.firstElementChild as HTMLElement | null)?.offsetWidth ?? 240;
+    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 8;
+    if (dir === 1 && atEnd) el.scrollTo({ left: 0, behavior: "smooth" });
+    else if (dir === -1 && el.scrollLeft <= 8) el.scrollTo({ left: el.scrollWidth, behavior: "smooth" });
+    else el.scrollBy({ left: dir * (step + 16), behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = window.setInterval(() => {
+      if (!paused.current && !document.hidden) slide(1);
+    }, 3000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  const hold = (v: boolean) => () => {
+    paused.current = v;
+  };
+
+  return (
+    <div onMouseEnter={hold(true)} onMouseLeave={hold(false)} onTouchStart={hold(true)} onTouchEnd={hold(false)} onFocus={hold(true)} onBlur={hold(false)}>
+      <div className="mx-auto -mt-4 mb-6 flex max-w-7xl justify-center gap-3 px-5 md:justify-end">
+        {([[-1, "Poprzednie zdjęcia", "←"], [1, "Następne zdjęcia", "→"]] as const).map(([dir, label, arrow]) => (
+          <button
+            key={label}
+            onClick={() => slide(dir)}
+            aria-label={label}
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-primary text-xl text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+          >
+            {arrow}
+          </button>
+        ))}
+      </div>
+      <div ref={track} className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth scroll-px-5 px-5 pb-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {images.map((src, i) => (
+          <button
+            key={src}
+            onClick={() => onOpen(i)}
+            aria-label={`Powiększ zdjęcie ${i + 1} z ${images.length}`}
+            className={`group aspect-[5/13] w-[44vw] shrink-0 snap-start overflow-hidden rounded-b-2xl rounded-t-full sm:w-56 lg:w-60 ${i % 2 ? "mt-8" : ""}`}
+          >
+            <img src={src} alt={`Metamorfoza włosów – efekt zabiegu ${i + 1}`} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -306,7 +365,7 @@ function Index() {
               [Scissors, "Strzyżenie", "Tylko damskie"],
               [Leaf, "Pielęgnacja", "Kuracje regenerujące, maski i ampułki"],
               [Heart, "Czesanie i makijaż", "Czesanie i makijaż dzienny oraz okolicznościowy. Usługa 2w1 makijaż + fryzura w 1,5h. Pakiety ślubne z dojazdem.", GLOW_IG],
-              [Gift, "Vouchery prezentowe 🎁", "Podaruj bliskiej osobie chwilę dla siebie"],
+              [Gift, "Vouchery prezentowe", "Podaruj bliskiej osobie chwilę dla siebie"],
             ].map(([I, t, d, link]) => {
               const Icon = I as typeof Sparkles;
               return (
@@ -403,14 +462,8 @@ function Index() {
       <section id="efekty" className="py-20">
         <div className="mx-auto max-w-7xl px-5">
           <SectionTitle kicker="Metamorfozy" title="Galeria efektów" />
-          <div className="columns-2 gap-4 md:columns-3 lg:columns-4">
-            {effects.map((src, i) => (
-              <button key={src} onClick={() => setLightbox({ imgs: effects, i, alt: "Powiększone zdjęcie metamorfozy" })} className="mb-4 block w-full overflow-hidden rounded-xl">
-                <img src={src} alt={`Metamorfoza włosów – efekt zabiegu ${i + 1}`} loading="lazy" className="w-full object-cover transition duration-500 hover:scale-105" />
-              </button>
-            ))}
-          </div>
         </div>
+        <EffectsCarousel images={effects} onOpen={(i) => setLightbox({ imgs: effects, i, alt: "Powiększone zdjęcie metamorfozy" })} />
       </section>
       {lightbox !== null && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/90 p-4" onClick={() => setLightbox(null)}>
@@ -430,7 +483,7 @@ function Index() {
               ["Zapis na konsultację", "Przez Booksy lub telefonicznie 796 764 768."],
               ["Konsultacja", "Wywiad o przeciwwskazaniach i oczekiwanym efekcie, test włosa, porady pielęgnacyjne. Tu możesz zakończyć wizytę."],
               ["Zabieg (nieobowiązkowy)", "Ty relaksujesz się przy serialu lub kawie z ekspresu, my działamy."],
-              ["Efekty", "💎 lśniące włosy 💎 zero rozdwojonych końcówek 💎 zero puszenia 💎 zero elektryzowania 💎 wygoda na co dzień 💎 piękne włosy nawet do 6 miesięcy."],
+              ["Efekty", "Lśniące włosy · zero rozdwojonych końcówek · zero puszenia · zero elektryzowania · wygoda na co dzień · piękne włosy nawet do 6 miesięcy."],
             ].map(([t, d], i) => (
               <Reveal key={t}>
                 <li className="relative">
@@ -450,7 +503,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-5">
           <SectionTitle kicker="Poznajmy się" title="Nasz zespół" />
           <Reveal>
-            <p className="mx-auto max-w-3xl text-center leading-relaxed">Zdrowa Odbudowa to miejsce, gdzie pasja do fryzjerstwa spotyka się z indywidualnym podejściem. Specjalizujemy się w koloryzacjach, w tym w nowoczesnych technikach jak Air Touch, oraz w trwałej rekonstrukcji włosa. Wierzymy, że pełen sukces osiągniemy tylko przy dobrze przemyślanej decyzji klientki – dlatego konsultacja jest bezpłatna, niezobowiązująca, a na decyzję masz tyle czasu, ile potrzebujesz 💕</p>
+            <p className="mx-auto max-w-3xl text-center leading-relaxed">Zdrowa Odbudowa to miejsce, gdzie pasja do fryzjerstwa spotyka się z indywidualnym podejściem. Specjalizujemy się w koloryzacjach, w tym w nowoczesnych technikach jak Air Touch, oraz w trwałej rekonstrukcji włosa. Wierzymy, że pełen sukces osiągniemy tylko przy dobrze przemyślanej decyzji klientki – dlatego konsultacja jest bezpłatna, niezobowiązująca, a na decyzję masz tyle czasu, ile potrzebujesz.</p>
           </Reveal>
           <div className="mx-auto mt-14 grid max-w-5xl grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-4">
             {team.map((m) => (
