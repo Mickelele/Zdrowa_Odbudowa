@@ -88,6 +88,22 @@
   }
 }
 
+/* Pociągnięcie pędzla za okrągłym zdjęciem (sekcja Nasz zespół). */
+@utility brush-band {
+  position: relative;
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 52% -16% 10% -16%;
+    z-index: -1;
+    background: var(--accent);
+    opacity: 0.75;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath d='M4 18 C80 6 200 14 396 8 L392 22 C300 26 380 34 398 40 C260 44 200 58 6 52 L14 40 C2 36 10 28 4 18Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath d='M4 18 C80 6 200 14 396 8 L392 22 C300 26 380 34 398 40 C260 44 200 58 6 52 L14 40 C2 36 10 28 4 18Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+  }
+}
+
 @utility gold-line {
   height: 1px;
   background: var(--primary);

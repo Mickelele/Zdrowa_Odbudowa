@@ -15,6 +15,7 @@ const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
 const FRESHA = "https://www.fresha.com/pl/a/zdrowa-odbudowa-studio-koloryzacji-i-rekonstrukcji-wlosa-kobylka-ksiedza-marcina-zaluskiego-73-xnra11q1";
 const FB = "https://www.facebook.com/profile.php?id=61573410756665";
 const IG = "https://www.instagram.com/zdrowaodbudowawlosa";
+const GLOW_IG = "https://www.instagram.com/hairxmakeup_glowteam";
 const TEL = "tel:+48796764768";
 const MAPS = "https://maps.google.com/maps?q=Ksi%C4%99dza%20Marcina%20Za%C5%82uskiego%2073%2C%20Koby%C5%82ka&t=m&z=15&output=embed";
 const ROUTE = "https://www.google.com/maps/dir/?api=1&destination=Ksi%C4%99dza%20Marcina%20Za%C5%82uskiego%2073%2C%2005-230%20Koby%C5%82ka";
@@ -30,6 +31,12 @@ const salon = [
   "https://images.fresha.com/locations/location-profile-images/3085242/6711026/e94265ed-d0f2-404d-867c-9b86f68c10fa-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
   "https://images.fresha.com/locations/location-profile-images/3085242/6711027/577c1ec8-671e-4e08-ab08-d50e159837c2-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
   "https://images.fresha.com/locations/location-profile-images/3085242/6711028/d0f21c45-e193-4b62-9ae6-6ca694699d8b-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
+];
+const team = [
+  { name: "Edyta", role: "fryzury okolicznościowe, zabiegi na włosy", photo: "/zespol/edyta.webp" },
+  { name: "Agnieszka", role: "koloryzacja, blond, strzyżenie", photo: "/zespol/agnieszka.webp" },
+  { name: "Malwina", role: "treatmentolog", photo: "/zespol/malwina.webp" },
+  { name: "Aneta", role: "makijaż", photo: "/zespol/aneta.webp" },
 ];
 const HERO = W + "2025/02/SAD_7070-682x1024.jpg";
 
@@ -199,7 +206,7 @@ function SectionTitle({ kicker, title }: { kicker?: string; title: string }) {
 }
 
 const nav = [
-  ["O nas", "#o-nas"], ["Usługi", "#uslugi"], ["Cennik", "#cennik"], ["Efekty", "#efekty"],
+  ["Zespół", "#o-nas"], ["Usługi", "#uslugi"], ["Cennik", "#cennik"], ["Efekty", "#efekty"],
   ["Jak to wygląda", "#jak"], ["FAQ", "#faq"], ["Kontakt", "#kontakt"],
 ];
 
@@ -280,9 +287,11 @@ function Index() {
             <Btn href={TEL} variant="outline" external={false}><Phone className="h-5 w-5" /> Zadzwoń: 796 764 768</Btn>
           </div>
         </Reveal>
-        <Reveal className="relative mx-auto w-full max-w-md">
-          <div className="absolute -inset-4 -rotate-3 rounded-[2rem] bg-accent-soft" />
-          <img src={HERO} alt="Malwina Szprecher – kolorystka, właścicielka studia" className="relative aspect-[2/3] w-full rounded-[2rem] object-cover" />
+        <Reveal className="mx-auto grid w-full max-w-lg grid-cols-2 gap-3 sm:gap-4">
+          {/* łuk jak lustra w salonie */}
+          <img src="/salon/lustra.webp" alt="Lustra w kształcie łuków w salonie Zdrowa Odbudowa w Kobyłce" className="row-span-2 h-full w-full rounded-b-3xl rounded-t-full object-cover" />
+          <img src="/salon/wnetrze-1.webp" alt="Wnętrze salonu Zdrowa Odbudowa – stanowiska fryzjerskie" className="aspect-[4/5] w-full rounded-3xl object-cover" />
+          <img src="/cennik/airtouch/1.webp" alt="Efekt koloryzacji Air Touch – lśniące, zdrowe włosy" className="aspect-[4/5] w-full rounded-3xl object-cover" />
         </Reveal>
       </section>
 
@@ -292,13 +301,13 @@ function Index() {
           <SectionTitle kicker="Czym się zajmujemy" title="Usługi" />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              [Sparkles, "Trwała rekonstrukcja włosa", "Nanoplastia, Keratyna, Bioplastia, Botoks"],
-              [Palette, "Koloryzacja i dekoloryzacja", "Metamorfozy koloru, Dekoloryzacja bez zniszczeń, Air Touch, Odrost"],
-              [Scissors, "Strzyżenie", "Damskie i męskie"],
+              [Sparkles, "Trwała rekonstrukcja włosa", "Zabiegi pielęgnująco-prostujące. Hybrydy zabiegowe. Pomagamy nawet najcięższym przypadkom."],
+              [Palette, "Koloryzacja i dekoloryzacja", "Metamorfozy struktury oraz koloru włosa. Bezinwazyjna dekoloryzacja. Najnowsze techniki koloryzacji."],
+              [Scissors, "Strzyżenie", "Tylko damskie"],
               [Leaf, "Pielęgnacja", "Kuracje regenerujące, maski i ampułki"],
-              [Heart, "Czesanie i makijaż", "Okolicznościowy i ślubny"],
+              [Heart, "Czesanie i makijaż", "Czesanie i makijaż dzienny oraz okolicznościowy. Usługa 2w1 makijaż + fryzura w 1,5h. Pakiety ślubne z dojazdem.", GLOW_IG],
               [Gift, "Vouchery prezentowe 🎁", "Podaruj bliskiej osobie chwilę dla siebie"],
-            ].map(([I, t, d]) => {
+            ].map(([I, t, d, link]) => {
               const Icon = I as typeof Sparkles;
               return (
                 <Reveal key={t as string}>
@@ -306,6 +315,11 @@ function Index() {
                     <Icon className="mb-4 h-9 w-9 text-primary" strokeWidth={1.3} />
                     <h3 className="font-display text-2xl uppercase text-primary">{t as string}</h3>
                     <p className="mt-2 font-narrow text-xl">{d as string}</p>
+                    {link && (
+                      <a href={link as string} {...ext} className="mt-3 inline-flex items-center gap-1.5 text-sm text-primary underline-offset-4 hover:underline">
+                        <Instagram className="h-4 w-4 shrink-0" /> Nasze prace ślubne: @hairxmakeup_glowteam
+                      </a>
+                    )}
                   </div>
                 </Reveal>
               );
@@ -434,26 +448,20 @@ function Index() {
       {/* O NAS */}
       <section id="o-nas" className="py-20">
         <div className="mx-auto max-w-7xl px-5">
-          <SectionTitle kicker="Poznajmy się" title="O nas" />
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <Reveal className="grid grid-cols-2 gap-4">
-              <img src={W + "2025/02/SAD_7083-682x1024.jpg"} alt="Malwina Szprecher przy pracy" loading="lazy" className="aspect-[2/3] w-full rounded-2xl object-cover" />
-              <img src={W + "2025/02/SAD_7006-682x1024.jpg"} alt="Malwina Szprecher w studiu" loading="lazy" className="mt-10 aspect-[2/3] w-full rounded-2xl object-cover" />
-            </Reveal>
-            <Reveal>
-              <h3 className="font-display text-3xl uppercase text-primary">Malwina Szprecher</h3>
-              <p className="font-narrow text-xl text-muted-foreground">kolorysta i trener technik trwałej odbudowy włosa</p>
-              <div className="gold-line my-6 w-24" />
-              <p className="leading-relaxed">Zdrowa Odbudowa to miejsce, gdzie pasja do fryzjerstwa spotyka się z indywidualnym podejściem. Specjalizujemy się w koloryzacjach, w tym w nowoczesnych technikach jak Air Touch, oraz w trwałej rekonstrukcji włosa. Wierzymy, że pełen sukces osiągniemy tylko przy dobrze przemyślanej decyzji klientki – dlatego konsultacja jest bezpłatna, niezobowiązująca, a na decyzję masz tyle czasu, ile potrzebujesz 💕</p>
-              <div className="mt-8 flex flex-wrap gap-6">
-                {[["Malwina", "fryzjer i kolorysta"], ["Edyta", "zespół"], ["Agnieszka", "zespół"], ["Glow", "make-up"]].map(([n, r]) => (
-                  <div key={n} className="flex items-center gap-3">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-soft font-display text-xl text-primary">{n?.[0]}</span>
-                    <div><p className="font-narrow text-xl text-primary">{n}</p><p className="text-xs text-muted-foreground">{r}</p></div>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
+          <SectionTitle kicker="Poznajmy się" title="Nasz zespół" />
+          <Reveal>
+            <p className="mx-auto max-w-3xl text-center leading-relaxed">Zdrowa Odbudowa to miejsce, gdzie pasja do fryzjerstwa spotyka się z indywidualnym podejściem. Specjalizujemy się w koloryzacjach, w tym w nowoczesnych technikach jak Air Touch, oraz w trwałej rekonstrukcji włosa. Wierzymy, że pełen sukces osiągniemy tylko przy dobrze przemyślanej decyzji klientki – dlatego konsultacja jest bezpłatna, niezobowiązująca, a na decyzję masz tyle czasu, ile potrzebujesz 💕</p>
+          </Reveal>
+          <div className="mx-auto mt-14 grid max-w-5xl grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-4">
+            {team.map((m) => (
+              <Reveal key={m.name} className="text-center">
+                <div className="brush-band mx-auto w-36 sm:w-44">
+                  <img src={m.photo} alt={`${m.name} – ${m.role}`} loading="lazy" className="aspect-square w-full rounded-full border-4 border-background object-cover shadow-sm" />
+                </div>
+                <h3 className="mt-5 font-display text-2xl text-primary">{m.name}</h3>
+                <p className="mx-auto mt-1 max-w-[12rem] font-narrow text-lg leading-snug text-muted-foreground">{m.role}</p>
+              </Reveal>
+            ))}
           </div>
           <div className="mt-16 flex flex-wrap justify-center gap-4">
             {salon.map((s, i) => <img key={s} src={s} alt={`Wnętrze salonu Zdrowa Odbudowa ${i + 1}`} loading="lazy" className="aspect-square w-[calc(50%-0.5rem)] rounded-xl object-cover md:w-[calc(33.333%-0.667rem)] lg:w-[calc(20%-0.8rem)]" />)}
