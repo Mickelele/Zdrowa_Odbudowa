@@ -11,7 +11,7 @@ import { formatPln, loadPricing } from "@/lib/pricing-db";
 import type { PriceItem } from "@/data/pricing";
 import { getBooksyReviews } from "@/lib/booksy-reviews";
 import { getSiteOrigin } from "@/lib/site-origin";
-import { HairStrand } from "@/components/HairStrand";
+import { BeforeAfter } from "@/components/BeforeAfter";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
 const FRESHA = "https://www.fresha.com/pl/a/zdrowa-odbudowa-studio-koloryzacji-i-rekonstrukcji-wlosa-kobylka-ksiedza-marcina-zaluskiego-73-xnra11q1";
@@ -410,9 +410,6 @@ function Index() {
         </Reveal>
       </section>
 
-      {/* Ozdoba: pasmo włosów wygładzające się przy przewijaniu */}
-      <HairStrand className="-mt-6 mb-2" />
-
       {/* USŁUGI */}
       <section id="uslugi" className="bg-secondary py-20">
         <div className="mx-auto max-w-7xl px-5">
@@ -450,6 +447,14 @@ function Index() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-5">
           <SectionTitle kicker="Co zyskujesz" title="Efekty zabiegów" />
+          <p className="-mt-6 mb-8 text-center text-sm text-muted-foreground">Przesuń suwak na zdjęciu, żeby porównać włosy przed zabiegiem i po nim.</p>
+          <div className="mb-16 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
+            {[1, 2, 3, 4].map((n) => (
+              <Reveal key={n}>
+                <BeforeAfter before={`/przed-po/${n}-przed.webp`} after={`/przed-po/${n}-po.webp`} label={`Metamorfoza włosów ${n}`} />
+              </Reveal>
+            ))}
+          </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {[
               [Microscope, "Test włosa", "Już na bezpłatnej konsultacji poznasz strukturę i kondycję włosów oraz dowiesz się, jak o nie dbać."],
