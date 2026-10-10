@@ -254,6 +254,56 @@ function EffectsCarousel({ images, onOpen }: { images: string[]; onOpen: (index:
   );
 }
 
+/** Kalkulator vouchera: do każdego vouchera salon dodaje 10% jego wartości. */
+function VoucherCalculator() {
+  const [amount, setAmount] = useState("500");
+  const value = Math.max(0, Math.min(100000, Number(amount.replace(",", ".")) || 0));
+  const zl = (n: number) => `${String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, " ")} zł`;
+
+  return (
+    <div className="relative mt-8 rounded-[2rem] border border-primary/40 bg-card px-5 py-10 md:px-12">
+      <span className="absolute -top-4 right-8 rounded-full bg-primary px-4 py-1.5 font-narrow text-xl tracking-wide text-primary-foreground">+10%</span>
+      <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+        <div>
+          <p className="font-narrow text-base uppercase tracking-[0.2em] text-muted-foreground">Voucher prezentowy</p>
+          <h3 className="mt-2 font-display text-3xl leading-tight text-primary md:text-4xl">Płacisz kwotę, ona dostaje o 10% więcej</h3>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Do każdego vouchera dodajemy 10% jego wartości. Kupisz go na{" "}
+            <a href={BOOKSY} {...ext} className="text-primary underline underline-offset-4">Booksy</a> albo na miejscu w salonie.
+          </p>
+        </div>
+        <div>
+          <label htmlFor="voucher-amount" className="text-sm font-medium">Kwota vouchera (zł)</label>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <input
+              id="voucher-amount"
+              type="number"
+              inputMode="numeric"
+              min={0}
+              step={50}
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+              className="h-12 w-32 rounded-xl border border-border bg-secondary px-4 text-lg outline-none focus:border-primary"
+            />
+            {[200, 500, 1000].map((v) => (
+              <button
+                key={v}
+                type="button"
+                onClick={() => setAmount(String(v))}
+                className={`h-11 rounded-full border px-4 text-sm transition-colors ${value === v ? "border-primary bg-primary text-primary-foreground" : "border-border bg-secondary hover:border-primary"}`}
+              >
+                {v}
+              </button>
+            ))}
+          </div>
+          <p className="mt-5 font-display text-5xl text-primary" aria-live="polite">{zl(value * 1.1)}</p>
+          <p className="mt-1 text-sm">do wykorzystania w salonie (płacisz {zl(value)})</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function SectionTitle({ kicker, title }: { kicker?: string; title: string }) {
   return (
     <div className="mb-12 text-center">
@@ -450,6 +500,7 @@ function Index() {
                     ))}
                   </div>
                 </div>
+                {/voucher/i.test(c.id + c.label) && <VoucherCalculator />}
               </TabsContent>
             ))}
           </Tabs>
