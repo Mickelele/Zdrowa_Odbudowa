@@ -39,13 +39,13 @@ const salon = [
   "https://images.fresha.com/locations/location-profile-images/3085242/6711027/577c1ec8-671e-4e08-ab08-d50e159837c2-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
   "https://images.fresha.com/locations/location-profile-images/3085242/6711028/d0f21c45-e193-4b62-9ae6-6ca694699d8b-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
 ];
-const services: { title: string; desc: string; img: string; tab: string; link?: string }[] = [
-  { title: "Trwała rekonstrukcja włosa", desc: "Zabiegi pielęgnująco-prostujące. Hybrydy zabiegowe. Pomagamy nawet najcięższym przypadkom.", img: "/cennik/nanoplastia/2.webp", tab: "rekonstrukcja" },
-  { title: "Koloryzacja i dekoloryzacja", desc: "Metamorfozy struktury oraz koloru włosa. Bezinwazyjna dekoloryzacja. Najnowsze techniki koloryzacji.", img: "/koloryzacja/9.webp", tab: "koloryzacja" },
-  { title: "Strzyżenie", desc: "Damskie", img: "/cennik/strzyzenie/3.webp", tab: "strzyzenie" },
-  { title: "Pielęgnacja", desc: "Kuracje regenerujące, maski i ampułki", img: "/cennik/ampulkaregeneracyjna/2.webp", tab: "pielegnacja" },
-  { title: "Czesanie i makijaż", desc: "Czesanie i makijaż dzienny oraz okolicznościowy. Usługa 2w1 makijaż + fryzura w 1,5h. Pakiety ślubne z dojazdem.", img: "/cennik/makijazfryzura/1.webp", tab: "czesanie", link: GLOW_IG },
-  { title: "Vouchery prezentowe", desc: "Podaruj bliskiej osobie chwilę dla siebie. Zyskaj do 10% wartości vouchera w prezencie.", img: "/cennik/voucher/1.webp", tab: "vouchery" },
+const services: { title: string; desc: string; tab: string; link?: string }[] = [
+  { title: "Trwała rekonstrukcja włosa", desc: "Zabiegi pielęgnująco-prostujące. Hybrydy zabiegowe. Pomagamy nawet najcięższym przypadkom.", tab: "rekonstrukcja" },
+  { title: "Koloryzacja i dekoloryzacja", desc: "Metamorfozy struktury oraz koloru włosa. Bezinwazyjna dekoloryzacja. Najnowsze techniki koloryzacji.", tab: "koloryzacja" },
+  { title: "Strzyżenie", desc: "Damskie", tab: "strzyzenie" },
+  { title: "Pielęgnacja", desc: "Kuracje regenerujące, maski i ampułki", tab: "pielegnacja" },
+  { title: "Czesanie i makijaż", desc: "Czesanie i makijaż dzienny oraz okolicznościowy. Usługa 2w1 makijaż + fryzura w 1,5h. Pakiety ślubne z dojazdem.", tab: "czesanie", link: GLOW_IG },
+  { title: "Vouchery prezentowe", desc: "Podaruj bliskiej osobie chwilę dla siebie. Zyskaj do 10% wartości vouchera w prezencie.", tab: "vouchery" },
 ];
 
 const team = [
@@ -433,10 +433,7 @@ function Index() {
             {services.map((sv, i) => (
               <Reveal key={sv.title} className="h-full">
                 <article className="group flex h-full flex-col items-center text-center">
-                  <div className="aspect-[4/5] w-full max-w-[17rem] overflow-hidden rounded-b-[2rem] rounded-t-full ring-1 ring-primary/30 ring-offset-8 ring-offset-secondary">
-                    <img src={sv.img} alt={sv.title} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-                  </div>
-                  <p className="mt-7 font-display text-sm tracking-[0.35em] text-primary/60">{String(i + 1).padStart(2, "0")}</p>
+                  <p className="font-display text-sm tracking-[0.35em] text-primary/60">{String(i + 1).padStart(2, "0")}</p>
                   <h3 className="mt-1 font-display text-2xl uppercase leading-snug text-primary">{sv.title}</h3>
                   <span className="gold-line my-4 w-12" />
                   <p className="max-w-xs text-[15px] leading-relaxed text-muted-foreground">{sv.desc}</p>
