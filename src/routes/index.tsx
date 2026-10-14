@@ -14,7 +14,6 @@ import { getSiteOrigin } from "@/lib/site-origin";
 import { BeforeAfter } from "@/components/BeforeAfter";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
-const FRESHA = "https://www.fresha.com/pl/a/zdrowa-odbudowa-studio-koloryzacji-i-rekonstrukcji-wlosa-kobylka-ksiedza-marcina-zaluskiego-73-xnra11q1";
 const FB = "https://www.facebook.com/profile.php?id=61573410756665";
 const IG = "https://www.instagram.com/zdrowaodbudowawlosa";
 const GLOW_IG = "https://www.instagram.com/hairxmakeup_glowteam";
@@ -38,8 +37,8 @@ const salon = [
 ];
 const team = [
   { name: "Edyta", role: "fryzury okolicznościowe, zabiegi na włosy", photo: "/zespol/edyta.webp" },
-  { name: "Agnieszka", role: "koloryzacja, blond, strzyżenie", photo: "/zespol/agnieszka.webp" },
-  { name: "Malwina", role: "treatmentolog", photo: "/zespol/malwina.webp" },
+  { name: "Agnieszka", role: "koloryzacja, strzyżenie", photo: "/zespol/agnieszka.webp" },
+  { name: "Malwina", role: "treatmentolog, zabiegi na włosy, trudne przypadki rekonstrukcji", photo: "/zespol/malwina.webp" },
   { name: "Aneta", role: "makijaż", photo: "/zespol/aneta.webp" },
 ];
 /** Obrazek pokazywany przy udostępnianiu linku (Facebook, Messenger, WhatsApp…) – plik public/og-image.jpg, 1200×630. */
@@ -322,7 +321,7 @@ function SectionTitle({ kicker, title }: { kicker?: string; title: string }) {
 
 const nav = [
   ["Zespół", "#o-nas"], ["Usługi", "#uslugi"], ["Cennik", "#cennik"], ["Efekty", "#efekty"],
-  ["Jak to wygląda", "#jak"], ["FAQ", "#faq"], ["Kontakt", "#kontakt"],
+  ["FAQ", "#faq"], ["Kontakt", "#kontakt"],
 ];
 
 function Logo({ small }: { small?: boolean }) {
@@ -418,10 +417,10 @@ function Index() {
             {[
               [Sparkles, "Trwała rekonstrukcja włosa", "Zabiegi pielęgnująco-prostujące. Hybrydy zabiegowe. Pomagamy nawet najcięższym przypadkom."],
               [Palette, "Koloryzacja i dekoloryzacja", "Metamorfozy struktury oraz koloru włosa. Bezinwazyjna dekoloryzacja. Najnowsze techniki koloryzacji."],
-              [Scissors, "Strzyżenie", "Tylko damskie"],
+              [Scissors, "Strzyżenie", "Damskie"],
               [Leaf, "Pielęgnacja", "Kuracje regenerujące, maski i ampułki"],
               [Heart, "Czesanie i makijaż", "Czesanie i makijaż dzienny oraz okolicznościowy. Usługa 2w1 makijaż + fryzura w 1,5h. Pakiety ślubne z dojazdem.", GLOW_IG],
-              [Gift, "Vouchery prezentowe", "Podaruj bliskiej osobie chwilę dla siebie"],
+              [Gift, "Vouchery prezentowe", "Podaruj bliskiej osobie chwilę dla siebie. Zyskaj do 10% wartości vouchera w prezencie."],
             ].map(([I, t, d, link]) => {
               const Icon = I as typeof Sparkles;
               return (
@@ -432,7 +431,7 @@ function Index() {
                     <p className="mt-2 font-narrow text-xl">{d as string}</p>
                     {link && (
                       <a href={link as string} {...ext} className="mt-3 inline-flex items-center gap-1.5 text-sm text-primary underline-offset-4 hover:underline">
-                        <Instagram className="h-4 w-4 shrink-0" /> Nasze prace ślubne: @hairxmakeup_glowteam
+                        <Instagram className="h-4 w-4 shrink-0" /> Nasze prace: @hairxmakeup_glowteam
                       </a>
                     )}
                   </div>
@@ -446,7 +445,7 @@ function Index() {
       {/* EFEKTY ZABIEGÓW */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-5">
-          <SectionTitle kicker="Co zyskujesz" title="Efekty zabiegów" />
+          <SectionTitle title="Efekty zabiegów" />
           <p className="-mt-6 mb-8 text-center text-sm text-muted-foreground">Przesuń suwak na zdjęciu, żeby porównać włosy przed zabiegiem i po nim.</p>
           <div className="mb-16 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
             {[1, 2, 3, 4].map((n) => (
@@ -455,6 +454,9 @@ function Index() {
               </Reveal>
             ))}
           </div>
+          <h3 className="mb-10 text-center font-narrow text-2xl uppercase tracking-[0.12em] text-primary md:text-3xl">
+            Co zyskujesz, zapisując się na trwałą rekonstrukcję włosa
+          </h3>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {[
               [Microscope, "Test włosa", "Już na bezpłatnej konsultacji poznasz strukturę i kondycję włosów oraz dowiesz się, jak o nie dbać."],
@@ -539,30 +541,6 @@ function Index() {
         </div>
       )}
 
-      {/* JAK TO WYGLĄDA */}
-      <section id="jak" className="bg-secondary py-20">
-        <div className="mx-auto max-w-4xl px-5">
-          <SectionTitle kicker="Krok po kroku" title="Jak to wygląda" />
-          <ol className="relative space-y-10 border-l border-primary/50 pl-10">
-            {[
-              ["Zapis na konsultację", "Przez Booksy lub telefonicznie 796 764 768."],
-              ["Konsultacja", "Wywiad o przeciwwskazaniach i oczekiwanym efekcie, test włosa, porady pielęgnacyjne. Tu możesz zakończyć wizytę."],
-              ["Zabieg (nieobowiązkowy)", "Ty relaksujesz się przy serialu lub kawie z ekspresu, my działamy."],
-              ["Efekty", "Lśniące włosy · zero rozdwojonych końcówek · zero puszenia · zero elektryzowania · wygoda na co dzień · piękne włosy nawet do 6 miesięcy."],
-            ].map(([t, d], i) => (
-              <Reveal key={t}>
-                <li className="relative">
-                  <span className="absolute -left-[3.6rem] flex h-10 w-10 items-center justify-center rounded-full bg-primary font-display text-xl text-primary-foreground">{i + 1}</span>
-                  <h3 className="font-narrow text-2xl uppercase text-primary">Krok {i + 1} – {t}</h3>
-                  <p className="mt-1">{d}</p>
-                </li>
-              </Reveal>
-            ))}
-          </ol>
-          <p className="mt-12 rounded-2xl bg-card p-6 text-sm leading-relaxed">Zabieg trwa ok. 3–3,5 h. Włosy myjemy szamponem oczyszczającym, suszymy i robimy test jakości włosa. Cienkimi pasmami nakładamy produkt najwyższej jakości na 30–90 minut, spłukujemy, suszymy i prostujemy w dobranej temperaturze (7–20 przeciągnięć), by wtłoczyć produkt w łuskę włosa. Na koniec myjemy i od razu cieszysz się efektem.</p>
-        </div>
-      </section>
-
       {/* O NAS */}
       <section id="o-nas" className="py-20">
         <div className="mx-auto max-w-7xl px-5">
@@ -628,7 +606,19 @@ function Index() {
         <div className="mx-auto max-w-3xl px-5">
           <SectionTitle kicker="Pytania i odpowiedzi" title="FAQ" />
           <Accordion type="single" collapsible>
-            {[
+            {([
+              [
+                "Jak wygląda wizyta krok po kroku?",
+                <>
+                  <ol className="list-decimal space-y-2 pl-5">
+                    <li><b>Zapis na konsultację</b> – przez Booksy lub telefonicznie 796 764 768.</li>
+                    <li><b>Konsultacja</b> – wywiad o przeciwwskazaniach i oczekiwanym efekcie, test włosa, porady pielęgnacyjne. Tu możesz zakończyć wizytę.</li>
+                    <li><b>Zabieg (nieobowiązkowy)</b> – Ty relaksujesz się przy serialu lub kawie z ekspresu, my działamy.</li>
+                    <li><b>Efekty</b> – lśniące włosy, zero rozdwojonych końcówek, zero puszenia i elektryzowania, wygoda na co dzień – piękne włosy nawet do 6 miesięcy.</li>
+                  </ol>
+                  <p className="mt-3">Zabieg trwa ok. 3–3,5 h. Włosy myjemy szamponem oczyszczającym, suszymy i robimy test jakości włosa. Cienkimi pasmami nakładamy produkt najwyższej jakości na 30–90 minut, spłukujemy, suszymy i prostujemy w dobranej temperaturze (7–20 przeciągnięć), by wtłoczyć produkt w łuskę włosa. Na koniec myjemy i od razu cieszysz się efektem.</p>
+                </>,
+              ],
               ["Dlaczego rekonstrukcja jest wyjątkowa?", "To innowacyjne zabiegi oparte na nanotechnologii. Po zabiegu włosy są proste, gładkie i lśniące."],
               ["Czy zabieg jest bolesny?", "Nie, zabiegi są bezbolesne."],
               ["Czy kolor włosów się zmieni?", "Zależnie od zabiegu: niektóre delikatnie rozjaśniają o kilka tonów, inne tonują lub ocieplają kolor – dlatego tak ważna jest konsultacja."],
@@ -637,10 +627,9 @@ function Index() {
               ["Jak długo utrzymują się efekty?", "Od 3 do 6 miesięcy, przy podatnych włosach i dobrej pielęgnacji nawet do roku."],
               ["Jakie są przeciwwskazania?", "Henna na włosach, trwała ondulacja (kwasowa), nieuregulowane hormony, aktywne stany zapalne skóry głowy, łysienie plackowate, mocno uwrażliwione/spalone włosy (wtedy możliwa tylko kuracja SOS na zimno)."],
               ["Zalecenia po zabiegu?", "Koloryzacja po 10–14 dniach (min. 14 dni przy rozjaśnianiu); unikaj sauny i basenu; szampony bez SLS/SLES; zawsze susz włosy suszarką w 100%; rozczesuj od końcówek, stosuj olejek na końce."],
-              ["Ile kosztują zabiegi?", "Od 250 zł, zależnie od długości i gęstości włosa. Dokładny koszt poznasz przed zabiegiem."],
               ["Czy można płacić kartą?", "Tak."],
               ["Czy jest parking?", "Tak, przy salonie jest duży bezpłatny parking."],
-            ].map(([q, a], i) => (
+            ] as [string, ReactNode][]).map(([q, a], i) => (
               <AccordionItem key={q} value={`q${i}`}>
                 <AccordionTrigger className="font-narrow text-xl text-primary hover:no-underline">{q}</AccordionTrigger>
                 <AccordionContent className="text-base">{a}</AccordionContent>
@@ -666,7 +655,6 @@ function Index() {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Btn href={BOOKSY}>Zarezerwuj na Booksy</Btn>
-                <Btn href={FRESHA} variant="outline">Rezerwuj na Fresha</Btn>
                 <Btn href={ROUTE} variant="outline"><Navigation className="h-5 w-5" />Wyznacz trasę</Btn>
               </div>
               <div className="flex gap-3">
