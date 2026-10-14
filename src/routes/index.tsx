@@ -12,6 +12,7 @@ import type { PriceItem } from "@/data/pricing";
 import { getBooksyReviews } from "@/lib/booksy-reviews";
 import { getSiteOrigin } from "@/lib/site-origin";
 import { BeforeAfter } from "@/components/BeforeAfter";
+import { HeroCollage } from "@/components/HeroCollage";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
 const FB = "https://www.facebook.com/profile.php?id=61573410756665";
@@ -384,7 +385,7 @@ function Index() {
 
       {/* HERO */}
       <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:py-24 lg:grid-cols-2">
-        <Reveal className="text-center lg:text-left">
+        <Reveal className="relative z-10 text-center lg:text-left">
           <div className="mb-8 flex items-center justify-center gap-4 lg:justify-start">
             <img src={LOGO} alt="Sylwetka kobiety – logo Zdrowa Odbudowa" className="h-24 w-24 rounded-full object-cover shadow-sm" />
             <div>
@@ -404,11 +405,8 @@ function Index() {
             <Btn href={TEL} variant="outline" external={false}><Phone className="h-5 w-5" /> Zadzwoń: 796 764 768</Btn>
           </div>
         </Reveal>
-        <Reveal className="mx-auto grid w-full max-w-lg grid-cols-2 gap-3 sm:gap-4">
-          {/* łuk jak lustra w salonie */}
-          <img src="/salon/lustra.webp" alt="Lustra w kształcie łuków w salonie Zdrowa Odbudowa w Kobyłce" className="row-span-2 h-full w-full rounded-b-3xl rounded-t-full object-cover" />
-          <img src="/salon/wnetrze-1.webp" alt="Wnętrze salonu Zdrowa Odbudowa – stanowiska fryzjerskie" className="aspect-[4/5] w-full rounded-3xl object-cover" />
-          <img src="/cennik/airtouch/1.webp" alt="Efekt koloryzacji Air Touch – lśniące, zdrowe włosy" className="aspect-[4/5] w-full rounded-3xl object-cover" />
+        <Reveal>
+          <HeroCollage />
         </Reveal>
       </section>
 
