@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Sparkles, Palette, Scissors, Leaf, Heart, Gift, Microscope, Droplets, Gem, ShieldCheck, Home,
-  Phone, MapPin, Clock, Menu, X, Star, Facebook, Instagram, Navigation, CalendarHeart, Lock,
+  Phone, MapPin, Clock, Menu, X, Star, Facebook, Instagram, Navigation, CalendarHeart, Lock, ArrowRight,
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -13,6 +13,7 @@ import { getBooksyReviews } from "@/lib/booksy-reviews";
 import { getSiteOrigin } from "@/lib/site-origin";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { HeroCollage } from "@/components/HeroCollage";
+import { FaqStack } from "@/components/FaqStack";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
 const FB = "https://www.facebook.com/profile.php?id=61573410756665";
@@ -39,6 +40,15 @@ const salon = [
   "https://images.fresha.com/locations/location-profile-images/3085242/6711027/577c1ec8-671e-4e08-ab08-d50e159837c2-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
   "https://images.fresha.com/locations/location-profile-images/3085242/6711028/d0f21c45-e193-4b62-9ae6-6ca694699d8b-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
 ];
+const services: { title: string; desc: string; img: string; tab: string; link?: string }[] = [
+  { title: "Trwała rekonstrukcja włosa", desc: "Zabiegi pielęgnująco-prostujące. Hybrydy zabiegowe. Pomagamy nawet najcięższym przypadkom.", img: "/cennik/nanoplastia/2.webp", tab: "rekonstrukcja" },
+  { title: "Koloryzacja i dekoloryzacja", desc: "Metamorfozy struktury oraz koloru włosa. Bezinwazyjna dekoloryzacja. Najnowsze techniki koloryzacji.", img: "/koloryzacja/9.webp", tab: "koloryzacja" },
+  { title: "Strzyżenie", desc: "Damskie", img: "/cennik/strzyzenie/3.webp", tab: "strzyzenie" },
+  { title: "Pielęgnacja", desc: "Kuracje regenerujące, maski i ampułki", img: "/cennik/ampulkaregeneracyjna/2.webp", tab: "pielegnacja" },
+  { title: "Czesanie i makijaż", desc: "Czesanie i makijaż dzienny oraz okolicznościowy. Usługa 2w1 makijaż + fryzura w 1,5h. Pakiety ślubne z dojazdem.", img: "/cennik/makijazfryzura/1.webp", tab: "czesanie", link: GLOW_IG },
+  { title: "Vouchery prezentowe", desc: "Podaruj bliskiej osobie chwilę dla siebie. Zyskaj do 10% wartości vouchera w prezencie.", img: "/cennik/voucher/1.webp", tab: "vouchery" },
+];
+
 const team = [
   { name: "Edyta", role: "fryzury okolicznościowe, zabiegi na włosy", photo: "/zespol/edyta.webp" },
   { name: "Agnieszka", role: "koloryzacja, strzyżenie", photo: "/zespol/agnieszka.webp" },
@@ -340,6 +350,12 @@ function Logo({ small }: { small?: boolean }) {
 function Index() {
   const { pricing, booksy } = Route.useLoaderData();
   const rating = booksy ?? FALLBACK_RATING;
+  const [priceTab, setPriceTab] = useState(pricing[0]?.id ?? "");
+  /** "Zobacz cennik" w Usługach – otwiera właściwą zakładkę cennika i przewija do niego. */
+  const openPrices = (tab: string) => {
+    if (pricing.some((c) => c.id === tab)) setPriceTab(tab);
+    document.getElementById("cennik")?.scrollIntoView({ behavior: "smooth" });
+  };
   const [open, setOpen] = useState(false);
   const [lightbox, setLightbox] = useState<{ imgs: string[]; i: number; alt: string } | null>(null);
   const step = (d: number) => setLightbox((lb) => (lb ? { ...lb, i: (lb.i + d + lb.imgs.length) % lb.imgs.length } : lb));
@@ -414,31 +430,31 @@ function Index() {
       <section id="uslugi" className="bg-secondary py-20">
         <div className="mx-auto max-w-7xl px-5">
           <SectionTitle kicker="Czym się zajmujemy" title="Usługi" />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              [Sparkles, "Trwała rekonstrukcja włosa", "Zabiegi pielęgnująco-prostujące. Hybrydy zabiegowe. Pomagamy nawet najcięższym przypadkom."],
-              [Palette, "Koloryzacja i dekoloryzacja", "Metamorfozy struktury oraz koloru włosa. Bezinwazyjna dekoloryzacja. Najnowsze techniki koloryzacji."],
-              [Scissors, "Strzyżenie", "Damskie"],
-              [Leaf, "Pielęgnacja", "Kuracje regenerujące, maski i ampułki"],
-              [Heart, "Czesanie i makijaż", "Czesanie i makijaż dzienny oraz okolicznościowy. Usługa 2w1 makijaż + fryzura w 1,5h. Pakiety ślubne z dojazdem.", GLOW_IG],
-              [Gift, "Vouchery prezentowe", "Podaruj bliskiej osobie chwilę dla siebie. Zyskaj do 10% wartości vouchera w prezencie."],
-            ].map(([I, t, d, link]) => {
-              const Icon = I as typeof Sparkles;
-              return (
-                <Reveal key={t as string}>
-                  <div className="h-full rounded-2xl border border-primary/40 bg-card p-8 transition hover:-translate-y-1 hover:shadow-lg">
-                    <Icon className="mb-4 h-9 w-9 text-primary" strokeWidth={1.3} />
-                    <h3 className="font-display text-2xl uppercase text-primary">{t as string}</h3>
-                    <p className="mt-2 font-narrow text-xl">{d as string}</p>
-                    {link && (
-                      <a href={link as string} {...ext} className="mt-3 inline-flex items-center gap-1.5 text-sm text-primary underline-offset-4 hover:underline">
-                        <Instagram className="h-4 w-4 shrink-0" /> Nasze prace: @hairxmakeup_glowteam
-                      </a>
-                    )}
+          <div className="grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((sv, i) => (
+              <Reveal key={sv.title} className="h-full">
+                <article className="group flex h-full flex-col items-center text-center">
+                  <div className="aspect-[4/5] w-full max-w-[17rem] overflow-hidden rounded-b-[2rem] rounded-t-full ring-1 ring-primary/30 ring-offset-8 ring-offset-secondary">
+                    <img src={sv.img} alt={sv.title} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                   </div>
-                </Reveal>
-              );
-            })}
+                  <p className="mt-7 font-display text-sm tracking-[0.35em] text-primary/60">{String(i + 1).padStart(2, "0")}</p>
+                  <h3 className="mt-1 font-display text-2xl uppercase leading-snug text-primary">{sv.title}</h3>
+                  <span className="gold-line my-4 w-12" />
+                  <p className="max-w-xs text-[15px] leading-relaxed text-muted-foreground">{sv.desc}</p>
+                  {sv.link && (
+                    <a href={sv.link} {...ext} className="mt-3 inline-flex items-center gap-1.5 text-sm text-primary underline-offset-4 hover:underline">
+                      <Instagram className="h-4 w-4 shrink-0" /> Nasze prace: @hairxmakeup_glowteam
+                    </a>
+                  )}
+                  <button
+                    onClick={() => openPrices(sv.tab)}
+                    className="mt-auto inline-flex items-center gap-2 pt-5 font-narrow text-lg uppercase tracking-[0.2em] text-primary transition-all hover:gap-3"
+                  >
+                    Zobacz cennik <ArrowRight className="h-4 w-4" />
+                  </button>
+                </article>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -504,7 +520,7 @@ function Index() {
       <section id="cennik" className="bg-secondary py-20">
         <div className="mx-auto max-w-6xl px-5">
           <SectionTitle kicker="Promocje do -15%" title="Cennik" />
-          <Tabs defaultValue={pricing[0]?.id ?? ""}>
+          <Tabs value={priceTab} onValueChange={setPriceTab}>
             <div className="-mx-5 overflow-x-auto px-5 [scrollbar-width:none] lg:mx-0 lg:overflow-visible lg:px-0 [&::-webkit-scrollbar]:hidden">
               <TabsList className="h-auto w-max gap-x-1 rounded-none border-b border-primary/20 bg-transparent p-0 lg:flex lg:w-full lg:flex-wrap lg:justify-center lg:gap-x-4">
                 {pricing.map((c) => (
@@ -627,8 +643,8 @@ function Index() {
       <section id="faq" className="py-20">
         <div className="mx-auto max-w-3xl px-5">
           <SectionTitle kicker="Pytania i odpowiedzi" title="FAQ" />
-          <Accordion type="single" collapsible>
-            {([
+          <FaqStack
+            items={([
               [
                 "Jak wygląda wizyta krok po kroku?",
                 <>
@@ -651,13 +667,8 @@ function Index() {
               ["Zalecenia po zabiegu?", "Koloryzacja po 10–14 dniach (min. 14 dni przy rozjaśnianiu); unikaj sauny i basenu; szampony bez SLS/SLES; zawsze susz włosy suszarką w 100%; rozczesuj od końcówek, stosuj olejek na końce."],
               ["Czy można płacić kartą?", "Tak."],
               ["Czy jest parking?", "Tak, przy salonie jest duży bezpłatny parking."],
-            ] as [string, ReactNode][]).map(([q, a], i) => (
-              <AccordionItem key={q} value={`q${i}`}>
-                <AccordionTrigger className="font-narrow text-xl text-primary hover:no-underline">{q}</AccordionTrigger>
-                <AccordionContent className="text-base">{a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+            ] as [string, ReactNode][])}
+          />
         </div>
       </section>
 
