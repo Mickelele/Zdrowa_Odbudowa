@@ -13,7 +13,6 @@ import { getBooksyReviews } from "@/lib/booksy-reviews";
 import { getSiteOrigin } from "@/lib/site-origin";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { HeroCollage } from "@/components/HeroCollage";
-import { FaqStack } from "@/components/FaqStack";
 
 const BOOKSY = "https://zdrowaodbudowa.booksy.com/a";
 const FB = "https://www.facebook.com/profile.php?id=61573410756665";
@@ -499,18 +498,29 @@ function Index() {
       <section id="koloryzacje" className="pb-20">
         <div className="mx-auto max-w-7xl px-5">
           <SectionTitle kicker="Metamorfozy koloru" title="Koloryzacje" />
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
-            {colorings.map((src, i) => (
-              <Reveal key={src} className={i === 0 ? "col-span-2 row-span-2" : ""}>
-                <button
-                  onClick={() => setLightbox({ imgs: colorings, i, alt: "Koloryzacja włosów – Zdrowa Odbudowa" })}
-                  aria-label={`Powiększ koloryzację ${i + 1} z ${colorings.length}`}
-                  className={`group block h-full w-full overflow-hidden ${i === 0 ? "rounded-t-full rounded-b-3xl" : "rounded-2xl"}`}
-                >
-                  <img src={src} alt={`Koloryzacja włosów – efekt ${i + 1}`} loading="lazy" className="aspect-[3/4] h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-                </button>
-              </Reveal>
-            ))}
+          {/* 1 duże zdjęcie + 4 małe; ostatnie otwiera galerię ze wszystkimi */}
+          <div className="mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+            {colorings.slice(0, 5).map((src, i) => {
+              const more = i === 4 ? colorings.length - 5 : 0;
+              const open = () => setLightbox({ imgs: colorings, i, alt: "Koloryzacja włosów – Zdrowa Odbudowa" });
+              return (
+                <Reveal key={src} className={i === 0 ? "col-span-2 row-span-2" : ""}>
+                  <button
+                    onClick={open}
+                    aria-label={more ? `Zobacz wszystkie koloryzacje (${colorings.length})` : `Powiększ koloryzację ${i + 1}`}
+                    className={`group relative block h-full w-full overflow-hidden ${i === 0 ? "rounded-b-3xl rounded-t-full" : "rounded-2xl"}`}
+                  >
+                    <img src={src} alt={`Koloryzacja włosów – efekt ${i + 1}`} loading="lazy" className="aspect-[3/4] h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                    {more > 0 && (
+                      <span className="absolute inset-0 flex flex-col items-center justify-center bg-foreground/55 text-background transition-colors group-hover:bg-foreground/65">
+                        <span className="font-display text-4xl">+{more}</span>
+                        <span className="font-narrow text-lg uppercase tracking-[0.2em]">zobacz wszystkie</span>
+                      </span>
+                    )}
+                  </button>
+                </Reveal>
+              );
+            })}
           </div>
           <div className="mt-10 text-center"><Btn href={BOOKSY}>Umów koloryzację na Booksy</Btn></div>
         </div>
@@ -643,8 +653,8 @@ function Index() {
       <section id="faq" className="py-20">
         <div className="mx-auto max-w-3xl px-5">
           <SectionTitle kicker="Pytania i odpowiedzi" title="FAQ" />
-          <FaqStack
-            items={([
+          <Accordion type="single" collapsible>
+            {([
               [
                 "Jak wygląda wizyta krok po kroku?",
                 <>
@@ -667,8 +677,13 @@ function Index() {
               ["Zalecenia po zabiegu?", "Koloryzacja po 10–14 dniach (min. 14 dni przy rozjaśnianiu); unikaj sauny i basenu; szampony bez SLS/SLES; zawsze susz włosy suszarką w 100%; rozczesuj od końcówek, stosuj olejek na końce."],
               ["Czy można płacić kartą?", "Tak."],
               ["Czy jest parking?", "Tak, przy salonie jest duży bezpłatny parking."],
-            ] as [string, ReactNode][])}
-          />
+            ] as [string, ReactNode][]).map(([q, a], i) => (
+              <AccordionItem key={q} value={`q${i}`}>
+                <AccordionTrigger className="font-narrow text-xl text-primary hover:no-underline">{q}</AccordionTrigger>
+                <AccordionContent className="text-base">{a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 
