@@ -22,6 +22,9 @@ const MAPS = "https://maps.google.com/maps?q=Ksi%C4%99dza%20Marcina%20Za%C5%82us
 const ROUTE = "https://www.google.com/maps/dir/?api=1&destination=Ksi%C4%99dza%20Marcina%20Za%C5%82uskiego%2073%2C%2005-230%20Koby%C5%82ka";
 const W = "https://zdrowaodbudowa.beauty-flow.pl/wp-content/uploads/";
 
+// Sekcja "Koloryzacje" – pliki public/koloryzacja/1–13.webp
+const colorings = Array.from({ length: 13 }, (_, i) => `/koloryzacja/${i + 1}.webp`);
+
 // Zdjęcia do karuzeli "Galeria efektów" – wybrane z public/cennik (włosy na środku kadru).
 const effects = [
   "airtouch/1", "balejazniteczkowy/3", "niewiemjakikolor/2", "tonowanie/1", "airtouch/4", "koloryzacjawielotonowa/2",
@@ -447,9 +450,9 @@ function Index() {
         <div className="mx-auto max-w-7xl px-5">
           <SectionTitle title="Efekty zabiegów" />
           <p className="-mt-6 mb-8 text-center text-sm text-muted-foreground">Przesuń suwak na zdjęciu, żeby porównać włosy przed zabiegiem i po nim.</p>
-          <div className="mb-16 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
-            {[1, 2, 3, 4].map((n) => (
-              <Reveal key={n}>
+          <div className="mb-16 flex flex-wrap justify-center gap-4 lg:gap-5">
+            {[1, 2, 3, 4, 5].map((n) => (
+              <Reveal key={n} className="w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.667rem)] lg:w-[calc(20%-1rem)]">
                 <BeforeAfter before={`/przed-po/${n}-przed.webp`} after={`/przed-po/${n}-po.webp`} label={`Metamorfoza włosów ${n}`} />
               </Reveal>
             ))}
@@ -475,6 +478,27 @@ function Index() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* KOLORYZACJE */}
+      <section id="koloryzacje" className="pb-20">
+        <div className="mx-auto max-w-7xl px-5">
+          <SectionTitle kicker="Metamorfozy koloru" title="Koloryzacje" />
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {colorings.map((src, i) => (
+              <Reveal key={src} className={i === 0 ? "col-span-2 row-span-2" : ""}>
+                <button
+                  onClick={() => setLightbox({ imgs: colorings, i, alt: "Koloryzacja włosów – Zdrowa Odbudowa" })}
+                  aria-label={`Powiększ koloryzację ${i + 1} z ${colorings.length}`}
+                  className={`group block h-full w-full overflow-hidden ${i === 0 ? "rounded-t-full rounded-b-3xl" : "rounded-2xl"}`}
+                >
+                  <img src={src} alt={`Koloryzacja włosów – efekt ${i + 1}`} loading="lazy" className="aspect-[3/4] h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                </button>
+              </Reveal>
+            ))}
+          </div>
+          <div className="mt-10 text-center"><Btn href={BOOKSY}>Umów koloryzację na Booksy</Btn></div>
         </div>
       </section>
 

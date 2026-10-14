@@ -6,7 +6,7 @@ export function BeforeAfter({ before, after, label }: { before: string; after: s
   const [pos, setPos] = useState(50);
 
   return (
-    <div className="relative aspect-[9/16] select-none overflow-hidden rounded-3xl bg-secondary">
+    <div className="relative aspect-[3/4] select-none overflow-hidden rounded-3xl bg-secondary">
       <img src={after} alt={`${label} – po zabiegu`} loading="lazy" draggable={false} className="absolute inset-0 h-full w-full object-cover" />
       <img
         src={before}

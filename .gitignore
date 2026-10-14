@@ -33,3 +33,5 @@ dist-ssr
 
 # Oryginalne grafiki (zoptymalizowane wersje są w public/cennik)
 grafiki/
+/koloryzacja/
+/zabiegoprzedpo/
