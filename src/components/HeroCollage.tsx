@@ -63,9 +63,9 @@ export function HeroCollage() {
   return (
     <div ref={box} className="relative mx-auto grid w-full max-w-lg grid-cols-2 gap-3 sm:gap-4">
       {/* łuk jak lustra w salonie */}
-      <img src="/salon/lustra.webp" alt="Lustra w kształcie łuków w salonie Zdrowa Odbudowa w Kobyłce" className={`${base} row-span-2 h-full rounded-b-3xl rounded-t-full`} />
-      <img src="/salon/wnetrze-1.webp" alt="Wnętrze salonu Zdrowa Odbudowa – stanowiska fryzjerskie" className={`${base} aspect-[4/5] rounded-3xl`} />
-      <img src="/cennik/airtouch/1.webp" alt="Efekt koloryzacji Air Touch – lśniące, zdrowe włosy" className={`${base} aspect-[4/5] rounded-3xl`} />
+      <img src="/salon/lustra.webp" alt="Lustra w kształcie łuków w salonie Zdrowa Odbudowa w Kobyłce" width={900} height={1200} fetchPriority="high" className={`${base} row-span-2 h-full rounded-b-3xl rounded-t-full`} />
+      <img src="/salon/wnetrze-1.webp" alt="Wnętrze salonu Zdrowa Odbudowa – stanowiska fryzjerskie" width={750} height={1000} className={`${base} aspect-[4/5] rounded-3xl`} />
+      <img src="/cennik/airtouch/1.webp" alt="Efekt koloryzacji Air Touch – lśniące, zdrowe włosy" width={900} height={900} className={`${base} aspect-[4/5] rounded-3xl`} />
     </div>
   );
 }

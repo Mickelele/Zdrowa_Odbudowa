@@ -12,6 +12,7 @@ import { booksyPricing, pricingUpdatedAt } from "@/lib/cennik";
 import type { PriceItem } from "@/data/pricing";
 import { getBooksyReviews } from "@/lib/booksy-reviews";
 import { getSiteOrigin } from "@/lib/site-origin";
+import { SALON, structuredData } from "@/lib/seo";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { HeroCollage } from "@/components/HeroCollage";
 
@@ -60,58 +61,48 @@ const formatReviewDate = (iso: string) => {
   return Number.isNaN(d.getTime()) ? "" : d.toLocaleDateString("pl-PL", { day: "numeric", month: "long", year: "numeric" });
 };
 
-const TITLE = "Zdrowa Odbudowa – rekonstrukcja i koloryzacja włosów | Kobyłka";
-const DESC = "Studio koloryzacji i rekonstrukcji włosa w Kobyłce. Nanoplastia, keratyna, bioplastia, botoks, Air Touch. Bezpłatna konsultacja – zarezerwuj na Booksy.";
+const TITLE = "Rekonstrukcja i koloryzacja włosów Kobyłka | Zdrowa Odbudowa";
+const DESC = "Studio koloryzacji i rekonstrukcji włosa w Kobyłce k. Warszawy. Nanoplastia, bioplastia, botoks, Air Touch, fryzury ślubne. Bezpłatna konsultacja – Booksy.";
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "HairSalon",
-  name: "Zdrowa Odbudowa – studio koloryzacji i rekonstrukcji włosa",
-  telephone: "+48796764768",
-  address: { "@type": "PostalAddress", streetAddress: "ul. Księdza Marcina Załuskiego 73, lokal 1", postalCode: "05-230", addressLocality: "Kobyłka", addressCountry: "PL" },
-  openingHoursSpecification: [
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday"], opens: "10:00", closes: "20:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "21:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "15:00" },
-  ],
-  sameAs: [FB, IG, BOOKSY],
-};
 
 export const Route = createFileRoute("/")({
   loader: async () => {
     // cennik: src/data/cennik.json, aktualizowany codziennie z Booksy (scripts/fetch-booksy.mjs)
     const [booksy, origin] = await Promise.all([getBooksyReviews(), getSiteOrigin()]);
-    return { pricing: booksyPricing, booksy, shareImage: origin + SHARE_IMAGE };
+    return { pricing: booksyPricing, booksy, origin, shareImage: origin + SHARE_IMAGE };
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESC },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESC },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: loaderData?.shareImage ?? SHARE_IMAGE },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Wnętrze salonu Zdrowa Odbudowa i efekty koloryzacji włosów" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: loaderData?.shareImage ?? SHARE_IMAGE },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          ...jsonLd,
-          image: loaderData?.shareImage ?? SHARE_IMAGE,
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: String(loaderData?.booksy?.rating ?? FALLBACK_RATING.rating),
-            reviewCount: String(loaderData?.booksy?.count ?? FALLBACK_RATING.count),
-          },
-        }),
-      },
-    ],
-  }),
+  head: ({ loaderData }) => {
+    const origin = loaderData?.origin ?? "";
+    const url = `${origin}/`;
+    const image = loaderData?.shareImage ?? SHARE_IMAGE;
+    return {
+      meta: [
+        { title: TITLE },
+        { name: "description", content: DESC },
+        { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+        { property: "og:title", content: TITLE },
+        { property: "og:description", content: DESC },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: url },
+        { property: "og:locale", content: "pl_PL" },
+        { property: "og:image", content: image },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { property: "og:image:alt", content: "Wnętrze salonu Zdrowa Odbudowa i efekty koloryzacji włosów" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: TITLE },
+        { name: "twitter:description", content: DESC },
+        { name: "twitter:image", content: image },
+        // lokalizacja salonu (Kobyłka, woj. mazowieckie)
+        { name: "geo.region", content: "PL-14" },
+        { name: "geo.placename", content: SALON.city },
+        { name: "geo.position", content: `${SALON.lat};${SALON.lng}` },
+        { name: "ICBM", content: `${SALON.lat}, ${SALON.lng}` },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [{ type: "application/ld+json", children: JSON.stringify(structuredData(origin, image)) }],
+    };
+  },
   component: Index,
 });
 
@@ -176,7 +167,7 @@ function PriceEntry({ item, onOpenImages }: { item: PriceItem; onOpenImages: (in
                 className="group relative aspect-square rounded-full p-[2px] ring-1 ring-primary/30 transition hover:ring-primary"
               >
                 <span className="block h-full w-full overflow-hidden rounded-full">
-                  <img src={src} alt="" loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+                  <img src={src} alt={`${plain(item.name)} – efekt zabiegu w salonie Zdrowa Odbudowa`} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
                 </span>
                 {more > 0 && (
                   <span className="absolute inset-[2px] flex items-center justify-center rounded-full bg-foreground/55 font-narrow text-lg text-background">
@@ -630,6 +621,7 @@ function Index() {
           <div className="grid gap-10 lg:grid-cols-2">
             <div className="space-y-6">
               <p className="flex gap-3"><MapPin className="h-6 w-6 shrink-0 text-primary" />ul. Księdza Marcina Załuskiego 73, lokal 1, domofon 1, 05-230 Kobyłka – 20 minut od Warszawy</p>
+              <p className="text-sm text-muted-foreground">Odwiedzają nas klientki z Kobyłki, Warszawy, Zielonki, Wołomina, Marek, Ząbek, Radzymina i Legionowa – przy salonie jest bezpłatny parking.</p>
               <a href={TEL} className="flex gap-3 font-narrow text-3xl text-primary"><Phone className="h-6 w-6 shrink-0" />796 764 768</a>
               <div className="flex gap-3">
                 <Clock className="h-6 w-6 shrink-0 text-primary" />
