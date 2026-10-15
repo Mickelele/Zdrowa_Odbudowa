@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import {
   Sparkles, Palette, Scissors, Leaf, Heart, Gift, Microscope, Droplets, Gem, ShieldCheck, Home,
   Phone, MapPin, Clock, Menu, X, Star, Facebook, Instagram, Navigation, CalendarHeart, Lock, ArrowRight,
@@ -23,16 +23,9 @@ const MAPS = "https://maps.google.com/maps?q=Ksi%C4%99dza%20Marcina%20Za%C5%82us
 const ROUTE = "https://www.google.com/maps/dir/?api=1&destination=Ksi%C4%99dza%20Marcina%20Za%C5%82uskiego%2073%2C%2005-230%20Koby%C5%82ka";
 const W = "https://zdrowaodbudowa.beauty-flow.pl/wp-content/uploads/";
 
-// Sekcja "Koloryzacje" – pliki public/koloryzacja/1–13.webp
-const colorings = Array.from({ length: 13 }, (_, i) => `/koloryzacja/${i + 1}.webp`);
+// Sekcja "Koloryzacje" – pliki public/koloryzacja/1–13.webp; pierwsze dwa wybrane przez salon
+const colorings = [8, 10, 1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13].map((n) => `/koloryzacja/${n}.webp`);
 
-// Zdjęcia do karuzeli "Galeria efektów" – wybrane z public/cennik (włosy na środku kadru).
-const effects = [
-  "airtouch/1", "balejazniteczkowy/3", "niewiemjakikolor/2", "tonowanie/1", "airtouch/4", "koloryzacjawielotonowa/2",
-  "balejazniteczkowy/5", "odrostbezrozjasniania/3", "frontblond/1", "nanoplastia/2", "airtouch/3", "niewiemjakikolor/4",
-  "balejazniteczkowy/2", "nanobotoks/1", "tonowanie/2", "botoksorganiczny/2", "koloryzacjablond/1", "odrostbezrozjasniania/2",
-  "niewiemjakikolor/3", "dekoloryzacjakoloryzacja/1",
-].map((p) => `/cennik/${p}.webp`);
 const salon = [
   W + "2025/03/IMG_8055-807x1024.jpg", W + "2025/02/IMG_DDD0E2481025-1-scaled-e1740763085948-772x1024.jpeg",
   "https://images.fresha.com/locations/location-profile-images/3085242/6711026/e94265ed-d0f2-404d-867c-9b86f68c10fa-ZDROWAODBUDOWA-PL-WojewdztwoMazowieckie-Kobyka-Fresha.jpg",
@@ -212,63 +205,6 @@ function PriceEntry({ item, onOpenImages }: { item: PriceItem; onOpenImages: (in
         ))}
       </ul>
     </article>
-  );
-}
-
-/** Karuzela zdjęć w kształcie łuków (jak lustra w salonie): przesuwa się sama, strzałkami lub palcem. */
-function EffectsCarousel({ images, onOpen }: { images: string[]; onOpen: (index: number) => void }) {
-  const track = useRef<HTMLDivElement>(null);
-  const paused = useRef(false);
-
-  const slide = (dir: 1 | -1) => {
-    const el = track.current;
-    if (!el) return;
-    const step = (el.firstElementChild as HTMLElement | null)?.offsetWidth ?? 240;
-    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 8;
-    if (dir === 1 && atEnd) el.scrollTo({ left: 0, behavior: "smooth" });
-    else if (dir === -1 && el.scrollLeft <= 8) el.scrollTo({ left: el.scrollWidth, behavior: "smooth" });
-    else el.scrollBy({ left: dir * (step + 16), behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = window.setInterval(() => {
-      if (!paused.current && !document.hidden) slide(1);
-    }, 3000);
-    return () => window.clearInterval(id);
-  }, []);
-
-  const hold = (v: boolean) => () => {
-    paused.current = v;
-  };
-
-  return (
-    <div onMouseEnter={hold(true)} onMouseLeave={hold(false)} onTouchStart={hold(true)} onTouchEnd={hold(false)} onFocus={hold(true)} onBlur={hold(false)}>
-      <div className="mx-auto -mt-4 mb-6 flex max-w-7xl justify-center gap-3 px-5 md:justify-end">
-        {([[-1, "Poprzednie zdjęcia", "←"], [1, "Następne zdjęcia", "→"]] as const).map(([dir, label, arrow]) => (
-          <button
-            key={label}
-            onClick={() => slide(dir)}
-            aria-label={label}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-primary text-xl text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-          >
-            {arrow}
-          </button>
-        ))}
-      </div>
-      <div ref={track} className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth scroll-px-5 px-5 pb-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {images.map((src, i) => (
-          <button
-            key={src}
-            onClick={() => onOpen(i)}
-            aria-label={`Powiększ zdjęcie ${i + 1} z ${images.length}`}
-            className={`group aspect-[5/13] w-[44vw] shrink-0 snap-start overflow-hidden rounded-b-2xl rounded-t-full sm:w-56 lg:w-60 ${i % 2 ? "mt-8" : ""}`}
-          >
-            <img src={src} alt={`Metamorfoza włosów – efekt zabiegu ${i + 1}`} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-          </button>
-        ))}
-      </div>
-    </div>
   );
 }
 
@@ -456,7 +392,7 @@ function Index() {
       </section>
 
       {/* EFEKTY ZABIEGÓW */}
-      <section className="py-20">
+      <section id="efekty" className="py-20">
         <div className="mx-auto max-w-7xl px-5">
           <SectionTitle title="Efekty zabiegów" />
           <p className="-mt-6 mb-8 text-center text-sm text-muted-foreground">Przesuń suwak na zdjęciu, żeby porównać włosy przed zabiegiem i po nim.</p>
@@ -570,13 +506,6 @@ function Index() {
         </div>
       </section>
 
-      {/* GALERIA */}
-      <section id="efekty" className="py-20">
-        <div className="mx-auto max-w-7xl px-5">
-          <SectionTitle kicker="Metamorfozy" title="Galeria efektów" />
-        </div>
-        <EffectsCarousel images={effects} onOpen={(i) => setLightbox({ imgs: effects, i, alt: "Powiększone zdjęcie metamorfozy" })} />
-      </section>
       {lightbox !== null && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/90 p-4" onClick={() => setLightbox(null)}>
           <button aria-label="Zamknij" className="absolute right-4 top-4 text-background"><X className="h-8 w-8" /></button>
