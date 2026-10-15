@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Kolaż 3 zdjęć na górze strony. Przy przewijaniu w dół zdjęcia rozjeżdżają się na boki
+ * Kolaż 3 zdjęć na górze strony. Na komputerze przy przewijaniu w dół zdjęcia rozjeżdżają się na boki
  * (łuk w lewo, dwa pozostałe w prawo – w górę i w dół), a przy przewijaniu w górę wracają.
  */
 
@@ -19,16 +19,22 @@ export function HeroCollage() {
     const el = box.current;
     if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const imgs = Array.from(el.querySelectorAll<HTMLImageElement>("img"));
+    // tylko na dużych ekranach (kolaż obok tekstu); na telefonie i tablecie kolaż jest pod tekstem
+    // i rozjeżdżałby się akurat wtedy, gdy się go ogląda – tam zdjęcia stoją w miejscu
+    const desktop = window.matchMedia("(min-width: 1024px)");
     let frame = 0;
 
     const draw = () => {
       frame = 0;
+      if (!desktop.matches) {
+        imgs.forEach((img) => {
+          img.style.transform = "";
+          img.style.opacity = "";
+        });
+        return;
+      }
       const rect = el.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const top = rect.top + window.scrollY;
-      // na komputerze startuje od razu, na telefonie – gdy kolaż dojedzie do ~60% wysokości ekranu
-      const start = Math.max(0, top - vh * 0.6);
-      const t = Math.min(1, Math.max(0, (window.scrollY - start) / (rect.height * 0.85)));
+      const t = Math.min(1, Math.max(0, window.scrollY / (rect.height * 0.85)));
       const p = t * t * (3 - 2 * t); // płynny start i koniec
       const w = rect.width;
       imgs.forEach((img, i) => {
@@ -44,9 +50,11 @@ export function HeroCollage() {
     draw();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
+    desktop.addEventListener("change", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
+      desktop.removeEventListener("change", onScroll);
       if (frame) cancelAnimationFrame(frame);
     };
   }, []);
