@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Pobiera cennik salonu z Booksy i zapisuje go do src/data/cennik.json.
+ * Pobiera cennik salonu z Booksy i zapisuje go do src/data/cennik.json (Node 20+).
  *
  *   node scripts/fetch-booksy.mjs
  *

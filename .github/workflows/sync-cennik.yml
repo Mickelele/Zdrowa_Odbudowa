@@ -39,13 +39,13 @@ jobs:
             echo "run=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         if: steps.gate.outputs.run == 'true'
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         if: steps.gate.outputs.run == 'true'
         with:
-          node-version: 20
+          node-version: 24
 
       # Skrypt używa tylko wbudowanych modułów Node – nie trzeba instalować zależności projektu.
       - name: Pobierz cennik z Booksy
@@ -70,5 +70,5 @@ jobs:
   keepalive:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: liskin/gh-workflow-keepalive@v1
