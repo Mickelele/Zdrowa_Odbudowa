@@ -1,0 +1,74 @@
+name: Synchronizacja cennika z Booksy
+
+on:
+  schedule:
+    # 6:00 czasu polskiego. Cron w GitHub Actions działa w UTC, więc są dwa wpisy,
+    # a krok "Czy to 6:00 w Warszawie?" przepuszcza tylko ten właściwy dla aktualnej pory roku.
+    - cron: "0 4 * * *" # 6:00 czasu letniego (UTC+2)
+    - cron: "0 5 * * *" # 6:00 czasu zimowego (UTC+1)
+  workflow_dispatch:
+
+permissions:
+  contents: write # commit z nowym cennikiem
+  actions: write # keepalive – ponowne włączenie harmonogramu po 60 dniach bez aktywności
+
+concurrency:
+  group: sync-cennik
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Czy to 6:00 w Warszawie?
+        id: gate
+        env:
+          EVENT: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          # GitHub potrafi opóźnić zaplanowany job, dlatego sprawdzamy, KTÓRY cron go uruchomił,
+          # a nie aktualną godzinę: "0 4" ma działać tylko w czasie letnim (+0200), "0 5" tylko w zimowym (+0100).
+          if [ "$EVENT" != "schedule" ]; then echo "run=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          OFFSET=$(TZ=Europe/Warsaw date +%z)
+          if { [ "$SCHEDULE" = "0 4 * * *" ] && [ "$OFFSET" = "+0200" ]; } || \
+             { [ "$SCHEDULE" = "0 5 * * *" ] && [ "$OFFSET" = "+0100" ]; }; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Cron '$SCHEDULE' nie jest teraz 6:00 w Warszawie (offset $OFFSET) – pomijam."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true'
+        with:
+          node-version: 20
+
+      # Skrypt używa tylko wbudowanych modułów Node – nie trzeba instalować zależności projektu.
+      - name: Pobierz cennik z Booksy
+        if: steps.gate.outputs.run == 'true'
+        run: node scripts/fetch-booksy.mjs
+
+      - name: Commit, jeśli cennik się zmienił
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          if git diff --quiet -- src/data/cennik.json; then
+            echo "Cennik bez zmian – brak commita."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/cennik.json
+          git commit -m "chore: aktualizacja cennika z Booksy ($(TZ=Europe/Warsaw date +%F))"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+  # GitHub wyłącza harmonogram po 60 dniach bez aktywności w repo – to go podtrzymuje bez pustych commitów.
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: liskin/gh-workflow-keepalive@v1

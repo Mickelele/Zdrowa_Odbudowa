@@ -69,7 +69,34 @@ async function compressImage(file: File): Promise<Blob> {
 
 // ---------- strona ----------
 
+/**
+ * Panel jest wyłączony: cennik na stronie pochodzi automatycznie z Booksy (src/data/cennik.json,
+ * synchronizacja .github/workflows/sync-cennik.yml). Kod i baza Supabase zostają – żeby wrócić
+ * do ręcznej edycji, ustaw true i w src/routes/index.tsx przywróć loadPricing() oraz link w stopce.
+ */
+export const ADMIN_ENABLED = false;
+
 function AdminPage() {
+  if (!ADMIN_ENABLED) return <AdminDisabled />;
+  return <AdminPanel />;
+}
+
+function AdminDisabled() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-secondary p-4">
+      <div className="max-w-md space-y-4 rounded-2xl border border-border bg-card p-8 text-center">
+        <img src="/logo.png" alt="" className="mx-auto h-16 w-16 rounded-full" />
+        <h1 className="font-display text-2xl uppercase text-primary">Panel wyłączony</h1>
+        <p className="text-sm text-muted-foreground">
+          Cennik aktualizuje się automatycznie z Booksy codziennie o 6:00. Zmiany cen wprowadzaj w Booksy.
+        </p>
+        <Link to="/" className="inline-block text-sm text-primary hover:underline">← Wróć na stronę</Link>
+      </div>
+    </div>
+  );
+}
+
+function AdminPanel() {
   const [session, setSession] = useState<Session | null>(null);
   const [ready, setReady] = useState(false);
 

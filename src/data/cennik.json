@@ -1,0 +1,1124 @@
+{
+  "aktualizacja": "2026-10-15T13:19:26+02:00",
+  "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
+  "kategorie": [
+    {
+      "nazwa": "KONSULTACJA 🤔",
+      "uslugi": [
+        {
+          "nazwa": "KONSULTACJA",
+          "opis": "Jeżeli nie jesteś przekonana jaki zabieg lub kolor będzie dla Ciebie odpowiedni, zapraszamy na BEZPŁATNĄ I NIEZOBOWIĄZUJĄCĄ konsultację z naszym specjalistą od zabiegów i koloryzacji.",
+          "warianty": [
+            {
+              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Bezpłatna",
+              "odCeny": false,
+              "czasMin": 15
+            },
+            {
+              "nazwa": "KONSULTACJA (KOLORYZACJA)",
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Bezpłatna",
+              "odCeny": false,
+              "czasMin": 15
+            }
+          ],
+          "zdjecia": [
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/aafc3700796146b2a97a392a1b3998aa.jpeg"
+          ]
+        },
+        {
+          "nazwa": "TERMIN VIP +50 %",
+          "opis": "Dowolna usługa w dogodnym dla Ciebie terminie - poza godzinami pracy salonu (przed 10:00 i po 20:00 od pon do pt oraz w weekendy i święta) \n\nNapisz do nas jeżeli chcesz zarezerwować taką usługę - 508125292 lub @zdrowaodbudowawlosa fb: ZDROWAODBUDOWA \n\nDo usługi doliczamy + 50 % ceny usługi. \n\n\nZapraszamy :)",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Zmienna",
+              "odCeny": false,
+              "czasMin": 5
+            }
+          ],
+          "zdjecia": [
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/f3eb9a89cc5d4994a216f33baf24d658.jpeg",
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/ae1ab1634c334fc3abb26d992dfed4e5.jpeg"
+          ]
+        }
+      ]
+    },
+    {
+      "nazwa": "KOLORYZACJA I DEKOLORYZACJA 🎨",
+      "uslugi": [
+        {
+          "nazwa": "NIE WIEM JAKI KOLOR",
+          "opis": "Konsultacja + czas przeznaczony na wizytę. Jeżeli nie wiesz jaką koloryzację wybrac, ta usługa jest dla Ciebie :) \nJeżeli masz bardzo uwrażliwione włosy lub dłuższe niż do łopatek - poinformuj nas o tym wcześniej (sms|instagram|facebook) \nKoszt usługi zostanie ustalony przed wykonaniem usługi. \nDo zobaczenia !",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Zmienna",
+              "odCeny": false,
+              "czasMin": 180
+            }
+          ],
+          "zdjecia": [
+            "/cennik/niewiemjakikolor/4.webp",
+            "/cennik/niewiemjakikolor/2.webp",
+            "/cennik/niewiemjakikolor/3.webp",
+            "/cennik/niewiemjakikolor/1.webp"
+          ]
+        },
+        {
+          "nazwa": "TONOWANIE",
+          "opis": "Jeżeli Twój blond nie jest już chłodnym blondem, brąz przechodzi w rudości, a jeszcze nie chcesz ponawiać koloryzacji permanentnej- ta usługa jest dla Ciebie! Usługa obejmuje tonowanie całej długości włosa, mycie i modelowanie.\n\nEfekt koloryzacji utrzymuje się około trzech miesięcy.\n\nKoloryzacja tonerami pokrywa około 70 % siwizny.\n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 150,
+              "cenaPromo": 135,
+              "najnizszaCena30d": 150,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 90
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 90
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
+              "cenaPromo": 225,
+              "najnizszaCena30d": 250,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 90
+            }
+          ],
+          "zdjecia": [
+            "/cennik/tonowanie/1.webp",
+            "/cennik/tonowanie/2.webp"
+          ]
+        },
+        {
+          "nazwa": "ODROST BEZ ROZJAŚNIANIA",
+          "opis": "Usługa zawiera koloryzację odrostu do 3 cm na ciemny kolor. \nUsługa zawiera położenie farby na odrost + melaksacja po całej długości włosa + modelowanie lub stylizacje. \n\nDo zobaczenia :)",
+          "warianty": [
+            {
+              "nazwa": "STAŁY KLIENT",
+              "cena": 250,
+              "cenaPromo": 225,
+              "najnizszaCena30d": 250,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
+              "nazwa": "PIERWSZA WIZYTA",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            }
+          ],
+          "zdjecia": [
+            "/cennik/odrostbezrozjasniania/1.webp",
+            "/cennik/odrostbezrozjasniania/2.webp",
+            "/cennik/odrostbezrozjasniania/3.webp"
+          ]
+        },
+        {
+          "nazwa": "FRONT BLOND | DELIKATNE POJAŚNIENIA",
+          "opis": "Nowoczesne rozjaśnienie frontów włosów do maksymalnej ilości 10 folii. Istnieje również możliwość rozłożenia pojaśnień, tak aby uzyskać delikatne rozjaśnienie calej fryzury. Cena jest taka sama do każdej długości włosa.",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": 400,
+              "cenaPromo": 360,
+              "najnizszaCena30d": 400,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            }
+          ],
+          "zdjecia": [
+            "/cennik/frontblond/2.webp",
+            "/cennik/frontblond/1.webp",
+            "/cennik/frontblond/3.webp"
+          ]
+        },
+        {
+          "nazwa": "BALEJAŻ NITECZKOWY | PASEMKA | REFLEKS +TONOWANIE",
+          "opis": "Wybierz tą usługę jeżeli pragniesz rozjaśnić swoje włosy metodą całościową , pasemkami lub refleksami. W tą usługę  wlicza się balejaż niteczkowy / refleksy / pojaśnienia min 50 % oraz ODROST , TONOWANIE i MODELOWANIE/LOKI/FALE\n\n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 750,
+              "cenaPromo": 637.5,
+              "najnizszaCena30d": 750,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 650,
+              "cenaPromo": 552.5,
+              "najnizszaCena30d": 650,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 550,
+              "cenaPromo": 467.5,
+              "najnizszaCena30d": 550,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            }
+          ],
+          "zdjecia": [
+            "/cennik/balejazniteczkowy/5.webp",
+            "/cennik/balejazniteczkowy/2.webp",
+            "/cennik/balejazniteczkowy/6.webp",
+            "/cennik/balejazniteczkowy/1.webp",
+            "/cennik/balejazniteczkowy/3.webp",
+            "/cennik/balejazniteczkowy/4.webp"
+          ]
+        },
+        {
+          "nazwa": "KOLORYZACJA BLOND + TONOWANIE",
+          "opis": "Usługa polega na dekoloryzacji odrostu oraz tonowaniu reszty włosa. Jeżeli chcesz zrobić również refleksy lub pojaśnienia - wybierz usługę POJAŚNIENIA. \n \n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 450,
+              "cenaPromo": 382.5,
+              "najnizszaCena30d": 450,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 590,
+              "cenaPromo": 501.5,
+              "najnizszaCena30d": 590,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy długie (do talii)",
+              "cena": 650,
+              "cenaPromo": 552.5,
+              "najnizszaCena30d": 650,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 210
+            }
+          ],
+          "zdjecia": [
+            "/cennik/koloryzacjablond/2.webp",
+            "/cennik/koloryzacjablond/1.webp"
+          ]
+        },
+        {
+          "nazwa": "KOLORYZACJA JEDNOTONOWA",
+          "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 490,
+              "cenaPromo": 416.5,
+              "najnizszaCena30d": 490,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 290,
+              "cenaPromo": 261,
+              "najnizszaCena30d": 290,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 390,
+              "cenaPromo": 331.5,
+              "najnizszaCena30d": 390,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            }
+          ],
+          "zdjecia": [
+            "/cennik/koloryzacjajednotonowa/1.webp"
+          ]
+        },
+        {
+          "nazwa": "KOLORYZACJA WIELOTONOWA",
+          "opis": "**Koloryzacja wielotonowa** jest to technika koloryzacji (inaczej również koloryzacja 3D), w której stosuje się co najmniej dwa kolory bazowe. Dzięki tej koloryzacji kolor jest głębszy, bardziej naturalny i nie jest \"płaski\".  W tej usłudze wliczamy rówież farbowanie odrostu na inny kolor niż reszta włosów po długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 450,
+              "cenaPromo": 382.5,
+              "najnizszaCena30d": 450,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 550,
+              "cenaPromo": 467.5,
+              "najnizszaCena30d": 550,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            }
+          ],
+          "zdjecia": [
+            "/cennik/koloryzacjawielotonowa/2.webp",
+            "/cennik/koloryzacjawielotonowa/1.webp"
+          ]
+        },
+        {
+          "nazwa": "AIR TOUCH | KOLORYZACJE INDYWIDUALNE",
+          "opis": "Najbardziej nowoczesne techniki koloryzacji dopasowane indywidualnie do Twojego stylu, urody oraz możliwości na włosach. \n\nW cenę koloryzacji wchodzi również - OCHRONA PLEX , AMPUŁKA REGENERACYJNA oraz STRZYZENIE I STYLIZACJA.",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 750,
+              "cenaPromo": 637.5,
+              "najnizszaCena30d": 750,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 240
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 1100,
+              "cenaPromo": 935,
+              "najnizszaCena30d": 1100,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 300
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 1400,
+              "cenaPromo": 1190,
+              "najnizszaCena30d": 1400,
+              "cenaTekst": null,
+              "odCeny": true,
+              "czasMin": 390
+            }
+          ],
+          "zdjecia": [
+            "/cennik/airtouch/4.webp",
+            "/cennik/airtouch/2.webp",
+            "/cennik/airtouch/3.webp",
+            "/cennik/airtouch/1.webp"
+          ]
+        },
+        {
+          "nazwa": "DEKOLORYZACJA + KOLORYZACJA",
+          "opis": "Dekoloryzacja znana jest też jako **ściąganie koloru z włosów.** Jest to zabieg usunięcia sztucznych barwników z wnętrza włosa. Polega na pozbyciu się pigmentów wprowadzonych tam podczas koloryzacji. Po dekoloryzacji nakładana jest porządana koloryzacja. \n\n**Do opłaty może zostać doliczona kwota 100  zł do gęstości włosa**\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**\n\n**O koszcie całej usługi dowiadujesz się przed rozpoczęciem usługi.**",
+          "warianty": [
+            {
+              "nazwa": "DEKOLORYZACJA POPRZEZ ZABIEG REKONSTRUKCJI",
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Zmienna",
+              "odCeny": false,
+              "czasMin": 210
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 850,
+              "cenaPromo": 722.5,
+              "najnizszaCena30d": 850,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 240
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 1000,
+              "cenaPromo": 850,
+              "najnizszaCena30d": 1000,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 270
+            }
+          ],
+          "zdjecia": [
+            "/cennik/dekoloryzacjakoloryzacja/2.webp",
+            "/cennik/dekoloryzacjakoloryzacja/1.webp"
+          ]
+        },
+        {
+          "nazwa": "KĄPIEL ROZJAŚNIAJĄCA | OCZYSZCZENIE KOLORU 1 TON",
+          "opis": "Poszukujesz sposobu na **delikatne rozjaśnianie** włosów? Nie chcesz narażać ich na silne, inwazyjne zabiegi takie jak dekoloryzacja, ale zależy Ci na uzyskaniu choć trochę **jaśniejszego koloru**? Jeśli tak, pomoże Ci kąpiel rozjaśniająca włosy.\n\nW jakim celu warto ją zastosować?\n\n1.Uzyskanie koloru jaśniejszego o maksymalnie 1-2 tony **na włosach naturalnych** lub **farbowanych**;  \n2.Przygotowanie włosów pod koloryzację półtrwałą tonerem na poziomie jaśniejszym, niż obecny;  \n3.**Skorygowanie** odcienia po wcześniejszej koloryzacji – jeśli kolor wpada w niechciane szare lub zielonkawe tony, które chcesz stonować lub ocieplić;  \n4.Delikatne **rozświetlenie** i **ocieplenie koloru** włosów – kąpielą rozjaśniającą możesz nadać im słoneczy odcień;  \n5.Rozjaśnienie **końcówek, ombre i sombre,** refleksy – taki efekt również możesz osiągnąć stosując kąpiel rozjaśniającą;\n\n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 150,
+              "cenaPromo": 135,
+              "najnizszaCena30d": 150,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 60
+            },
+            {
+              "nazwa": "Włosy za ramiona",
+              "cena": 200,
+              "cenaPromo": 180,
+              "najnizszaCena30d": 200,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 60
+            }
+          ],
+          "zdjecia": []
+        },
+        {
+          "nazwa": "REPIGMENTACJA - DODATEK DO USŁUGI",
+          "opis": "Repigmentacja to **zabieg chemiczny, który polega na przywróceniu pigmentów utraconych podczas rozjaśniania i farbowania włosów**. Repigmentacja może być stosowana także w przypadku bardzo jasnych włosów.\n\nStosujemy repigmentacje jako dodatek do koloryzacji.",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": 150,
+              "cenaPromo": 135,
+              "najnizszaCena30d": 150,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 45
+            }
+          ],
+          "zdjecia": []
+        }
+      ]
+    },
+    {
+      "nazwa": "PIELĘGNACJA 🌱",
+      "uslugi": [
+        {
+          "nazwa": "AMPUŁKA REGENERACYJNA❄️",
+          "opis": "Złota ampułka  to ekspresowa kuracja do włosów suchych, matowych i zniszczonych, idealna także po zabiegach chemicznych.\nLekka formuła bogata w składniki aktywne działa bez obciążenia, zapewniając natychmiastowy efekt wygładzenia i połysku.\n\t•\tIntensywne nawilżenie i regeneracja w 1 aplikacji\n\t•\tKwaśne pH zamyka łuski włosa i utrwala kolor – idealna po koloryzacji\n\t•\tDziała antystatycznie – eliminuje puszenie i elektryzowanie\n\t•\tWzmacnia włosy, redukuje łamliwość i chroni przed uszkodzeniami\n\t•\tPrzedłuża efekty prostowania, nanoplastii i botoksów\n\t•\tSzybka, prosta i ekonomiczna aplikacja \n\n\nIdealna dla włosów po dekoloryzacjach i koloryzacjach blond 🌿",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": 150,
+              "cenaPromo": 127.5,
+              "najnizszaCena30d": 150,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 60
+            }
+          ],
+          "zdjecia": [
+            "/cennik/ampulkaregeneracyjna/3.webp",
+            "/cennik/ampulkaregeneracyjna/2.webp",
+            "/cennik/ampulkaregeneracyjna/1.webp"
+          ]
+        },
+        {
+          "nazwa": "REKONSTRUKCJA JOICO❄️",
+          "opis": "JOICO K-Pak  - najlepsza dostępna rekonstrukcja na zimno na rynku - to silnie regenerująca kuracja przeznaczona do włosów zniszczonych, osłabionych i łamliwych. Wzmacnia pasma, poprawia ich kondycję i pomaga przywrócić elastyczność oraz połysk – efekty są widoczne  już po pierwszym użyciu.\n\nFormuła wykorzystuje technologię SmartRelease, która stopniowo uwalnia keratynę, argininę i olejek z dzikiej róży – składniki wspierające odbudowę oraz ochronę włosów. Regularne stosowanie pomaga ograniczyć dalsze uszkodzenia, zwiększa odporność na czynniki zewnętrzne i ułatwia codzienną stylizację.\n\n\nZalety stosowania  JOICO K-Pak:\n-intensywnie regeneruje i wspiera odbudowę struktury włosa,\npomaga zmniejszyć łamliwość i wzmacnia końcówki,\n-poprawia elastyczność oraz dodaje zdrowego blasku,\ndziała szybko – efekty już w ok. 1 minutę",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": 150,
+              "cenaPromo": 127.5,
+              "najnizszaCena30d": 150,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 60
+            }
+          ],
+          "zdjecia": [
+            "/cennik/rekonstrukcjajoico/1.webp",
+            "/cennik/rekonstrukcjajoico/2.webp"
+          ]
+        },
+        {
+          "nazwa": "MASKA NA CIEPŁO 🔥",
+          "opis": "Poznaj naszą maskę na ciepło  – profesjonalną, odbudowującą maskę do włosów , również po zabiegach chemicznych. To zaawansowana formuła, która przywraca włosom zdrowie, blask i miękkość już po pierwszym użyciu. Dzięki innowacyjnym składnikom, takim jak aminokwasy, białka, fibroina i nanokapsułki, maska intensywnie regeneruje włókna włosów, zapobiega łamliwości i chroni kolor. Idealna do stosowania po koloryzacji, dekoloryzacji czy innych zabiegach chemicznych. Przekonaj się, jak skutecznie możesz odbudować i wygładzić swoje włosy!\n\nJakie są jej najważniejsze cechy? -Intensywnie odbudowuje i regeneruje włosy po zabiegach chemicznych\n-Uzupełnia niedobory białek i aminokwasów w strukturze włosów\n-Przedłuża efekty zabiegów fryzjerskich, takich jak koloryzacja czy prostowanie\n-Wygładza włosy, ogranicza puszenie i nadaje im wyjątkowy połysk\n-Efekty widoczne już po pierwszej aplikacji\n\nZaawansowana formuła z fibroiną wzmacnia włókna włosów i przeciwdziała łamliwości\nNanokapsułki wnikają głęboko, odbudowując masę kapilarną i uzupełniając lipidy\nKationowe polimery tworzą ochronny film, zabezpieczając kolor włosów\nMaska aktywowana jest ciepłem – efekt potęguje użycie suszarki lub sauny do włosów\nOdpowiednia do wszystkich rodzajów włosów",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": 150,
+              "cenaPromo": 127.5,
+              "najnizszaCena30d": 150,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 60
+            }
+          ],
+          "zdjecia": [
+            "/cennik/maskanacieplo/1.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "nazwa": "TRWAŁA REKONSTRUKCJA WŁOSA 💚",
+      "uslugi": [
+        {
+          "nazwa": "NIE WIEM JAKI ZABIEG",
+          "opis": "Konsultacja + czas na zabieg. \nJeżeli chcesz poprawić kondycję swoich włosów ,ale nie wiesz jaki zabieg rekonstrukcji  wybrac, ta usługa jest dla Ciebie :) \nJeżeli masz bardzo uwrażliwione włosy lub dłuższe niż do łopatek - poinformuj nas o tym wcześniej (sms|instagram|facebook) \nKoszt usługi ustalamy przed wykonaniem usługi. \nDo zobaczenia !",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Zmienna",
+              "odCeny": false,
+              "czasMin": 180
+            }
+          ],
+          "zdjecia": [
+            "/cennik/niewiemjaki/3.webp",
+            "/cennik/niewiemjaki/1.webp",
+            "/cennik/niewiemjaki/2.webp"
+          ]
+        },
+        {
+          "nazwa": "REKONSTRUKCJA WŁOSÓW |TRUDNE PRZYPADKI |HYBRYDY|",
+          "opis": "**KONSULTACJA + CZAS NA WYKONANIE ZABIEGU TRWAŁEJ REKONSTRUKCJI WŁOSA.** \n\nJeżeli Twoje włosy są w złym stanie, ich codzienna pielęgnacja przysparza Ci wiele kłopotów i myślisz o ścięciu - ta usługa jest dla Ciebie. Malwina jest wieloletnim instruktorem oraz specjalistą w dziedzinie trwałej rekonstrukcji włosa. Dobierze - specjalnie dla Twoich włosów -  terapię indywidualną, dzięki której będziesz mogła cieszyć się zadbanymi włosami. Doradzamy i dbamy o włosy długofalowo. Mamy wiele klientek, które dzięki naszej opiece pięknie zapuszczają włosy oraz dochodzą do wymarzonych kolorów bez utraty włosa. Zaufaj doświadczeniu naszej top stylistki - do zobaczenia na fotelu :) \n\n_W PRZYPADKU HYBRYD ZABIEGOWYCH I CIĘŻKICH PRZYAPADKÓW USŁUGĘ WYKONUJE TOP STYLISTA (MALWINA) = CENA USTALONA JEST PO KONSULTACJI PRZED ZABIEGIEM. (600-1100 zł w zależności od długości i gęstości włosa) \n\n**Do wszystkich zabiegów wliczone jest już kosmetyczne podcięcie oraz pielęgnacja W PREZENCIE.**",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Zmienna",
+              "odCeny": false,
+              "czasMin": 180
+            }
+          ],
+          "zdjecia": [
+            "/cennik/rekonstrukcjatrudneprzypadki/2.webp",
+            "/cennik/rekonstrukcjatrudneprzypadki/1.webp",
+            "/cennik/rekonstrukcjatrudneprzypadki/4.webp",
+            "/cennik/rekonstrukcjatrudneprzypadki/3.webp",
+            "/cennik/rekonstrukcjatrudneprzypadki/5.webp",
+            "/cennik/rekonstrukcjatrudneprzypadki/6.webp"
+          ]
+        },
+        {
+          "nazwa": "KAUTERYZACJA WŁOSA",
+          "opis": "Zabieg to ratunek dla **najbardziej** uwrażliwionych włosów,  również tych po procesie rozjaśniania, **nieprzechodzących testu włosa.** \n\nRewitalizuje, nawilża i odżywia włosy zapewniając przy tym ochronę.\n\nMa za zadanie  redukować puszenie, elektryzowanie się włosów oraz na dłużej podtrzymuje  nawilżenie  we włosach. Efektywność tego zabiegu wyróżnia się tym, że jako jedyny z zabiegow na gorąco -  może   być wykonywany  bezpośrednio po koloryzacji.\nDzięki temu jest uznawany jako \"zabieg bankietowy\". \n\nJeśli chcesz poprawić nawilżenie , sprężystość i miękkość swoich włosów a zarazem nie chcesz trwale zmieniać struktury swojego włosa -  kauteryzacja  jest doskonałym wyborem, gdyż pozwala zachować naturalny skręt włosów. \n\nDodatkowym atutem zabiegu , jest również natychmiastowy efekt lustrzanego blasku. \n\nEfekt zabiegu utrzymuję się do 30 dni. Możesz stosować tak często jak potrzebujesz.\n\nBezpieczny dla kobiet w ciaży i w trakcie laktacji.\n\nUWAGI:\n\nMożliwa dopłata za włosy gęste **+50 zł** i za bardzo gęste **\\+ 100 zł**\n\n**Do wszystkich zabiegów wliczone jest już kosmetyczne podcięcie oraz pielęgnacja W PREZENCIE.**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 200,
+              "cenaPromo": 180,
+              "najnizszaCena30d": 200,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 300,
+              "cenaPromo": 255,
+              "najnizszaCena30d": 300,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 150
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
+              "cenaPromo": 225,
+              "najnizszaCena30d": 250,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 150
+            },
+            {
+              "nazwa": "Włosy dłuższe",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            }
+          ],
+          "zdjecia": [
+            "/cennik/kauteryzacjawlosa/1.webp",
+            "/cennik/kauteryzacjawlosa/2.webp"
+          ]
+        },
+        {
+          "nazwa": "BOTOKS ORGANICZNY",
+          "opis": "Btox Organic to zaawansowany, brazylijski zabieg kapilarny (botoks na włosy) stworzony z myślą o głębokiej regeneracji, redukcji objętości oraz eliminacji puszenia się pasm. \nProdukt ten łączy właściwości silnie odżywcze z delikatnym efektem prostującym, bez użycia agresywnych substancji chemicznych. (Bezpieczny dla kobiet w ciazy i karmiących) \nGłówne cechy i działanie: \n>Redukcja objętości i puszenia - Skutecznie dyscyplinuje niesforne pasma i domyka łuski włosa.\n>Głęboka rekonstrukcja - Działa w wewnętrznych i zewnętrznych strukturach włosa, odbudowując uszkodzenia.\n>Intensywne nawilżenie: Bogata formuła z olejkami amazońskimi przywraca pasmom miękkość i elastyczność.\n>Lustrzany blask: Nadaje włosom zdrowy, jedwabisty połysk oraz wygładzenie.\n\nEfekty do około 3 miesięcy.",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 450,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 150
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 550,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 650,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 200
+            }
+          ],
+          "zdjecia": [
+            "/cennik/botoksorganiczny/1.webp",
+            "/cennik/botoksorganiczny/2.webp"
+          ]
+        },
+        {
+          "nazwa": "NANOBOTOKS - DO 5 MIESIĘCY",
+          "opis": "HIT NASZYCH KLIENTEK 🤩\n\nNanobotoks to zabieg skoncentrowany na uszczelnieniu i nawilżeniu włosów, jednak ma słabsze działanie prostujące niż nanoplastia, dzięki czemu włosy są podatne do codziennej stylizacji. Jego formuła zawiera BioComplex, witaminy B i E, olejek arganowy oraz aż 19 aminokwasów, które dogłębnie odżywiają i nawilżają strukturę włosa. Zabieg ten jest idealny **dla osób z włosami puszącymi się** **i pozbawionymi blasku.** Zapewnia bardzo naturalny efekt wygładzenia i ułatwia codzienną stylizację.Co więcej, nanobotoks posiada niebieski pigment, który tonuje włosy blond. \n\n*   Nanobotoks jest doskonały dla osób m.in. z włosami cienkimi lub klientów z włosami prostymi, ale niesfornymi. Świetnie sprawdza się także przy włosach farbowanych i rozjaśnianych.\n\nZalety Nanobotoksu:\n\n*   Włosy stają się jedwabiście gładkie, zabezpieczone przed puszeniem się oraz są łatwiejsze w stylizacji.\n*   Zawartość olejku arganowego i witamin zapewnia głębokie wielopoziomowe nawilżenie.\n*   Dzięki aminokwasom włosy są bardziej elastyczne, sprężyste i miękkie w dotyku.\n\n**\\- bez formaldehydu, dyskomfortu i pieczenia ,** \n\n**\\- bezpieczny dla kobiet w ciąży bądź karmiących .** \n\nUWAGI:\n\nMożliwa dopłata za włosy gęste **+50 zł** i za bardzo gęste **\\+ 100 zł**\n\n**Do wszystkich zabiegów wliczone jest już kosmetyczne podcięcie oraz pielęgnacja W PREZENCIE.**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 500,
+              "cenaPromo": 425,
+              "najnizszaCena30d": 500,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 600,
+              "cenaPromo": 510,
+              "najnizszaCena30d": 600,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 210
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 750,
+              "cenaPromo": 637.5,
+              "najnizszaCena30d": 750,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 210
+            },
+            {
+              "nazwa": "Włosy dłuższe",
+              "cena": 850,
+              "cenaPromo": 722.5,
+              "najnizszaCena30d": 850,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 240
+            }
+          ],
+          "zdjecia": [
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/e5f6f5156fe1439e8bb3f7e1a3db837d.jpeg",
+            "/cennik/nanobotoks/1.webp",
+            "/cennik/nanobotoks/2.webp",
+            "/cennik/nanobotoks/4.webp"
+          ]
+        },
+        {
+          "nazwa": "BIOPLASTIA - DO 6 MIESIĘCY",
+          "opis": "Bioplastia to **kuracja przeciw puszeniu** się włosa. Odpowiedni zabieg dla włosów uwrażliwionych, niesfornych, plączących się czy też cienkich. Jeśli twoje włosy są wysokiej porowatości i codzienna pielęgnacja  nie pomaga ich zdyscyplinować , będzie to wybór dla Ciebie. Zabieg zapewnia **uszczelnienie łuski włosa** , dzięki temu jest idealnym zabezpieczeniem przed mechanicznym uszkodzeniom a także optycznie je pogrubia. Zabieg bioplastii to trwałe  pożegnanie z nadmiernych puszkiem  i elektryzowaniem się włosa. Twoje włosy **nie będą już reagować na zmianę warunków atmosferycznych.** Dużym atutem jest zachowanie **naturalnej objętości włosa**  , gdyż zabieg w odpowiednio dobranych parametrach nie powoduje znaczącej utraty objętości. Sprawia, że włosy są odżywione i sypkie.  Jest zalecany również dla włosów falowanych, nie  powoduje też zmiany koloru włosów. \n\nJeżeli chcesz włosy gładkie, ale podatne do układania i stylizacji - ten zabieg będzie idelany. \n\nAtuty zabiegu: \n\n\\-długotrwale przeciwdziała puszeniu  i elektryzowaniu się włosów \n\n\\- nie wysusza końcówek, \n\n\\- trwale nie zmienia formy włosa, włosy dalej są podatne na stylizację, \n\n\\- doskonale uszczelnia łuskę włosa , \n\n\\- nawilża i zmiękcza, \n\n**\\- bez formaldehydu, dyskomfortu i pieczenia ,**\n\n**\\- bezpieczny dla kobiet w ciąży bądź laktacji.**\n\nUWAGI:\n\nMożliwa dopłata za włosy gęste **+50 zł** i za bardzo gęste **\\+ 100 zł**\n\n**Do wszystkich zabiegów wliczone jest już kosmetyczne podcięcie oraz pielęgnacja W PREZENCIE.**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 590,
+              "cenaPromo": 501.5,
+              "najnizszaCena30d": 590,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 850,
+              "cenaPromo": 722.5,
+              "najnizszaCena30d": 850,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 210
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 690,
+              "cenaPromo": 586.5,
+              "najnizszaCena30d": 690,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 210
+            },
+            {
+              "nazwa": "Włosy dłuższe",
+              "cena": 950,
+              "cenaPromo": 807.5,
+              "najnizszaCena30d": 950,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 240
+            }
+          ],
+          "zdjecia": [
+            "/cennik/bioplastia/2.webp",
+            "/cennik/bioplastia/1.webp"
+          ]
+        },
+        {
+          "nazwa": "NANOPLASTIA BASIC | DLA BLONDYNEK DO 6 MIESIĘCY",
+          "opis": "Najmocniejszy zabieg  ze specjalnie opatentowaną formułą, wzbogaconą o 19 aminokwasów aktywnych.  Korzyścią zabiegu jest przede wszystkim **trwałe rozprostowanie włosów NAWET  kręconych,** powodując  przy tym jednoczesne uszczelnienie i odbudowę łodygi włosa. \n\nZabieg sprawia, że włosy są nawilżone, sypkie, miękkie, całkowicie proste, nie powodując przy tym ocieplenia ich koloru \n\nW przypadku włosów ciemnych farbowanych możliwa jest zmiana koloru do 2 tonów. Jest to tak zwana **BEZINWAZYJNA DEKOLORYZACJA** od której można zacząć proces schodzenia z czarnych/ciemnych włosów. \n\n**Efektywność zabiegu :** \n\n\\- maksymalny rozprost, \n\n\\- trwałość zabiegu - do 6 miesięcy.\n\n\\- miękkie , sypkie i nawilżone włosy , \n\n\\- całkowita eliminacja puszenia się włosów, \n\n\\- bezpieczny dla kobiet w ciąży i podczas laktacji , \n\n\\- **Zabieg bez łez i dyskomfortu.**\n\nMożliwa dopłata za włosy gęste **+50 zł** i za bardzo gęste **\\+ 100 zł**\n\n**Do wszystkich zabiegów wliczone jest już kosmetyczne podcięcie oraz pielęgnacja W PREZENCIE.**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 600,
+              "cenaPromo": 510,
+              "najnizszaCena30d": 600,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 750,
+              "cenaPromo": 637.5,
+              "najnizszaCena30d": 750,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 210
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 950,
+              "cenaPromo": 807.5,
+              "najnizszaCena30d": 950,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 240
+            },
+            {
+              "nazwa": "Włosy dłuższe",
+              "cena": 1100,
+              "cenaPromo": 935,
+              "najnizszaCena30d": 1100,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 270
+            }
+          ],
+          "zdjecia": [
+            "/cennik/nanoplastia/3.webp",
+            "/cennik/nanoplastia/1.webp",
+            "/cennik/nanoplastia/2.webp"
+          ]
+        },
+        {
+          "nazwa": "TANINOPLASTIA (VEGAN)",
+          "opis": "Taniny – sekret zabiegu taninoplastii\n\nTym, co wyróżnia taninoplastię na tle innych podobnych zabiegów, jest zawartość tanin w składzie kosmetyku. Taniny (kwas garbnikowy, kwasy roślinne, kwasy organiczne) przynoszą wiele korzyści włosom.\n\nWarto dodać, że taniny są związkami organicznymi wytwarzanymi przez rośliny. Zabieg taninoplastii jest zabiegiem wegańskim.\n\nWpływ tanin na włosy:\n\n-wzmacniają\n-wygładzają\n-nawilżają\n-działają antyoksydacyjnie\n-mają właściwości przeciwbakteryjne\n\nJak to działa?\n\nTaninoplastia jest zabiegiem prostującym włosy, opartym na składnikach roślinnych. Włosy po zabiegu są zdyscyplinowane, nie puszą się. Ponadto są zregenerowane. Jest to alternatywa dla nanoplastii w przypadku ,gdy zależy nam na mocnej regeneracji, bez mocnego rozprostu włosów. \n\nMultitaniny wyrównują łuski włosów i następnie tworzą łańcuch białek wewnątrz włosów, wzmacniają je i dodają sprężystości. Dzięki temu kondycja kosmyków poprawia się na wielu płaszczyznach.\n\n\n-zabieg jest bezpieczny dla kobiet w ciąży i karmiących \n-efekty utrzymują się do 6 miesięcy",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 600,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 750,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 200
+            },
+            {
+              "nazwa": "Włosy do talii i dłuższe",
+              "cena": 950,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 220
+            }
+          ],
+          "zdjecia": [
+            "/cennik/taninoplastiavegan/1.webp",
+            "/cennik/taninoplastiavegan/2.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "nazwa": "STRZYŻENIE DAMSKIE",
+      "uslugi": [
+        {
+          "nazwa": "MYCIE + PODCIĘCIE KOŃCÓWEK + MODELOWANIE",
+          "opis": "Usługa polega na umyciu włosów i podcięciu ich na prosto (same końcówki). \n\nNa koniec włosy suszymy, modelujemy lub stylizujemy .",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 99,
+              "cenaPromo": 89.1,
+              "najnizszaCena30d": 99,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 40
+            },
+            {
+              "nazwa": "Włosy do łopatek i dłuższe",
+              "cena": 110,
+              "cenaPromo": 99,
+              "najnizszaCena30d": 110,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 60
+            }
+          ],
+          "zdjecia": [
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/398983948acc4f3d8aad496824ecf8b5.jpeg"
+          ]
+        },
+        {
+          "nazwa": "MYCIE + STYLIZACJA LUB MODELOWANIE",
+          "opis": "Mycie włosów, maska nawilżająca i suszenie z modelowaniem, prostowaniem lub stylizacja.",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 80,
+              "cenaPromo": 72,
+              "najnizszaCena30d": 80,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 45
+            },
+            {
+              "nazwa": "Włosy do łopatek i dłuższe",
+              "cena": 100,
+              "cenaPromo": 90,
+              "najnizszaCena30d": 100,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 50
+            }
+          ],
+          "zdjecia": [
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/5b64a80324034266b2dac7c9c4aabbf9.jpeg"
+          ]
+        },
+        {
+          "nazwa": "STRZYŻENIE DAMSKIE ✂️",
+          "opis": "STRZYŻENIE + MYCIE + MODELOWANIE/STYLIZACJA\n\nZastrzegamy sobie możliwość doliczenia 50-100 zł do dodatkowej gęstości lub długości włosa.\n\nUWAGA - nie strzyżemy fryzur na włosach bardzo krótkich.",
+          "warianty": [
+            {
+              "nazwa": "Strzyżenie samej grzywki BEZ MYCIA",
+              "cena": 40,
+              "cenaPromo": 36,
+              "najnizszaCena30d": 40,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 15
+            },
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 100,
+              "cenaPromo": 90,
+              "najnizszaCena30d": 100,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 40
+            },
+            {
+              "nazwa": "Włosy do łopatek i dłuższe",
+              "cena": 120,
+              "cenaPromo": 108,
+              "najnizszaCena30d": 120,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 60
+            }
+          ],
+          "zdjecia": [
+            "/cennik/strzyzenie/3.webp",
+            "/cennik/strzyzenie/2.webp",
+            "/cennik/strzyzenie/1.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "nazwa": "CZESANIE I MAKIJAŻ 💄 🪮",
+      "uslugi": [
+        {
+          "nazwa": "🚀MAKIJAŻ  + FRYZURA 2W1 | 1,5h",
+          "opis": "Zapraszamy na usługę 2W1, która pozwoli zaoszczędzić Ci czas w ważnym dla Ciebie dniu.\n\nMakijaż + Fryzura okolicznościowa (maksymalnie 1,5h🚀) **550** zł \n\nUsługa  usługę wykonujemy w salonie na Załuskiego 73/2 w Kobyłce. Jeżeli masz uwagi co do fryzury i makijażu zachęcamy do wysyłania inspiracji  SMS 508125292.",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": 550,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 90
+            }
+          ],
+          "zdjecia": [
+            "/cennik/makijazfryzura/9.webp",
+            "/cennik/makijazfryzura/3.webp",
+            "/cennik/makijazfryzura/12.webp",
+            "/cennik/makijazfryzura/8.webp",
+            "/cennik/makijazfryzura/5.webp",
+            "/cennik/makijazfryzura/10.webp",
+            "/cennik/makijazfryzura/15.webp",
+            "/cennik/makijazfryzura/2.webp",
+            "/cennik/makijazfryzura/6.webp",
+            "/cennik/makijazfryzura/4.webp",
+            "/cennik/makijazfryzura/1.webp",
+            "/cennik/makijazfryzura/7.webp",
+            "/cennik/makijazfryzura/11.webp",
+            "/cennik/makijazfryzura/14.webp",
+            "/cennik/makijazfryzura/13.webp"
+          ]
+        },
+        {
+          "nazwa": "FRYZURA OKOLICZNOŚCIOWA BASIC",
+          "opis": "Serdecznie zapraszamy Cię na usługę czesania okazjonalnego. Ta opcja to czesanie prostych fryzur typu PROSTOWANIE, KARBOWANIE, LOKI, FALE. Pamiętaj ,aby umyć głowę dzień wcześniej i nie nakładaj zbyt mocno obciążających masek.\n\n**Istnieje również opcja czesania w pakiecie z makijażem, wybierz wtedy usługę 2W1.**",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": 200,
+              "cenaPromo": 180,
+              "najnizszaCena30d": 200,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 60
+            }
+          ],
+          "zdjecia": [
+            "/cennik/fryzuraokolicznosciowabasic/1.webp",
+            "/cennik/fryzuraokolicznosciowabasic/2.webp",
+            "/cennik/fryzuraokolicznosciowabasic/3.webp"
+          ]
+        },
+        {
+          "nazwa": "FRYZURA OKOLICZNOŚCIOWA PREMIUM |",
+          "opis": "Serdecznie zapraszamy Cię na usługę czesania okazjonalnego. Ta opcja to czesanie fryzur typu: **FALE HOLLYWOOD / UPIĘCIA / PÓŁUPIĘCIA / FRENCH TWIST / KOKI / FALE OBIĘTOŚCIOWE / FRYZURY GLAMOUR**   \nPamiętaj ,aby umyć głowę dzień wcześniej i nie nakładaj zbyt mocno obciążających masek.\n\nIstnieje również opcja czesania w pakiecie z makijażem, wybierz wtedy usługę 2W1.\n\nProszę o wysłanie zdjęcia włosów oraz inspiracji smsem na numer 508125292 przed wykonaniem usługi.",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": 250,
+              "cenaPromo": 225,
+              "najnizszaCena30d": 250,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 90
+            }
+          ],
+          "zdjecia": [
+            "/cennik/fryzuraokolicznosciowapremium/11.webp",
+            "/cennik/fryzuraokolicznosciowapremium/10.webp",
+            "/cennik/fryzuraokolicznosciowapremium/9.webp",
+            "/cennik/fryzuraokolicznosciowapremium/7.webp",
+            "/cennik/fryzuraokolicznosciowapremium/5.webp",
+            "/cennik/fryzuraokolicznosciowapremium/6.webp",
+            "/cennik/fryzuraokolicznosciowapremium/8.webp",
+            "/cennik/fryzuraokolicznosciowapremium/1.webp",
+            "/cennik/fryzuraokolicznosciowapremium/4.webp",
+            "/cennik/fryzuraokolicznosciowapremium/3.webp",
+            "/cennik/fryzuraokolicznosciowapremium/2.webp"
+          ]
+        },
+        {
+          "nazwa": "💄MAKIJAŻ OKOLICZNOŚCIOWY | MAKIJAŻ ŚLUBNY",
+          "opis": "Profesjonalny makijaż okolicznościowy dopasowany do indywidualnych potrzeb i typu urody. W studio Zdrowa Odbudowa można wykonać makijaż dzienny, wieczorowy, a także na specjalne okazje, takie jak śluby i sesje zdjęciowe. Używamy wyłącznie wysokiej jakości kosmetyków i profesjonalnych technik, by podkreślić Twoje naturalne piękno. Na wizytę zapraszamy bez makijażu, a dzień wcześniej warto zadbać o nawilżenie skóry.\n\nJest opcja tańszej usługi makijażu z czesaniem w pakiecie  2w1",
+          "warianty": [
+            {
+              "nazwa": "MAKIJAŻ DZIENNY / BIZNESOWY (delikatny bez rzęs)",
+              "cena": 230,
+              "cenaPromo": 207,
+              "najnizszaCena30d": 230,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 60
+            },
+            {
+              "nazwa": "MAKIJAŻ  OKOLICZNOŚCIOWY",
+              "cena": 280,
+              "cenaPromo": 252,
+              "najnizszaCena30d": 280,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 90
+            },
+            {
+              "nazwa": "MAKIJAŻ ŚLUBNY / PRÓBA",
+              "cena": 300,
+              "cenaPromo": 270,
+              "najnizszaCena30d": 300,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 90
+            }
+          ],
+          "zdjecia": [
+            "/cennik/makijazokolicznosciowy/3.webp",
+            "/cennik/makijazokolicznosciowy/11.webp",
+            "/cennik/makijazokolicznosciowy/12.webp",
+            "/cennik/makijazokolicznosciowy/7.webp",
+            "/cennik/makijazokolicznosciowy/2.webp",
+            "/cennik/makijazokolicznosciowy/10.webp",
+            "/cennik/makijazokolicznosciowy/8.webp",
+            "/cennik/makijazokolicznosciowy/4.webp",
+            "/cennik/makijazokolicznosciowy/5.webp",
+            "/cennik/makijazokolicznosciowy/6.webp",
+            "/cennik/makijazokolicznosciowy/9.webp",
+            "/cennik/makijazokolicznosciowy/1.webp"
+          ]
+        },
+        {
+          "nazwa": "👰‍♀️FRYZURA PRÓBNA | ŚLUBNA",
+          "opis": "Rezerwacja czasu na próbę ślubną lub pojedynczą fryzurę ślubną w salonie.",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": 300,
+              "cenaPromo": 270,
+              "najnizszaCena30d": 300,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 150
+            }
+          ],
+          "zdjecia": [
+            "/cennik/fryzuraprobna/1.webp",
+            "/cennik/fryzuraprobna/6.webp",
+            "/cennik/fryzuraprobna/12.webp",
+            "/cennik/fryzuraprobna/9.webp",
+            "/cennik/fryzuraprobna/11.webp",
+            "/cennik/fryzuraprobna/13.webp",
+            "/cennik/fryzuraprobna/7.webp",
+            "/cennik/fryzuraprobna/2.webp",
+            "/cennik/fryzuraprobna/4.webp",
+            "/cennik/fryzuraprobna/10.webp",
+            "/cennik/fryzuraprobna/5.webp",
+            "/cennik/fryzuraprobna/3.webp",
+            "/cennik/fryzuraprobna/8.webp",
+            "/cennik/fryzuraprobna/14.webp"
+          ]
+        },
+        {
+          "nazwa": "FRYZURA ŚLUBNA + DOJAZD 👰🤵‍♂️",
+          "opis": "Zapraszamy do rezerwowania miejsc na sezon 2027.  \n \n\nJeżeli zarezerwujesz dzień pakietu - napisz do nas 508125292,aby umówić się na fryzurę i makijaż próbny, nie później niż 2 miesiące  przed Wielkim Dniem ☺️ Więcej informacji o pakiecie ślubnym znajdziecie w podpiętych postach na naszych social mediach @hairxmakeup\\_glowteam.",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Wycena indywidualna",
+              "odCeny": false,
+              "czasMin": 240
+            }
+          ],
+          "zdjecia": [
+            "/cennik/fryzuraslubnadojazd/13.webp",
+            "/cennik/fryzuraslubnadojazd/1.webp",
+            "/cennik/fryzuraslubnadojazd/2.webp",
+            "/cennik/fryzuraslubnadojazd/12.webp",
+            "/cennik/fryzuraslubnadojazd/3.webp",
+            "/cennik/fryzuraslubnadojazd/16.webp",
+            "/cennik/fryzuraslubnadojazd/8.webp",
+            "/cennik/fryzuraslubnadojazd/9.webp",
+            "/cennik/fryzuraslubnadojazd/7.webp",
+            "/cennik/fryzuraslubnadojazd/6.webp",
+            "/cennik/fryzuraslubnadojazd/11.webp",
+            "/cennik/fryzuraslubnadojazd/5.webp",
+            "/cennik/fryzuraslubnadojazd/10.webp",
+            "/cennik/fryzuraslubnadojazd/15.webp",
+            "/cennik/fryzuraslubnadojazd/14.webp",
+            "/cennik/fryzuraslubnadojazd/4.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "nazwa": "VOUCHERY PREZENTOWE 🎁",
+      "uslugi": [
+        {
+          "nazwa": "VOUCHER",
+          "opis": "DO KAŻDEGO VOUCHERA DODAJEMY 10 % JEGO WARTOŚCI!\n\nWykup voucher na dowolną kwotę, a dodamy do niego 10 % tej kwoty w prezencie. \n\nNa co można wykorzystać voucher?\n\nKOLORYZACJE\n\nSTRZYŻENIE DAMSKIE\n\nZABIEGI REGENERACYJNE DO WŁOSÓW\n\nPAKIET OKAZJONALNY - FRYZURA + MAKIJAŻ\n\nWażne informacje:\n\nVOUCHERY MOŻNA ZAKUPIĆ W SALONIE UL.ZAŁUSKIEGO 73D/2 KOBYŁKA, wybierz wybrany termin na booksy, kiedy chciałbyś/chciałabyś go odebrać.\n\nDO KAŻDEGO VOCUHERA DODAJEMY 10 % JEGO WARTOŚCI\n\nTO TY DECYDUJESZ O KWOCIE VOUCHERA\n\nVOUCHER MOŻNA WYKORZYSTAĆ NA CAŁĄ USŁUGĘ LUB OPŁACIĆ NIM CZĘŚĆ USŁUGI \n\nKAŻDY VOUCHER JEST WAŻNY 3 MIESIĄCE od daty zakupu.\n\nKAŻDY VOUCHER JEST ZAPAKOWANY W OZDOBNĄ KOPERTĘ ORAZ KOKARDĘ - IDEALNIE NA PREZENT\n\nZAPRASZAMY!",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Zmienna",
+              "odCeny": false,
+              "czasMin": 5
+            }
+          ],
+          "zdjecia": [
+            "/cennik/voucher/1.webp"
+          ]
+        }
+      ]
+    }
+  ]
+}

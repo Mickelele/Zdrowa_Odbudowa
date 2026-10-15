@@ -7,7 +7,8 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const LOGO = "/logo.png";
-import { formatPln, loadPricing } from "@/lib/pricing-db";
+import { formatPln } from "@/lib/pricing-db";
+import { booksyPricing, pricingUpdatedAt } from "@/lib/cennik";
 import type { PriceItem } from "@/data/pricing";
 import { getBooksyReviews } from "@/lib/booksy-reviews";
 import { getSiteOrigin } from "@/lib/site-origin";
@@ -78,8 +79,9 @@ const jsonLd = {
 
 export const Route = createFileRoute("/")({
   loader: async () => {
-    const [pricing, booksy, origin] = await Promise.all([loadPricing(), getBooksyReviews(), getSiteOrigin()]);
-    return { pricing, booksy, shareImage: origin + SHARE_IMAGE };
+    // cennik: src/data/cennik.json, aktualizowany codziennie z Booksy (scripts/fetch-booksy.mjs)
+    const [booksy, origin] = await Promise.all([getBooksyReviews(), getSiteOrigin()]);
+    return { pricing: booksyPricing, booksy, shareImage: origin + SHARE_IMAGE };
   },
   head: ({ loaderData }) => ({
     meta: [
@@ -127,6 +129,9 @@ function Reveal({ children, className = "" }: { children: ReactNode; className?:
   return <div className={`reveal ${className}`}>{children}</div>;
 }
 
+/** Usuwa emoji z opisu, ale zostawia podział na akapity. */
+const plainText = (s: string) => s.replace(/[\p{Extended_Pictographic}️‍]/gu, "").replace(/[ 	]{2,}/g, " ").trim();
+
 /** Usuwa emoji z nazw – w cenniku wyglądają elegancko bez nich. */
 const plain = (s: string) => s.replace(/[\p{Extended_Pictographic}️‍]/gu, "").replace(/\s{2,}/g, " ").trim();
 
@@ -149,7 +154,7 @@ function PriceEntry({ item, onOpenImages }: { item: PriceItem; onOpenImages: (in
         {item.badge && <p className="mt-1 font-narrow text-sm uppercase tracking-[0.2em] text-primary/80">✦ {plain(item.badge)}</p>}
         {item.desc && (
           <div className="mt-1.5">
-            <p className={`text-sm leading-relaxed text-muted-foreground ${longDesc && !expanded ? "line-clamp-3" : ""}`}>{plain(item.desc)}</p>
+            <p className={`whitespace-pre-line text-sm leading-relaxed text-muted-foreground ${longDesc && !expanded ? "line-clamp-3" : ""}`}>{plainText(item.desc)}</p>
             {longDesc && (
               <button onClick={() => setExpanded((e) => !e)} className="mt-1 text-xs font-medium uppercase tracking-wider text-primary hover:underline">
                 {expanded ? "Zwiń" : "Czytaj więcej"}
@@ -286,9 +291,13 @@ function Index() {
   const { pricing, booksy } = Route.useLoaderData();
   const rating = booksy ?? FALLBACK_RATING;
   const [priceTab, setPriceTab] = useState(pricing[0]?.id ?? "");
+  // największy rabat w całym cenniku, np. "-15%" (liczony z danych Booksy)
+  const maxPct = Math.max(0, ...pricing.flatMap((c) => c.items.map((it) => Number(it.discount?.replace(/\D/g, "") || 0))));
+  const maxDiscount = maxPct ? `-${maxPct}%` : null;
   /** "Zobacz cennik" w Usługach – otwiera właściwą zakładkę cennika i przewija do niego. */
   const openPrices = (tab: string) => {
-    if (pricing.some((c) => c.id === tab)) setPriceTab(tab);
+    const target = pricing.find((c) => c.id === tab || c.id.includes(tab));
+    if (target) setPriceTab(target.id);
     document.getElementById("cennik")?.scrollIntoView({ behavior: "smooth" });
   };
   const [open, setOpen] = useState(false);
@@ -462,7 +471,7 @@ function Index() {
       {/* CENNIK */}
       <section id="cennik" className="bg-secondary py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <SectionTitle kicker="Promocje do -15%" title="Cennik" />
+          <SectionTitle kicker={maxDiscount ? `Promocje do ${maxDiscount}` : "Aktualne ceny"} title="Cennik" />
           <Tabs value={priceTab} onValueChange={setPriceTab}>
             <div className="-mx-5 overflow-x-auto px-5 [scrollbar-width:none] lg:mx-0 lg:overflow-visible lg:px-0 [&::-webkit-scrollbar]:hidden">
               <TabsList className="h-auto w-max gap-x-1 rounded-none border-b border-primary/20 bg-transparent p-0 lg:flex lg:w-full lg:flex-wrap lg:justify-center lg:gap-x-4">
@@ -502,6 +511,7 @@ function Index() {
             ))}
           </Tabs>
           <p className="mx-auto mt-10 max-w-3xl text-center text-sm text-muted-foreground">Ostateczna cena zależy od długości i gęstości włosa – dokładny koszt poznasz przed zabiegiem.</p>
+          <p className="mt-3 text-center text-xs text-muted-foreground">Cennik aktualizowany automatycznie z Booksy · stan na {pricingUpdatedAt}</p>
           <div className="mt-6 text-center"><Btn href={BOOKSY}>Zarezerwuj na Booksy</Btn></div>
         </div>
       </section>
@@ -664,9 +674,10 @@ function Index() {
               © 2026 Zdrowa Odbudowa · Wykonanie:{" "}
               <a href="https://mico-page.pl" {...ext} className="underline-offset-2 hover:text-primary hover:underline">MicoPage ©</a>
             </p>
+            {/* Panel administratora wyłączony (cennik z Booksy) – zob. ADMIN_ENABLED w src/routes/admin.tsx
             <a href="/admin" rel="nofollow" className="inline-flex items-center gap-1 rounded-full border border-border px-3 py-1 hover:border-primary hover:text-primary">
               <Lock className="h-3 w-3" /> Panel administratora
-            </a>
+            </a> */}
           </div>
         </div>
       </footer>
