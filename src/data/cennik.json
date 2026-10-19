@@ -1,5 +1,5 @@
 {
-  "aktualizacja": "2026-10-16T10:34:39+02:00",
+  "aktualizacja": "2026-10-19T11:23:54+02:00",
   "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
   "kategorie": [
     {
@@ -82,10 +82,10 @@
           "opis": "Jeżeli Twój blond nie jest już chłodnym blondem, brąz przechodzi w rudości, a jeszcze nie chcesz ponawiać koloryzacji permanentnej- ta usługa jest dla Ciebie! Usługa obejmuje tonowanie całej długości włosa, mycie i modelowanie.\n\nEfekt koloryzacji utrzymuje się około trzech miesięcy.\n\nKoloryzacja tonerami pokrywa około 70 % siwizny.\n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do talii",
-              "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
+              "nazwa": "Włosy do ramion",
+              "cena": 170,
+              "cenaPromo": 153,
+              "najnizszaCena30d": 150,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
@@ -100,10 +100,10 @@
               "czasMin": 90
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 170,
-              "cenaPromo": 153,
-              "najnizszaCena30d": 150,
+              "nazwa": "Włosy do talii",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
@@ -170,15 +170,6 @@
           "opis": "Wybierz tą usługę jeżeli pragniesz rozjaśnić swoje włosy metodą całościową , pasemkami lub refleksami. W tą usługę  wlicza się balejaż niteczkowy / refleksy / pojaśnienia min 50 % oraz ODROST , TONOWANIE i MODELOWANIE/LOKI/FALE\n\n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do talii",
-              "cena": 750,
-              "cenaPromo": 637.5,
-              "najnizszaCena30d": 750,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 180
-            },
-            {
               "nazwa": "Włosy do ramion",
               "cena": 550,
               "cenaPromo": 467.5,
@@ -192,6 +183,15 @@
               "cena": 650,
               "cenaPromo": 552.5,
               "najnizszaCena30d": 650,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 750,
+              "cenaPromo": 637.5,
+              "najnizszaCena30d": 750,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -248,6 +248,15 @@
           "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
+              "nazwa": "Włosy do talii",
+              "cena": 490,
+              "cenaPromo": 416.5,
+              "najnizszaCena30d": 490,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
               "nazwa": "Włosy do łopatek",
               "cena": 390,
               "cenaPromo": 331.5,
@@ -264,15 +273,6 @@
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
-            },
-            {
-              "nazwa": "Włosy do talii",
-              "cena": 490,
-              "cenaPromo": 416.5,
-              "najnizszaCena30d": 490,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
             }
           ],
           "zdjecia": [
@@ -283,6 +283,15 @@
           "nazwa": "KOLORYZACJA WIELOTONOWA",
           "opis": "**Koloryzacja wielotonowa** jest to technika koloryzacji (inaczej również koloryzacja 3D), w której stosuje się co najmniej dwa kolory bazowe. Dzięki tej koloryzacji kolor jest głębszy, bardziej naturalny i nie jest \"płaski\".  W tej usłudze wliczamy rówież farbowanie odrostu na inny kolor niż reszta włosów po długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 550,
+              "cenaPromo": 467.5,
+              "najnizszaCena30d": 550,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
             {
               "nazwa": "Włosy do łopatek",
               "cena": 450,
@@ -297,15 +306,6 @@
               "cena": 350,
               "cenaPromo": 315,
               "najnizszaCena30d": 350,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
-            },
-            {
-              "nazwa": "Włosy do talii",
-              "cena": 550,
-              "cenaPromo": 467.5,
-              "najnizszaCena30d": 550,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -1068,7 +1068,6 @@
             "/cennik/fryzuraslubnadojazd/13.webp",
             "/cennik/fryzuraslubnadojazd/1.webp",
             "/cennik/fryzuraslubnadojazd/2.webp",
-            "/cennik/fryzuraslubnadojazd/12.webp",
             "/cennik/fryzuraslubnadojazd/3.webp",
             "/cennik/fryzuraslubnadojazd/16.webp",
             "/cennik/fryzuraslubnadojazd/8.webp",
@@ -1082,7 +1081,9 @@
             "/cennik/fryzuraslubnadojazd/14.webp",
             "/cennik/fryzuraslubnadojazd/4.webp",
             "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/6e57f291d1a24f9eb6623cf8674c126d.jpeg",
-            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/1b6e5e539fc44f9e841034bbc80b8c93.jpeg"
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/1b6e5e539fc44f9e841034bbc80b8c93.jpeg",
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/85e4bbcf9a864bf9b5d1d08a75e4bcfa.jpeg",
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/3fe0ed5b6b8a4102bb0bf75b092c83ce.jpeg"
           ]
         }
       ]
