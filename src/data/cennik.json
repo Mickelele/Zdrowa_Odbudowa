@@ -1,5 +1,5 @@
 {
-  "aktualizacja": "2026-10-21T10:57:16+02:00",
+  "aktualizacja": "2026-10-22T10:59:42+02:00",
   "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
   "kategorie": [
     {
@@ -10,7 +10,7 @@
           "opis": "Jeżeli nie jesteś przekonana jaki zabieg lub kolor będzie dla Ciebie odpowiedni, zapraszamy na BEZPŁATNĄ I NIEZOBOWIĄZUJĄCĄ konsultację z naszym specjalistą od zabiegów i koloryzacji.",
           "warianty": [
             {
-              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
@@ -19,7 +19,7 @@
               "czasMin": 15
             },
             {
-              "nazwa": "KONSULTACJA (KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
@@ -170,19 +170,19 @@
           "opis": "Wybierz tą usługę jeżeli pragniesz rozjaśnić swoje włosy metodą całościową , pasemkami lub refleksami. W tą usługę  wlicza się balejaż niteczkowy / refleksy / pojaśnienia min 50 % oraz ODROST , TONOWANIE i MODELOWANIE/LOKI/FALE\n\n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 650,
-              "cenaPromo": 552.5,
-              "najnizszaCena30d": 650,
+              "nazwa": "Włosy do talii",
+              "cena": 750,
+              "cenaPromo": 637.5,
+              "najnizszaCena30d": 750,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 750,
-              "cenaPromo": 637.5,
-              "najnizszaCena30d": 750,
+              "nazwa": "Włosy do łopatek",
+              "cena": 650,
+              "cenaPromo": 552.5,
+              "najnizszaCena30d": 650,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -248,6 +248,15 @@
           "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
+              "nazwa": "Włosy do łopatek",
+              "cena": 390,
+              "cenaPromo": 331.5,
+              "najnizszaCena30d": 390,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
               "nazwa": "Włosy do talii",
               "cena": 490,
               "cenaPromo": 416.5,
@@ -264,15 +273,6 @@
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
-            },
-            {
-              "nazwa": "Włosy do łopatek",
-              "cena": 390,
-              "cenaPromo": 331.5,
-              "najnizszaCena30d": 390,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
             }
           ],
           "zdjecia": [
@@ -283,15 +283,6 @@
           "nazwa": "KOLORYZACJA WIELOTONOWA",
           "opis": "**Koloryzacja wielotonowa** jest to technika koloryzacji (inaczej również koloryzacja 3D), w której stosuje się co najmniej dwa kolory bazowe. Dzięki tej koloryzacji kolor jest głębszy, bardziej naturalny i nie jest \"płaski\".  W tej usłudze wliczamy rówież farbowanie odrostu na inny kolor niż reszta włosów po długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
-            {
-              "nazwa": "Włosy do ramion",
-              "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
-            },
             {
               "nazwa": "Włosy do łopatek",
               "cena": 450,
@@ -306,6 +297,15 @@
               "cena": 550,
               "cenaPromo": 467.5,
               "najnizszaCena30d": 550,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -397,19 +397,19 @@
           "opis": "Poszukujesz sposobu na **delikatne rozjaśnianie** włosów? Nie chcesz narażać ich na silne, inwazyjne zabiegi takie jak dekoloryzacja, ale zależy Ci na uzyskaniu choć trochę **jaśniejszego koloru**? Jeśli tak, pomoże Ci kąpiel rozjaśniająca włosy.\n\nW jakim celu warto ją zastosować?\n\n1.Uzyskanie koloru jaśniejszego o maksymalnie 1-2 tony **na włosach naturalnych** lub **farbowanych**;  \n2.Przygotowanie włosów pod koloryzację półtrwałą tonerem na poziomie jaśniejszym, niż obecny;  \n3.**Skorygowanie** odcienia po wcześniejszej koloryzacji – jeśli kolor wpada w niechciane szare lub zielonkawe tony, które chcesz stonować lub ocieplić;  \n4.Delikatne **rozświetlenie** i **ocieplenie koloru** włosów – kąpielą rozjaśniającą możesz nadać im słoneczy odcień;  \n5.Rozjaśnienie **końcówek, ombre i sombre,** refleksy – taki efekt również możesz osiągnąć stosując kąpiel rozjaśniającą;\n\n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 150,
-              "cenaPromo": 135,
-              "najnizszaCena30d": 150,
+              "nazwa": "Włosy za ramiona",
+              "cena": 200,
+              "cenaPromo": 180,
+              "najnizszaCena30d": 200,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 60
             },
             {
-              "nazwa": "Włosy za ramiona",
-              "cena": 200,
-              "cenaPromo": 180,
-              "najnizszaCena30d": 200,
+              "nazwa": "Włosy do ramion",
+              "cena": 150,
+              "cenaPromo": 135,
+              "najnizszaCena30d": 150,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 60
