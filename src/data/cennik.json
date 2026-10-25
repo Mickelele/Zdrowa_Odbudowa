@@ -1,5 +1,5 @@
 {
-  "aktualizacja": "2026-10-23T10:54:47+02:00",
+  "aktualizacja": "2026-10-25T10:29:03+01:00",
   "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
   "kategorie": [
     {
@@ -10,7 +10,7 @@
           "opis": "Jeżeli nie jesteś przekonana jaki zabieg lub kolor będzie dla Ciebie odpowiedni, zapraszamy na BEZPŁATNĄ I NIEZOBOWIĄZUJĄCĄ konsultację z naszym specjalistą od zabiegów i koloryzacji.",
           "warianty": [
             {
-              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
@@ -19,7 +19,7 @@
               "czasMin": 15
             },
             {
-              "nazwa": "KONSULTACJA (KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
@@ -119,19 +119,19 @@
           "opis": "Usługa zawiera koloryzację odrostu do 3 cm na ciemny kolor. \nUsługa zawiera położenie farby na odrost + melaksacja po całej długości włosa + modelowanie lub stylizacje. \n\nDo zobaczenia :)",
           "warianty": [
             {
-              "nazwa": "PIERWSZA WIZYTA",
-              "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
+              "nazwa": "STAŁY KLIENT",
+              "cena": 250,
+              "cenaPromo": 225,
+              "najnizszaCena30d": 250,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
             },
             {
-              "nazwa": "STAŁY KLIENT",
-              "cena": 250,
-              "cenaPromo": 225,
-              "najnizszaCena30d": 250,
+              "nazwa": "PIERWSZA WIZYTA",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -170,15 +170,6 @@
           "opis": "Wybierz tą usługę jeżeli pragniesz rozjaśnić swoje włosy metodą całościową , pasemkami lub refleksami. W tą usługę  wlicza się balejaż niteczkowy / refleksy / pojaśnienia min 50 % oraz ODROST , TONOWANIE i MODELOWANIE/LOKI/FALE\n\n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 650,
-              "cenaPromo": 552.5,
-              "najnizszaCena30d": 650,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 180
-            },
-            {
               "nazwa": "Włosy do ramion",
               "cena": 550,
               "cenaPromo": 467.5,
@@ -192,6 +183,15 @@
               "cena": 750,
               "cenaPromo": 637.5,
               "najnizszaCena30d": 750,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 650,
+              "cenaPromo": 552.5,
+              "najnizszaCena30d": 650,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -248,10 +248,10 @@
           "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 290,
-              "cenaPromo": 261,
-              "najnizszaCena30d": 290,
+              "nazwa": "Włosy do talii",
+              "cena": 490,
+              "cenaPromo": 416.5,
+              "najnizszaCena30d": 490,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -266,10 +266,10 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 490,
-              "cenaPromo": 416.5,
-              "najnizszaCena30d": 490,
+              "nazwa": "Włosy do ramion",
+              "cena": 290,
+              "cenaPromo": 261,
+              "najnizszaCena30d": 290,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -293,19 +293,19 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 450,
-              "cenaPromo": 382.5,
-              "najnizszaCena30d": 450,
+              "nazwa": "Włosy do talii",
+              "cena": 550,
+              "cenaPromo": 467.5,
+              "najnizszaCena30d": 550,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 550,
-              "cenaPromo": 467.5,
-              "najnizszaCena30d": 550,
+              "nazwa": "Włosy do łopatek",
+              "cena": 450,
+              "cenaPromo": 382.5,
+              "najnizszaCena30d": 450,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -672,19 +672,19 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 690,
-              "cenaPromo": 586.5,
-              "najnizszaCena30d": 690,
+              "nazwa": "Włosy do talii",
+              "cena": 850,
+              "cenaPromo": 722.5,
+              "najnizszaCena30d": 850,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 850,
-              "cenaPromo": 722.5,
-              "najnizszaCena30d": 850,
+              "nazwa": "Włosy do łopatek",
+              "cena": 690,
+              "cenaPromo": 586.5,
+              "najnizszaCena30d": 690,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -892,7 +892,7 @@
       "uslugi": [
         {
           "nazwa": "🚀MAKIJAŻ  + FRYZURA 2W1 | 1,5h",
-          "opis": "Zapraszamy na usługę 2W1, która pozwoli zaoszczędzić Ci czas w ważnym dla Ciebie dniu.\n\nMakijaż + Fryzura okolicznościowa (maksymalnie 1,5h🚀) **550** zł \n\nUsługa  usługę wykonujemy w salonie na Załuskiego 73/2 w Kobyłce. Jeżeli masz uwagi co do fryzury i makijażu zachęcamy do wysyłania inspiracji  SMS 508125292.",
+          "opis": "Zapraszamy na usługę 2W1, która pozwoli zaoszczędzić Ci czas w ważnym dla Ciebie dniu.\n\nMakijaż + Fryzura okolicznościowa (maksymalnie 1,5h🚀) **550** zł \n\nUsługa  usługę wykonujemy w salonie na Załuskiego 73/1 w Kobyłce. Jeżeli masz uwagi co do fryzury i makijażu zachęcamy do wysyłania inspiracji  SMS 508125292.",
           "warianty": [
             {
               "nazwa": null,
@@ -919,7 +919,8 @@
             "/cennik/makijazfryzura/7.webp",
             "/cennik/makijazfryzura/11.webp",
             "/cennik/makijazfryzura/14.webp",
-            "/cennik/makijazfryzura/13.webp"
+            "/cennik/makijazfryzura/13.webp",
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/18aa0593576d464592fe3835235f86e8.jpeg"
           ]
         },
         {
@@ -969,7 +970,8 @@
             "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/83f24fffe3aa43679c1b0287e558ef57.jpeg",
             "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/3a4955be505d49aba0f7f00edff591c8.jpeg",
             "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/67cbdf0df6224bd191e8da3ad61f84f4.jpeg",
-            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/f11eae0f8bc04cfbb8ce9423332e5983.jpeg"
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/f11eae0f8bc04cfbb8ce9423332e5983.jpeg",
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/bcd49cfefc3040b3a931ede0ad569e59.jpeg"
           ]
         },
         {
@@ -986,19 +988,19 @@
               "czasMin": 60
             },
             {
-              "nazwa": "MAKIJAŻ ŚLUBNY / PRÓBA",
-              "cena": 300,
-              "cenaPromo": 270,
-              "najnizszaCena30d": 300,
+              "nazwa": "MAKIJAŻ  OKOLICZNOŚCIOWY",
+              "cena": 280,
+              "cenaPromo": 252,
+              "najnizszaCena30d": 280,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
             },
             {
-              "nazwa": "MAKIJAŻ  OKOLICZNOŚCIOWY",
-              "cena": 280,
-              "cenaPromo": 252,
-              "najnizszaCena30d": 280,
+              "nazwa": "MAKIJAŻ ŚLUBNY / PRÓBA",
+              "cena": 300,
+              "cenaPromo": 270,
+              "najnizszaCena30d": 300,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
