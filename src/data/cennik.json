@@ -1,5 +1,5 @@
 {
-  "aktualizacja": "2026-10-31T11:39:13+01:00",
+  "aktualizacja": "2026-11-01T12:33:32+01:00",
   "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
   "kategorie": [
     {
@@ -170,10 +170,10 @@
           "opis": "Wybierz tą usługę jeżeli pragniesz rozjaśnić swoje włosy metodą całościową , pasemkami lub refleksami. W tą usługę  wlicza się balejaż niteczkowy / refleksy / pojaśnienia min 50 % oraz ODROST , TONOWANIE i MODELOWANIE/LOKI/FALE\n\n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 650,
-              "cenaPromo": 552.5,
-              "najnizszaCena30d": 650,
+              "nazwa": "Włosy do ramion",
+              "cena": 550,
+              "cenaPromo": 467.5,
+              "najnizszaCena30d": 550,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -188,10 +188,10 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 550,
-              "cenaPromo": 467.5,
-              "najnizszaCena30d": 550,
+              "nazwa": "Włosy do łopatek",
+              "cena": 650,
+              "cenaPromo": 552.5,
+              "najnizszaCena30d": 650,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -211,19 +211,19 @@
           "opis": "Usługa polega na dekoloryzacji odrostu oraz tonowaniu reszty włosa. Jeżeli chcesz zrobić również refleksy lub pojaśnienia - wybierz usługę POJAŚNIENIA. \n \n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 590,
-              "cenaPromo": 501.5,
-              "najnizszaCena30d": 590,
+              "nazwa": "Włosy do ramion",
+              "cena": 450,
+              "cenaPromo": 382.5,
+              "najnizszaCena30d": 450,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 450,
-              "cenaPromo": 382.5,
-              "najnizszaCena30d": 450,
+              "nazwa": "Włosy do łopatek",
+              "cena": 590,
+              "cenaPromo": 501.5,
+              "najnizszaCena30d": 590,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -249,19 +249,19 @@
           "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do talii",
-              "cena": 490,
-              "cenaPromo": 416.5,
-              "najnizszaCena30d": 490,
+              "nazwa": "Włosy do łopatek",
+              "cena": 390,
+              "cenaPromo": 331.5,
+              "najnizszaCena30d": 390,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 390,
-              "cenaPromo": 331.5,
-              "najnizszaCena30d": 390,
+              "nazwa": "Włosy do talii",
+              "cena": 490,
+              "cenaPromo": 416.5,
+              "najnizszaCena30d": 490,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -285,6 +285,15 @@
           "opis": "**Koloryzacja wielotonowa** jest to technika koloryzacji (inaczej również koloryzacja 3D), w której stosuje się co najmniej dwa kolory bazowe. Dzięki tej koloryzacji kolor jest głębszy, bardziej naturalny i nie jest \"płaski\".  W tej usłudze wliczamy rówież farbowanie odrostu na inny kolor niż reszta włosów po długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
+              "nazwa": "Włosy do ramion",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
               "nazwa": "Włosy do talii",
               "cena": 550,
               "cenaPromo": 467.5,
@@ -298,15 +307,6 @@
               "cena": 450,
               "cenaPromo": 382.5,
               "najnizszaCena30d": 450,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
-            },
-            {
-              "nazwa": "Włosy do ramion",
-              "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -600,19 +600,19 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 750,
-              "cenaPromo": 637.5,
-              "najnizszaCena30d": 750,
+              "nazwa": "Włosy do łopatek",
+              "cena": 600,
+              "cenaPromo": 510,
+              "najnizszaCena30d": 600,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 600,
-              "cenaPromo": 510,
-              "najnizszaCena30d": 600,
+              "nazwa": "Włosy do talii",
+              "cena": 750,
+              "cenaPromo": 637.5,
+              "najnizszaCena30d": 750,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -648,19 +648,19 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 690,
-              "cenaPromo": 586.5,
-              "najnizszaCena30d": 690,
+              "nazwa": "Włosy do talii",
+              "cena": 850,
+              "cenaPromo": 722.5,
+              "najnizszaCena30d": 850,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 850,
-              "cenaPromo": 722.5,
-              "najnizszaCena30d": 850,
+              "nazwa": "Włosy do łopatek",
+              "cena": 690,
+              "cenaPromo": 586.5,
+              "najnizszaCena30d": 690,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -964,19 +964,19 @@
               "czasMin": 60
             },
             {
-              "nazwa": "MAKIJAŻ  OKOLICZNOŚCIOWY",
-              "cena": 280,
-              "cenaPromo": 252,
-              "najnizszaCena30d": 280,
+              "nazwa": "MAKIJAŻ ŚLUBNY / PRÓBA",
+              "cena": 300,
+              "cenaPromo": 270,
+              "najnizszaCena30d": 300,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
             },
             {
-              "nazwa": "MAKIJAŻ ŚLUBNY / PRÓBA",
-              "cena": 300,
-              "cenaPromo": 270,
-              "najnizszaCena30d": 300,
+              "nazwa": "MAKIJAŻ  OKOLICZNOŚCIOWY",
+              "cena": 280,
+              "cenaPromo": 252,
+              "najnizszaCena30d": 280,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
