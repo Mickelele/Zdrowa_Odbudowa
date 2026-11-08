@@ -1,5 +1,5 @@
 {
-  "aktualizacja": "2026-11-07T12:23:23+01:00",
+  "aktualizacja": "2026-11-08T12:36:07+01:00",
   "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
   "kategorie": [
     {
@@ -10,7 +10,7 @@
           "opis": "Jeżeli nie jesteś przekonana jaki zabieg lub kolor będzie dla Ciebie odpowiedni, zapraszamy na BEZPŁATNĄ I NIEZOBOWIĄZUJĄCĄ konsultację z naszym specjalistą od zabiegów i koloryzacji.",
           "warianty": [
             {
-              "nazwa": "KONSULTACJA (KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
@@ -19,7 +19,7 @@
               "czasMin": 15
             },
             {
-              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
@@ -82,10 +82,10 @@
           "opis": "Jeżeli Twój blond nie jest już chłodnym blondem, brąz przechodzi w rudości, a jeszcze nie chcesz ponawiać koloryzacji permanentnej- ta usługa jest dla Ciebie! Usługa obejmuje tonowanie całej długości włosa, mycie i modelowanie.\n\nEfekt koloryzacji utrzymuje się około trzech miesięcy.\n\nKoloryzacja tonerami pokrywa około 70 % siwizny.\n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 170,
-              "cenaPromo": 153,
-              "najnizszaCena30d": 150,
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
+              "cenaPromo": 225,
+              "najnizszaCena30d": 250,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
@@ -100,10 +100,10 @@
               "czasMin": 90
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 250,
-              "cenaPromo": 225,
-              "najnizszaCena30d": 250,
+              "nazwa": "Włosy do ramion",
+              "cena": 170,
+              "cenaPromo": 153,
+              "najnizszaCena30d": 150,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
@@ -170,19 +170,19 @@
           "opis": "Wybierz tą usługę jeżeli pragniesz rozjaśnić swoje włosy metodą całościową , pasemkami lub refleksami. W tą usługę  wlicza się balejaż niteczkowy / refleksy / pojaśnienia min 50 % oraz ODROST , TONOWANIE i MODELOWANIE/LOKI/FALE\n\n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 650,
-              "cenaPromo": 552.5,
-              "najnizszaCena30d": 650,
+              "nazwa": "Włosy do ramion",
+              "cena": 550,
+              "cenaPromo": 467.5,
+              "najnizszaCena30d": 550,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 550,
-              "cenaPromo": 467.5,
-              "najnizszaCena30d": 550,
+              "nazwa": "Włosy do łopatek",
+              "cena": 650,
+              "cenaPromo": 552.5,
+              "najnizszaCena30d": 650,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -249,15 +249,6 @@
           "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 390,
-              "cenaPromo": 331.5,
-              "najnizszaCena30d": 390,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
-            },
-            {
               "nazwa": "Włosy do ramion",
               "cena": 290,
               "cenaPromo": 261,
@@ -271,6 +262,15 @@
               "cena": 490,
               "cenaPromo": 416.5,
               "najnizszaCena30d": 490,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 390,
+              "cenaPromo": 331.5,
+              "najnizszaCena30d": 390,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -294,19 +294,19 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
+              "nazwa": "Włosy do łopatek",
+              "cena": 450,
+              "cenaPromo": 382.5,
+              "najnizszaCena30d": 450,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 450,
-              "cenaPromo": 382.5,
-              "najnizszaCena30d": 450,
+              "nazwa": "Włosy do ramion",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -517,19 +517,19 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 250,
-              "cenaPromo": 225,
-              "najnizszaCena30d": 250,
+              "nazwa": "Włosy do talii",
+              "cena": 300,
+              "cenaPromo": 255,
+              "najnizszaCena30d": 300,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 150
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 300,
-              "cenaPromo": 255,
-              "najnizszaCena30d": 300,
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
+              "cenaPromo": 225,
+              "najnizszaCena30d": 250,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 150
@@ -600,19 +600,19 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 600,
-              "cenaPromo": 510,
-              "najnizszaCena30d": 600,
+              "nazwa": "Włosy do talii",
+              "cena": 750,
+              "cenaPromo": 637.5,
+              "najnizszaCena30d": 750,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 750,
-              "cenaPromo": 637.5,
-              "najnizszaCena30d": 750,
+              "nazwa": "Włosy do łopatek",
+              "cena": 600,
+              "cenaPromo": 510,
+              "najnizszaCena30d": 600,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -897,7 +897,7 @@
             "/cennik/makijazfryzura/14.webp",
             "/cennik/makijazfryzura/13.webp",
             "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/18aa0593576d464592fe3835235f86e8.jpeg",
-            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/2a6a7cbbbf4a4d70a7a132696d59f8b8.jpeg"
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/c1428405af7343098400f166a9586ac3.jpeg"
           ]
         },
         {
@@ -995,8 +995,8 @@
             "/cennik/makijazokolicznosciowy/5.webp",
             "/cennik/makijazokolicznosciowy/6.webp",
             "/cennik/makijazokolicznosciowy/9.webp",
-            "/cennik/makijazokolicznosciowy/1.webp",
-            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/12b60edda0734b22872b2f5403c20f4f.jpeg"
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/12b60edda0734b22872b2f5403c20f4f.jpeg",
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/df6ca94931ec487f928c52d51bb177f5.jpeg"
           ]
         },
         {
@@ -1031,7 +1031,7 @@
           ]
         },
         {
-          "nazwa": "FRYZURA ŚLUBNA + DOJAZD 👰🤵‍♂️",
+          "nazwa": "PAKIET ŚLUBNY  👰🤵‍♂️",
           "opis": "Zapraszamy do rezerwowania miejsc na sezon 2027.  \n \n\nJeżeli zarezerwujesz dzień pakietu - napisz do nas 508125292,aby umówić się na fryzurę i makijaż próbny, nie później niż 2 miesiące  przed Wielkim Dniem ☺️ Więcej informacji o pakiecie ślubnym znajdziecie w podpiętych postach na naszych social mediach @hairxmakeup\\_glowteam.",
           "warianty": [
             {
@@ -1049,7 +1049,6 @@
             "/cennik/fryzuraslubnadojazd/1.webp",
             "/cennik/fryzuraslubnadojazd/2.webp",
             "/cennik/fryzuraslubnadojazd/3.webp",
-            "/cennik/fryzuraslubnadojazd/16.webp",
             "/cennik/fryzuraslubnadojazd/8.webp",
             "/cennik/fryzuraslubnadojazd/9.webp",
             "/cennik/fryzuraslubnadojazd/7.webp",
@@ -1063,7 +1062,8 @@
             "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/6e57f291d1a24f9eb6623cf8674c126d.jpeg",
             "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/1b6e5e539fc44f9e841034bbc80b8c93.jpeg",
             "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/85e4bbcf9a864bf9b5d1d08a75e4bcfa.jpeg",
-            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/3fe0ed5b6b8a4102bb0bf75b092c83ce.jpeg"
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/3fe0ed5b6b8a4102bb0bf75b092c83ce.jpeg",
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/3f43ceaedb70465aaa3986a384d03f16.jpeg"
           ]
         }
       ]
