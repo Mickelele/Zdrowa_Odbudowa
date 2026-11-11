@@ -1,58 +1,7 @@
 {
-  "aktualizacja": "2026-11-10T14:06:47+01:00",
+  "aktualizacja": "2026-11-11T13:15:44+01:00",
   "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
   "kategorie": [
-    {
-      "nazwa": "KONSULTACJA 🤔",
-      "uslugi": [
-        {
-          "nazwa": "KONSULTACJA",
-          "opis": "Jeżeli nie jesteś przekonana jaki zabieg lub kolor będzie dla Ciebie odpowiedni, zapraszamy na BEZPŁATNĄ I NIEZOBOWIĄZUJĄCĄ konsultację z naszym specjalistą od zabiegów i koloryzacji.",
-          "warianty": [
-            {
-              "nazwa": "KONSULTACJA (KOLORYZACJA)",
-              "cena": null,
-              "cenaPromo": null,
-              "najnizszaCena30d": null,
-              "cenaTekst": "Bezpłatna",
-              "odCeny": false,
-              "czasMin": 15
-            },
-            {
-              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
-              "cena": null,
-              "cenaPromo": null,
-              "najnizszaCena30d": null,
-              "cenaTekst": "Bezpłatna",
-              "odCeny": false,
-              "czasMin": 15
-            }
-          ],
-          "zdjecia": [
-            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/aafc3700796146b2a97a392a1b3998aa.jpeg"
-          ]
-        },
-        {
-          "nazwa": "TERMIN VIP +50 %",
-          "opis": "Dowolna usługa w dogodnym dla Ciebie terminie - poza godzinami pracy salonu (przed 10:00 i po 20:00 od pon do pt oraz w weekendy i święta) \n\nNapisz do nas jeżeli chcesz zarezerwować taką usługę - 508125292 lub @zdrowaodbudowawlosa fb: ZDROWAODBUDOWA \n\nDo usługi doliczamy + 50 % ceny usługi. \n\n\nZapraszamy :)",
-          "warianty": [
-            {
-              "nazwa": null,
-              "cena": null,
-              "cenaPromo": null,
-              "najnizszaCena30d": null,
-              "cenaTekst": "Zmienna",
-              "odCeny": false,
-              "czasMin": 5
-            }
-          ],
-          "zdjecia": [
-            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/f3eb9a89cc5d4994a216f33baf24d658.jpeg",
-            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/ae1ab1634c334fc3abb26d992dfed4e5.jpeg"
-          ]
-        }
-      ]
-    },
     {
       "nazwa": "KOLORYZACJA I DEKOLORYZACJA 🎨",
       "uslugi": [
@@ -91,19 +40,19 @@
               "czasMin": 90
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
+              "nazwa": "Włosy do ramion",
+              "cena": 170,
+              "cenaPromo": 153,
+              "najnizszaCena30d": 150,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 170,
-              "cenaPromo": 153,
-              "najnizszaCena30d": 150,
+              "nazwa": "Włosy do talii",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
@@ -119,19 +68,19 @@
           "opis": "Usługa zawiera koloryzację odrostu do 3 cm na ciemny kolor. \nUsługa zawiera położenie farby na odrost + melaksacja po całej długości włosa + modelowanie lub stylizacje. \n\nDo zobaczenia :)",
           "warianty": [
             {
-              "nazwa": "PIERWSZA WIZYTA",
-              "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
+              "nazwa": "STAŁY KLIENT",
+              "cena": 250,
+              "cenaPromo": 225,
+              "najnizszaCena30d": 250,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
             },
             {
-              "nazwa": "STAŁY KLIENT",
-              "cena": 250,
-              "cenaPromo": 225,
-              "najnizszaCena30d": 250,
+              "nazwa": "PIERWSZA WIZYTA",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -179,19 +128,19 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 750,
-              "cenaPromo": 637.5,
-              "najnizszaCena30d": 750,
+              "nazwa": "Włosy do ramion",
+              "cena": 550,
+              "cenaPromo": 467.5,
+              "najnizszaCena30d": 550,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 550,
-              "cenaPromo": 467.5,
-              "najnizszaCena30d": 550,
+              "nazwa": "Włosy do talii",
+              "cena": 750,
+              "cenaPromo": 637.5,
+              "najnizszaCena30d": 750,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -211,19 +160,19 @@
           "opis": "Usługa polega na dekoloryzacji odrostu oraz tonowaniu reszty włosa. Jeżeli chcesz zrobić również refleksy lub pojaśnienia - wybierz usługę POJAŚNIENIA. \n \n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 590,
-              "cenaPromo": 501.5,
-              "najnizszaCena30d": 590,
+              "nazwa": "Włosy do ramion",
+              "cena": 450,
+              "cenaPromo": 382.5,
+              "najnizszaCena30d": 450,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 450,
-              "cenaPromo": 382.5,
-              "najnizszaCena30d": 450,
+              "nazwa": "Włosy do łopatek",
+              "cena": 590,
+              "cenaPromo": 501.5,
+              "najnizszaCena30d": 590,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -249,6 +198,15 @@
           "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
+              "nazwa": "Włosy do łopatek",
+              "cena": 390,
+              "cenaPromo": 331.5,
+              "najnizszaCena30d": 390,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
               "nazwa": "Włosy do ramion",
               "cena": 290,
               "cenaPromo": 261,
@@ -265,15 +223,6 @@
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
-            },
-            {
-              "nazwa": "Włosy do łopatek",
-              "cena": 390,
-              "cenaPromo": 331.5,
-              "najnizszaCena30d": 390,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
             }
           ],
           "zdjecia": [
@@ -285,10 +234,10 @@
           "opis": "**Koloryzacja wielotonowa** jest to technika koloryzacji (inaczej również koloryzacja 3D), w której stosuje się co najmniej dwa kolory bazowe. Dzięki tej koloryzacji kolor jest głębszy, bardziej naturalny i nie jest \"płaski\".  W tej usłudze wliczamy rówież farbowanie odrostu na inny kolor niż reszta włosów po długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 450,
-              "cenaPromo": 382.5,
-              "najnizszaCena30d": 450,
+              "nazwa": "Włosy do ramion",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -303,10 +252,10 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
+              "nazwa": "Włosy do łopatek",
+              "cena": 450,
+              "cenaPromo": 382.5,
+              "najnizszaCena30d": 450,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -454,6 +403,52 @@
           "zdjecia": [
             "/cennik/maskanacieplo/1.webp"
           ]
+        },
+        {
+          "nazwa": "KAUTERYZACJA WŁOSA",
+          "opis": "Zabieg to ratunek dla **najbardziej** uwrażliwionych włosów,  również tych po procesie rozjaśniania, **nieprzechodzących testu włosa.** \n\nRewitalizuje, nawilża i odżywia włosy zapewniając przy tym ochronę.\n\nMa za zadanie  redukować puszenie, elektryzowanie się włosów oraz na dłużej podtrzymuje  nawilżenie  we włosach. Efektywność tego zabiegu wyróżnia się tym, że jako jedyny z zabiegow na gorąco -  może   być wykonywany  bezpośrednio po koloryzacji.\nDzięki temu jest uznawany jako \"zabieg bankietowy\". \n\nJeśli chcesz poprawić nawilżenie , sprężystość i miękkość swoich włosów a zarazem nie chcesz trwale zmieniać struktury swojego włosa -  kauteryzacja  jest doskonałym wyborem, gdyż pozwala zachować naturalny skręt włosów. \n\nDodatkowym atutem zabiegu , jest również natychmiastowy efekt lustrzanego blasku. \n\nEfekt zabiegu utrzymuję się do 30 dni. Możesz stosować tak często jak potrzebujesz.\n\nBezpieczny dla kobiet w ciaży i w trakcie laktacji.\n\nUWAGI:\n\nMożliwa dopłata za włosy gęste **+50 zł** i za bardzo gęste **\\+ 100 zł**\n\n**Do wszystkich zabiegów wliczone jest już kosmetyczne podcięcie oraz pielęgnacja W PREZENCIE.**",
+          "warianty": [
+            {
+              "nazwa": "Włosy do ramion",
+              "cena": 200,
+              "cenaPromo": 180,
+              "najnizszaCena30d": 200,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
+              "cenaPromo": 225,
+              "najnizszaCena30d": 250,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 150
+            },
+            {
+              "nazwa": "Włosy do talii",
+              "cena": 300,
+              "cenaPromo": 255,
+              "najnizszaCena30d": 300,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 150
+            },
+            {
+              "nazwa": "Włosy dłuższe",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            }
+          ],
+          "zdjecia": [
+            "/cennik/kauteryzacjawlosa/1.webp",
+            "/cennik/kauteryzacjawlosa/2.webp"
+          ]
         }
       ]
     },
@@ -501,52 +496,6 @@
             "/cennik/rekonstrukcjatrudneprzypadki/3.webp",
             "/cennik/rekonstrukcjatrudneprzypadki/5.webp",
             "/cennik/rekonstrukcjatrudneprzypadki/6.webp"
-          ]
-        },
-        {
-          "nazwa": "KAUTERYZACJA WŁOSA",
-          "opis": "Zabieg to ratunek dla **najbardziej** uwrażliwionych włosów,  również tych po procesie rozjaśniania, **nieprzechodzących testu włosa.** \n\nRewitalizuje, nawilża i odżywia włosy zapewniając przy tym ochronę.\n\nMa za zadanie  redukować puszenie, elektryzowanie się włosów oraz na dłużej podtrzymuje  nawilżenie  we włosach. Efektywność tego zabiegu wyróżnia się tym, że jako jedyny z zabiegow na gorąco -  może   być wykonywany  bezpośrednio po koloryzacji.\nDzięki temu jest uznawany jako \"zabieg bankietowy\". \n\nJeśli chcesz poprawić nawilżenie , sprężystość i miękkość swoich włosów a zarazem nie chcesz trwale zmieniać struktury swojego włosa -  kauteryzacja  jest doskonałym wyborem, gdyż pozwala zachować naturalny skręt włosów. \n\nDodatkowym atutem zabiegu , jest również natychmiastowy efekt lustrzanego blasku. \n\nEfekt zabiegu utrzymuję się do 30 dni. Możesz stosować tak często jak potrzebujesz.\n\nBezpieczny dla kobiet w ciaży i w trakcie laktacji.\n\nUWAGI:\n\nMożliwa dopłata za włosy gęste **+50 zł** i za bardzo gęste **\\+ 100 zł**\n\n**Do wszystkich zabiegów wliczone jest już kosmetyczne podcięcie oraz pielęgnacja W PREZENCIE.**",
-          "warianty": [
-            {
-              "nazwa": "Włosy do ramion",
-              "cena": 200,
-              "cenaPromo": 180,
-              "najnizszaCena30d": 200,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
-            },
-            {
-              "nazwa": "Włosy do talii",
-              "cena": 300,
-              "cenaPromo": 255,
-              "najnizszaCena30d": 300,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 150
-            },
-            {
-              "nazwa": "Włosy do łopatek",
-              "cena": 250,
-              "cenaPromo": 225,
-              "najnizszaCena30d": 250,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 150
-            },
-            {
-              "nazwa": "Włosy dłuższe",
-              "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 180
-            }
-          ],
-          "zdjecia": [
-            "/cennik/kauteryzacjawlosa/1.webp",
-            "/cennik/kauteryzacjawlosa/2.webp"
           ]
         },
         {
@@ -600,19 +549,19 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 750,
-              "cenaPromo": 637.5,
-              "najnizszaCena30d": 750,
+              "nazwa": "Włosy do łopatek",
+              "cena": 600,
+              "cenaPromo": 510,
+              "najnizszaCena30d": 600,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 600,
-              "cenaPromo": 510,
-              "najnizszaCena30d": 600,
+              "nazwa": "Włosy do talii",
+              "cena": 750,
+              "cenaPromo": 637.5,
+              "najnizszaCena30d": 750,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -648,19 +597,19 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 850,
-              "cenaPromo": 722.5,
-              "najnizszaCena30d": 850,
+              "nazwa": "Włosy do łopatek",
+              "cena": 690,
+              "cenaPromo": 586.5,
+              "najnizszaCena30d": 690,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 690,
-              "cenaPromo": 586.5,
-              "najnizszaCena30d": 690,
+              "nazwa": "Włosy do talii",
+              "cena": 850,
+              "cenaPromo": 722.5,
+              "najnizszaCena30d": 850,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -965,19 +914,19 @@
               "czasMin": 60
             },
             {
-              "nazwa": "MAKIJAŻ  OKOLICZNOŚCIOWY",
-              "cena": 280,
-              "cenaPromo": 252,
-              "najnizszaCena30d": 280,
+              "nazwa": "MAKIJAŻ ŚLUBNY / PRÓBA",
+              "cena": 300,
+              "cenaPromo": 270,
+              "najnizszaCena30d": 300,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
             },
             {
-              "nazwa": "MAKIJAŻ ŚLUBNY / PRÓBA",
-              "cena": 300,
-              "cenaPromo": 270,
-              "najnizszaCena30d": 300,
+              "nazwa": "MAKIJAŻ  OKOLICZNOŚCIOWY",
+              "cena": 280,
+              "cenaPromo": 252,
+              "najnizszaCena30d": 280,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
@@ -1087,6 +1036,57 @@
           ],
           "zdjecia": [
             "/cennik/voucher/1.webp"
+          ]
+        }
+      ]
+    },
+    {
+      "nazwa": "KONSULTACJA 🤔",
+      "uslugi": [
+        {
+          "nazwa": "KONSULTACJA",
+          "opis": "Jeżeli nie jesteś przekonana jaki zabieg lub kolor będzie dla Ciebie odpowiedni, zapraszamy na BEZPŁATNĄ I NIEZOBOWIĄZUJĄCĄ konsultację z naszym specjalistą od zabiegów i koloryzacji.",
+          "warianty": [
+            {
+              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Bezpłatna",
+              "odCeny": false,
+              "czasMin": 15
+            },
+            {
+              "nazwa": "KONSULTACJA (KOLORYZACJA)",
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Bezpłatna",
+              "odCeny": false,
+              "czasMin": 15
+            }
+          ],
+          "zdjecia": [
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/aafc3700796146b2a97a392a1b3998aa.jpeg"
+          ]
+        },
+        {
+          "nazwa": "TERMIN VIP +50 %",
+          "opis": "Dowolna usługa w dogodnym dla Ciebie terminie - poza godzinami pracy salonu (przed 10:00 i po 20:00 od pon do pt oraz w weekendy i święta) \n\nNapisz do nas jeżeli chcesz zarezerwować taką usługę - 508125292 lub @zdrowaodbudowawlosa fb: ZDROWAODBUDOWA \n\nDo usługi doliczamy + 50 % ceny usługi. \n\n\nZapraszamy :)",
+          "warianty": [
+            {
+              "nazwa": null,
+              "cena": null,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": "Zmienna",
+              "odCeny": false,
+              "czasMin": 5
+            }
+          ],
+          "zdjecia": [
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/f3eb9a89cc5d4994a216f33baf24d658.jpeg",
+            "https://d375139ucebi94.cloudfront.net/region2/pl/285951/service_photos/ae1ab1634c334fc3abb26d992dfed4e5.jpeg"
           ]
         }
       ]
