@@ -1,5 +1,5 @@
 {
-  "aktualizacja": "2026-11-16T14:13:19+01:00",
+  "aktualizacja": "2026-11-17T14:56:42+01:00",
   "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
   "kategorie": [
     {
@@ -40,19 +40,19 @@
               "czasMin": 90
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 170,
-              "cenaPromo": 153,
-              "najnizszaCena30d": 170,
+              "nazwa": "Włosy do talii",
+              "cena": 350,
+              "cenaPromo": 315,
+              "najnizszaCena30d": 350,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
+              "nazwa": "Włosy do ramion",
+              "cena": 170,
+              "cenaPromo": 153,
+              "najnizszaCena30d": 170,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
@@ -160,19 +160,19 @@
           "opis": "Usługa polega na dekoloryzacji odrostu oraz tonowaniu reszty włosa. Jeżeli chcesz zrobić również refleksy lub pojaśnienia - wybierz usługę POJAŚNIENIA. \n \n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 450,
-              "cenaPromo": 382.5,
-              "najnizszaCena30d": 450,
+              "nazwa": "Włosy do łopatek",
+              "cena": 590,
+              "cenaPromo": 501.5,
+              "najnizszaCena30d": 590,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 590,
-              "cenaPromo": 501.5,
-              "najnizszaCena30d": 590,
+              "nazwa": "Włosy do ramion",
+              "cena": 450,
+              "cenaPromo": 382.5,
+              "najnizszaCena30d": 450,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -198,19 +198,19 @@
           "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do talii",
-              "cena": 490,
-              "cenaPromo": 416.5,
-              "najnizszaCena30d": 490,
+              "nazwa": "Włosy do łopatek",
+              "cena": 390,
+              "cenaPromo": 331.5,
+              "najnizszaCena30d": 390,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 390,
-              "cenaPromo": 331.5,
-              "najnizszaCena30d": 390,
+              "nazwa": "Włosy do talii",
+              "cena": 490,
+              "cenaPromo": 416.5,
+              "najnizszaCena30d": 490,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -234,15 +234,6 @@
           "opis": "**Koloryzacja wielotonowa** jest to technika koloryzacji (inaczej również koloryzacja 3D), w której stosuje się co najmniej dwa kolory bazowe. Dzięki tej koloryzacji kolor jest głębszy, bardziej naturalny i nie jest \"płaski\".  W tej usłudze wliczamy rówież farbowanie odrostu na inny kolor niż reszta włosów po długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 450,
-              "cenaPromo": 382.5,
-              "najnizszaCena30d": 450,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
-            },
-            {
               "nazwa": "Włosy do talii",
               "cena": 550,
               "cenaPromo": 467.5,
@@ -256,6 +247,15 @@
               "cena": 350,
               "cenaPromo": 315,
               "najnizszaCena30d": 350,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 450,
+              "cenaPromo": 382.5,
+              "najnizszaCena30d": 450,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -418,19 +418,19 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 300,
-              "cenaPromo": 255,
-              "najnizszaCena30d": 300,
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
+              "cenaPromo": 225,
+              "najnizszaCena30d": 250,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 150
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 250,
-              "cenaPromo": 225,
-              "najnizszaCena30d": 250,
+              "nazwa": "Włosy do talii",
+              "cena": 300,
+              "cenaPromo": 255,
+              "najnizszaCena30d": 300,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 150
@@ -597,19 +597,19 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 690,
-              "cenaPromo": 586.5,
-              "najnizszaCena30d": 690,
+              "nazwa": "Włosy do talii",
+              "cena": 850,
+              "cenaPromo": 722.5,
+              "najnizszaCena30d": 850,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 850,
-              "cenaPromo": 722.5,
-              "najnizszaCena30d": 850,
+              "nazwa": "Włosy do łopatek",
+              "cena": 690,
+              "cenaPromo": 586.5,
+              "najnizszaCena30d": 690,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -719,7 +719,7 @@
       "nazwa": "STRZYŻENIE DAMSKIE",
       "uslugi": [
         {
-          "nazwa": "MYCIE + STYLIZACJA LUB MODELOWANIE",
+          "nazwa": "MYCIE + MODELOWANIE",
           "opis": "Mycie włosów, maska nawilżająca i suszenie z modelowaniem, prostowaniem lub stylizacja.",
           "warianty": [
             {
@@ -774,7 +774,7 @@
         },
         {
           "nazwa": "STRZYŻENIE DAMSKIE ✂️",
-          "opis": "STRZYŻENIE + MYCIE + MODELOWANIE/STYLIZACJA\n\nZastrzegamy sobie możliwość doliczenia 50-100 zł do dodatkowej gęstości lub długości włosa.\n\nUWAGA - nie strzyżemy fryzur na włosach bardzo krótkich.",
+          "opis": "STRZYŻENIE + MYCIE + MODELOWANIE\n\nZastrzegamy sobie możliwość doliczenia 50-100 zł do dodatkowej gęstości lub długości włosa.\n\nUWAGA - nie strzyżemy fryzur na włosach bardzo krótkich.",
           "warianty": [
             {
               "nazwa": "Strzyżenie samej grzywki BEZ MYCIA",
@@ -1048,7 +1048,7 @@
           "opis": "Jeżeli nie jesteś przekonana jaki zabieg lub kolor będzie dla Ciebie odpowiedni, zapraszamy na BEZPŁATNĄ I NIEZOBOWIĄZUJĄCĄ konsultację z naszym specjalistą od zabiegów i koloryzacji.",
           "warianty": [
             {
-              "nazwa": "KONSULTACJA (KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
@@ -1057,7 +1057,7 @@
               "czasMin": 15
             },
             {
-              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
