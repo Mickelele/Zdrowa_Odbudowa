@@ -1,5 +1,5 @@
 {
-  "aktualizacja": "2026-11-21T14:07:41+01:00",
+  "aktualizacja": "2026-11-23T16:29:23+01:00",
   "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
   "kategorie": [
     {
@@ -31,19 +31,10 @@
           "opis": "Jeżeli Twój blond nie jest już chłodnym blondem, brąz przechodzi w rudości, a jeszcze nie chcesz ponawiać koloryzacji permanentnej- ta usługa jest dla Ciebie! Usługa obejmuje tonowanie całej długości włosa, mycie i modelowanie.\n\nEfekt koloryzacji utrzymuje się około trzech miesięcy.\n\nKoloryzacja tonerami pokrywa około 70 % siwizny.\n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 250,
-              "cenaPromo": 225,
-              "najnizszaCena30d": 250,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 90
-            },
-            {
               "nazwa": "Włosy do talii",
               "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
@@ -51,8 +42,17 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 170,
-              "cenaPromo": 153,
-              "najnizszaCena30d": 170,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 90
+            },
+            {
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 90
@@ -70,8 +70,8 @@
             {
               "nazwa": "PIERWSZA WIZYTA",
               "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -79,8 +79,8 @@
             {
               "nazwa": "STAŁY KLIENT",
               "cena": 250,
-              "cenaPromo": 225,
-              "najnizszaCena30d": 250,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -100,8 +100,8 @@
             {
               "nazwa": null,
               "cena": 400,
-              "cenaPromo": 360,
-              "najnizszaCena30d": 400,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -119,10 +119,19 @@
           "opis": "Wybierz tą usługę jeżeli pragniesz rozjaśnić swoje włosy metodą całościową , pasemkami lub refleksami. W tą usługę  wlicza się balejaż niteczkowy / refleksy / pojaśnienia min 50 % oraz ODROST , TONOWANIE i MODELOWANIE/LOKI/FALE\n\n\n* Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa \n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
+              "nazwa": "Włosy do łopatek",
+              "cena": 650,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 180
+            },
+            {
               "nazwa": "Włosy do talii",
               "cena": 750,
-              "cenaPromo": 637.5,
-              "najnizszaCena30d": 750,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -130,17 +139,8 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 550,
-              "cenaPromo": 467.5,
-              "najnizszaCena30d": 550,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 180
-            },
-            {
-              "nazwa": "Włosy do łopatek",
-              "cena": 650,
-              "cenaPromo": 552.5,
-              "najnizszaCena30d": 650,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -162,8 +162,8 @@
             {
               "nazwa": "Włosy do łopatek",
               "cena": 590,
-              "cenaPromo": 501.5,
-              "najnizszaCena30d": 590,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -171,8 +171,8 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 450,
-              "cenaPromo": 382.5,
-              "najnizszaCena30d": 450,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -180,8 +180,8 @@
             {
               "nazwa": "Włosy długie (do talii)",
               "cena": 650,
-              "cenaPromo": 552.5,
-              "najnizszaCena30d": 650,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -198,10 +198,10 @@
           "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 390,
-              "cenaPromo": 331.5,
-              "najnizszaCena30d": 390,
+              "nazwa": "Włosy do talii",
+              "cena": 490,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -209,17 +209,17 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 290,
-              "cenaPromo": 261,
-              "najnizszaCena30d": 290,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 490,
-              "cenaPromo": 416.5,
-              "najnizszaCena30d": 490,
+              "nazwa": "Włosy do łopatek",
+              "cena": 390,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -234,10 +234,19 @@
           "opis": "**Koloryzacja wielotonowa** jest to technika koloryzacji (inaczej również koloryzacja 3D), w której stosuje się co najmniej dwa kolory bazowe. Dzięki tej koloryzacji kolor jest głębszy, bardziej naturalny i nie jest \"płaski\".  W tej usłudze wliczamy rówież farbowanie odrostu na inny kolor niż reszta włosów po długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
+              "nazwa": "Włosy do łopatek",
+              "cena": 450,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
               "nazwa": "Włosy do talii",
               "cena": 550,
-              "cenaPromo": 467.5,
-              "najnizszaCena30d": 550,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -245,17 +254,8 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
-            },
-            {
-              "nazwa": "Włosy do łopatek",
-              "cena": 450,
-              "cenaPromo": 382.5,
-              "najnizszaCena30d": 450,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -273,8 +273,8 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 750,
-              "cenaPromo": 637.5,
-              "najnizszaCena30d": 750,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 240
@@ -282,8 +282,8 @@
             {
               "nazwa": "Włosy do łopatek",
               "cena": 1100,
-              "cenaPromo": 935,
-              "najnizszaCena30d": 1100,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 300
@@ -291,8 +291,8 @@
             {
               "nazwa": "Włosy do talii",
               "cena": 1400,
-              "cenaPromo": 1190,
-              "najnizszaCena30d": 1400,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": true,
               "czasMin": 390
@@ -320,8 +320,8 @@
             {
               "nazwa": "Włosy do łopatek",
               "cena": 850,
-              "cenaPromo": 722.5,
-              "najnizszaCena30d": 850,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 240
@@ -329,8 +329,8 @@
             {
               "nazwa": "Włosy do talii",
               "cena": 1000,
-              "cenaPromo": 850,
-              "najnizszaCena30d": 1000,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 270
@@ -354,8 +354,8 @@
             {
               "nazwa": null,
               "cena": 150,
-              "cenaPromo": 127.5,
-              "najnizszaCena30d": 150,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 60
@@ -374,8 +374,8 @@
             {
               "nazwa": null,
               "cena": 150,
-              "cenaPromo": 127.5,
-              "najnizszaCena30d": 150,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 60
@@ -393,8 +393,8 @@
             {
               "nazwa": null,
               "cena": 150,
-              "cenaPromo": 127.5,
-              "najnizszaCena30d": 150,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 60
@@ -411,26 +411,26 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 200,
-              "cenaPromo": 180,
-              "najnizszaCena30d": 200,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 300,
-              "cenaPromo": 255,
-              "najnizszaCena30d": 300,
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 150
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 250,
-              "cenaPromo": 225,
-              "najnizszaCena30d": 250,
+              "nazwa": "Włosy do talii",
+              "cena": 300,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 150
@@ -438,8 +438,8 @@
             {
               "nazwa": "Włosy dłuższe",
               "cena": 350,
-              "cenaPromo": 315,
-              "najnizszaCena30d": 350,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -542,8 +542,8 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 500,
-              "cenaPromo": 425,
-              "najnizszaCena30d": 500,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -551,8 +551,8 @@
             {
               "nazwa": "Włosy do łopatek",
               "cena": 600,
-              "cenaPromo": 510,
-              "najnizszaCena30d": 600,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -560,8 +560,8 @@
             {
               "nazwa": "Włosy do talii",
               "cena": 750,
-              "cenaPromo": 637.5,
-              "najnizszaCena30d": 750,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -569,8 +569,8 @@
             {
               "nazwa": "Włosy dłuższe",
               "cena": 850,
-              "cenaPromo": 722.5,
-              "najnizszaCena30d": 850,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 240
@@ -590,8 +590,8 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 590,
-              "cenaPromo": 501.5,
-              "najnizszaCena30d": 590,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -599,8 +599,8 @@
             {
               "nazwa": "Włosy do łopatek",
               "cena": 690,
-              "cenaPromo": 586.5,
-              "najnizszaCena30d": 690,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -608,8 +608,8 @@
             {
               "nazwa": "Włosy do talii",
               "cena": 850,
-              "cenaPromo": 722.5,
-              "najnizszaCena30d": 850,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -617,8 +617,8 @@
             {
               "nazwa": "Włosy dłuższe",
               "cena": 950,
-              "cenaPromo": 807.5,
-              "najnizszaCena30d": 950,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 240
@@ -636,8 +636,8 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 600,
-              "cenaPromo": 510,
-              "najnizszaCena30d": 600,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -645,8 +645,8 @@
             {
               "nazwa": "Włosy do łopatek",
               "cena": 750,
-              "cenaPromo": 637.5,
-              "najnizszaCena30d": 750,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 210
@@ -654,8 +654,8 @@
             {
               "nazwa": "Włosy do talii",
               "cena": 950,
-              "cenaPromo": 807.5,
-              "najnizszaCena30d": 950,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 240
@@ -663,8 +663,8 @@
             {
               "nazwa": "Włosy dłuższe",
               "cena": 1100,
-              "cenaPromo": 935,
-              "najnizszaCena30d": 1100,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 270
@@ -725,8 +725,8 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 80,
-              "cenaPromo": 72,
-              "najnizszaCena30d": 80,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 45
@@ -734,8 +734,8 @@
             {
               "nazwa": "Włosy do łopatek i dłuższe",
               "cena": 100,
-              "cenaPromo": 90,
-              "najnizszaCena30d": 100,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 50
@@ -752,8 +752,8 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 99,
-              "cenaPromo": 89.1,
-              "najnizszaCena30d": 99,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 40
@@ -761,8 +761,8 @@
             {
               "nazwa": "Włosy do łopatek i dłuższe",
               "cena": 110,
-              "cenaPromo": 99,
-              "najnizszaCena30d": 110,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 60
@@ -779,8 +779,8 @@
             {
               "nazwa": "Strzyżenie samej grzywki BEZ MYCIA",
               "cena": 40,
-              "cenaPromo": 36,
-              "najnizszaCena30d": 40,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 15
@@ -788,8 +788,8 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 100,
-              "cenaPromo": 90,
-              "najnizszaCena30d": 100,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 40
@@ -797,8 +797,8 @@
             {
               "nazwa": "Włosy do łopatek i dłuższe",
               "cena": 120,
-              "cenaPromo": 108,
-              "najnizszaCena30d": 120,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 60
@@ -1048,7 +1048,7 @@
           "opis": "Jeżeli nie jesteś przekonana jaki zabieg lub kolor będzie dla Ciebie odpowiedni, zapraszamy na BEZPŁATNĄ I NIEZOBOWIĄZUJĄCĄ konsultację z naszym specjalistą od zabiegów i koloryzacji.",
           "warianty": [
             {
-              "nazwa": "KONSULTACJA (KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
@@ -1057,7 +1057,7 @@
               "czasMin": 15
             },
             {
-              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
