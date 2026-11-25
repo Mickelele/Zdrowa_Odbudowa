@@ -1,5 +1,5 @@
 {
-  "aktualizacja": "2026-11-23T16:29:23+01:00",
+  "aktualizacja": "2026-11-25T16:05:32+01:00",
   "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
   "kategorie": [
     {
@@ -31,8 +31,8 @@
           "opis": "Jeżeli Twój blond nie jest już chłodnym blondem, brąz przechodzi w rudości, a jeszcze nie chcesz ponawiać koloryzacji permanentnej- ta usługa jest dla Ciebie! Usługa obejmuje tonowanie całej długości włosa, mycie i modelowanie.\n\nEfekt koloryzacji utrzymuje się około trzech miesięcy.\n\nKoloryzacja tonerami pokrywa około 70 % siwizny.\n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do talii",
-              "cena": 350,
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -49,8 +49,8 @@
               "czasMin": 90
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 250,
+              "nazwa": "Włosy do talii",
+              "cena": 350,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -128,8 +128,8 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 750,
+              "nazwa": "Włosy do ramion",
+              "cena": 550,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -137,8 +137,8 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 550,
+              "nazwa": "Włosy do talii",
+              "cena": 750,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -198,6 +198,15 @@
           "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
+              "nazwa": "Włosy do łopatek",
+              "cena": 390,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 120
+            },
+            {
               "nazwa": "Włosy do talii",
               "cena": 490,
               "cenaPromo": null,
@@ -214,15 +223,6 @@
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
-            },
-            {
-              "nazwa": "Włosy do łopatek",
-              "cena": 390,
-              "cenaPromo": null,
-              "najnizszaCena30d": null,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 120
             }
           ],
           "zdjecia": [
@@ -234,8 +234,8 @@
           "opis": "**Koloryzacja wielotonowa** jest to technika koloryzacji (inaczej również koloryzacja 3D), w której stosuje się co najmniej dwa kolory bazowe. Dzięki tej koloryzacji kolor jest głębszy, bardziej naturalny i nie jest \"płaski\".  W tej usłudze wliczamy rówież farbowanie odrostu na inny kolor niż reszta włosów po długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 450,
+              "nazwa": "Włosy do talii",
+              "cena": 550,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -243,8 +243,8 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 550,
+              "nazwa": "Włosy do łopatek",
+              "cena": 450,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -267,12 +267,12 @@
           ]
         },
         {
-          "nazwa": "AIR TOUCH | KOLORYZACJE INDYWIDUALNE",
+          "nazwa": "KOLORYZACJE INDYWIDUALNE",
           "opis": "Najbardziej nowoczesne techniki koloryzacji dopasowane indywidualnie do Twojego stylu, urody oraz możliwości na włosach. \nJeżeli chcesz efekt z mniejszą ilością pojaśnień (<70%) typu babylights - wybierz usługę: BALEJAŻ NITECZKOWY | MOCNIEJSZE POJAŚNIENIA. \n\nW cenę koloryzacji wchodzi również - OCHRONA PLEX , AMPUŁKA REGENERACYJNA oraz STRZYZENIE I STYLIZACJA.",
           "warianty": [
             {
               "nazwa": "Włosy do ramion",
-              "cena": 750,
+              "cena": 699,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -281,7 +281,7 @@
             },
             {
               "nazwa": "Włosy do łopatek",
-              "cena": 1100,
+              "cena": 950,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -290,7 +290,7 @@
             },
             {
               "nazwa": "Włosy do talii",
-              "cena": 1400,
+              "cena": 1100,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -418,8 +418,8 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 250,
+              "nazwa": "Włosy do talii",
+              "cena": 300,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -427,8 +427,8 @@
               "czasMin": 150
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 300,
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -597,8 +597,8 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 690,
+              "nazwa": "Włosy do talii",
+              "cena": 850,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -606,8 +606,8 @@
               "czasMin": 210
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 850,
+              "nazwa": "Włosy do łopatek",
+              "cena": 690,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -630,7 +630,7 @@
           ]
         },
         {
-          "nazwa": "NANOPLASTIA BASIC | DLA BLONDYNEK DO 6 MIESIĘCY",
+          "nazwa": "NANOPLASTIA BASIC i DLA BLONDYNEK DO 6 MIESIĘCY",
           "opis": "Najmocniejszy zabieg  ze specjalnie opatentowaną formułą, wzbogaconą o 19 aminokwasów aktywnych.  Korzyścią zabiegu jest przede wszystkim **trwałe rozprostowanie włosów NAWET  kręconych,** powodując  przy tym jednoczesne uszczelnienie i odbudowę łodygi włosa. \n\nZabieg sprawia, że włosy są nawilżone, sypkie, miękkie, całkowicie proste, nie powodując przy tym ocieplenia ich koloru \n\nW przypadku włosów ciemnych farbowanych możliwa jest zmiana koloru do 2 tonów. Jest to tak zwana **BEZINWAZYJNA DEKOLORYZACJA** od której można zacząć proces schodzenia z czarnych/ciemnych włosów. \n\n**Efektywność zabiegu :** \n\n\\- maksymalny rozprost, \n\n\\- trwałość zabiegu - do 6 miesięcy.\n\n\\- miękkie , sypkie i nawilżone włosy , \n\n\\- całkowita eliminacja puszenia się włosów, \n\n\\- bezpieczny dla kobiet w ciąży i podczas laktacji , \n\n\\- **Zabieg bez łez i dyskomfortu.**\n\nMożliwa dopłata za włosy gęste **+50 zł** i za bardzo gęste **\\+ 100 zł**\n\n**Do wszystkich zabiegów wliczone jest już kosmetyczne podcięcie oraz pielęgnacja W PREZENCIE.**",
           "warianty": [
             {
@@ -774,7 +774,7 @@
         },
         {
           "nazwa": "STRZYŻENIE DAMSKIE ✂️",
-          "opis": "STRZYŻENIE + MYCIE + MODELOWANIE\n\nZastrzegamy sobie możliwość doliczenia 50-100 zł do dodatkowej gęstości lub długości włosa.\n\nUWAGA - nie strzyżemy fryzur na włosach bardzo krótkich.",
+          "opis": "STRZYŻENIE + MYCIE + MODELOWANIE\n\nZastrzegamy sobie możliwość doliczenia 50 zł do dodatkowej gęstości lub długości włosa.\n\nUWAGA - nie strzyżemy fryzur na włosach bardzo krótkich.",
           "warianty": [
             {
               "nazwa": "Strzyżenie samej grzywki BEZ MYCIA",
