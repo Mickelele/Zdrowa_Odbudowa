@@ -1,5 +1,5 @@
 {
-  "aktualizacja": "2026-11-27T15:29:06+01:00",
+  "aktualizacja": "2026-11-28T14:44:54+01:00",
   "zrodlo": "https://booksy.com/pl-pl/285951_zdrowa-odbudowa_fryzjer_4285_kobylka",
   "kategorie": [
     {
@@ -31,6 +31,15 @@
           "opis": "Jeżeli Twój blond nie jest już chłodnym blondem, brąz przechodzi w rudości, a jeszcze nie chcesz ponawiać koloryzacji permanentnej- ta usługa jest dla Ciebie! Usługa obejmuje tonowanie całej długości włosa, mycie i modelowanie.\n\nEfekt koloryzacji utrzymuje się około trzech miesięcy.\n\nKoloryzacja tonerami pokrywa około 70 % siwizny.\n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
+              "cenaTekst": null,
+              "odCeny": false,
+              "czasMin": 90
+            },
+            {
               "nazwa": "Włosy do talii",
               "cena": 350,
               "cenaPromo": null,
@@ -42,15 +51,6 @@
             {
               "nazwa": "Włosy do ramion",
               "cena": 170,
-              "cenaPromo": null,
-              "najnizszaCena30d": null,
-              "cenaTekst": null,
-              "odCeny": false,
-              "czasMin": 90
-            },
-            {
-              "nazwa": "Włosy do łopatek",
-              "cena": 250,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -128,19 +128,19 @@
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 550,
-              "cenaPromo": 495,
-              "najnizszaCena30d": 550,
+              "nazwa": "Włosy do talii",
+              "cena": 750,
+              "cenaPromo": 675,
+              "najnizszaCena30d": 750,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 750,
-              "cenaPromo": 675,
-              "najnizszaCena30d": 750,
+              "nazwa": "Włosy do ramion",
+              "cena": 550,
+              "cenaPromo": 495,
+              "najnizszaCena30d": 550,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 180
@@ -198,10 +198,10 @@
           "opis": "Koloryzacja jednotonowa to pokrycie całych włosów farbą permanentną - jednym odcieniem farby po całej długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 290,
-              "cenaPromo": null,
-              "najnizszaCena30d": null,
+              "nazwa": "Włosy do talii",
+              "cena": 490,
+              "cenaPromo": 441,
+              "najnizszaCena30d": 490,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -216,10 +216,10 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 490,
-              "cenaPromo": 441,
-              "najnizszaCena30d": 490,
+              "nazwa": "Włosy do ramion",
+              "cena": 290,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -234,10 +234,10 @@
           "opis": "**Koloryzacja wielotonowa** jest to technika koloryzacji (inaczej również koloryzacja 3D), w której stosuje się co najmniej dwa kolory bazowe. Dzięki tej koloryzacji kolor jest głębszy, bardziej naturalny i nie jest \"płaski\".  W tej usłudze wliczamy rówież farbowanie odrostu na inny kolor niż reszta włosów po długości. \n\n*   Do ceny może zostać doliczone 50-100 zł za gęstość lub dodatkową długość włosa\n\n**Do koloryzacji powyżej 500 zł strzyżenie (opcja dostępna tylko u Agnieszki) oraz ochrona PLEX są dostępnew w prezencie**",
           "warianty": [
             {
-              "nazwa": "Włosy do talii",
-              "cena": 550,
-              "cenaPromo": 495,
-              "najnizszaCena30d": 550,
+              "nazwa": "Włosy do ramion",
+              "cena": 350,
+              "cenaPromo": null,
+              "najnizszaCena30d": null,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -252,10 +252,10 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do ramion",
-              "cena": 350,
-              "cenaPromo": null,
-              "najnizszaCena30d": null,
+              "nazwa": "Włosy do talii",
+              "cena": 550,
+              "cenaPromo": 495,
+              "najnizszaCena30d": 550,
               "cenaTekst": null,
               "odCeny": false,
               "czasMin": 120
@@ -418,8 +418,8 @@
               "czasMin": 120
             },
             {
-              "nazwa": "Włosy do talii",
-              "cena": 300,
+              "nazwa": "Włosy do łopatek",
+              "cena": 250,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -427,8 +427,8 @@
               "czasMin": 150
             },
             {
-              "nazwa": "Włosy do łopatek",
-              "cena": 250,
+              "nazwa": "Włosy do talii",
+              "cena": 300,
               "cenaPromo": null,
               "najnizszaCena30d": null,
               "cenaTekst": null,
@@ -1048,7 +1048,7 @@
           "opis": "Jeżeli nie jesteś przekonana jaki zabieg lub kolor będzie dla Ciebie odpowiedni, zapraszamy na BEZPŁATNĄ I NIEZOBOWIĄZUJĄCĄ konsultację z naszym specjalistą od zabiegów i koloryzacji.",
           "warianty": [
             {
-              "nazwa": "KONSULTACJA (KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
@@ -1057,7 +1057,7 @@
               "czasMin": 15
             },
             {
-              "nazwa": "KONSULTACJA (ZABIEG I/LUB KOLORYZACJA)",
+              "nazwa": "KONSULTACJA (KOLORYZACJA)",
               "cena": null,
               "cenaPromo": null,
               "najnizszaCena30d": null,
